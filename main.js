@@ -28,7 +28,7 @@ function tick() {
             seconds = "0" + seconds;
         }
 
-        let time = `${days} : ${hours} : ${minutes} : ${seconds}`;
+        let time = `${days}d : ${hours}h : ${minutes}m : ${seconds}s`;
 
         document.querySelector('.countdown').innerText = time;
     }

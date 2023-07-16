@@ -27,11 +27,6 @@ document.querySelectorAll("[data-value]").forEach(element => {
 
 
 // Call the insertNavbar function when the DOM is ready
-document.addEventListener('DOMContentLoaded', insertNavbar);
-var loader = document.getElementById("preloader");
-window.addEventListener("load", function () {
-    loader.style.display = "none";
-});
 
 let launchDate = new Date("October 5, 2023 00:00:00").getTime();
 let adjournDate = new Date("October 8, 2023 00:00:00").getTime();

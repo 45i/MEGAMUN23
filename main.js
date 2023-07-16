@@ -1,7 +1,7 @@
 const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
 
-document.querySelectorAll("h6").forEach(h6 => {
-  h6.onmouseover = event => {
+document.querySelectorAll("[data-value]").forEach(element => {
+  element.onmouseover = event => {
     let iterations = 0;
 
     const interval = setInterval(() => {

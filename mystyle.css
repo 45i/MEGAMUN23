@@ -143,7 +143,19 @@ nav {
   letter-spacing: 2px;
   color: #fff;
   margin-right: 48px;
-  width: 120px;
+  width: 70px;
+  transition: 3s;
+}
+
+.menu li:hover {
+  font-size: 17px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  color: #fff;
+  margin-right: 48px;
+  width: 70px;
+  transition: 3s;
 }
 
 .menu a {

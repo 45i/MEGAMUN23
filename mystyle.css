@@ -11,14 +11,14 @@
 }
 
 body {
-  font-family: 'Montserrat', sans-serif; 
-  margin: 0; 
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
 }
 
 html,
 body,
 header {
-  height: 100%; 
+  height: 100%;
 }
 
 header {
@@ -104,17 +104,31 @@ h2 {
   z-index: 100;
 }
 
-nav {
+/* nav {
   background-color: #333;
   color: #fff;
-  display: flex;
+} */
+
+nav {
+  height: 80px;
+  width: 100%;
+  position: fixed;
+  background: #30197d77;
+  backdrop-filter: blur(10px);
+  transition: 0.75s;
+  z-index: 1;
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
+  display: flex;
 }
 
 .logo {
-  font-size: 24px;
+  font-size: 48px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #fff;
 }
 
 .menu {
@@ -123,7 +137,13 @@ nav {
 }
 
 .menu li {
-  margin-right: 10px;
+  font-size: 17px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #fff;
+  margin-right: 48px;
+  width: 120px;
 }
 
 .menu a {
@@ -162,30 +182,30 @@ nav {
     transition: all 0.3s ease-in-out;
   }
 
-  .menu-toggle input:checked ~ span:nth-child(2) {
+  .menu-toggle input:checked~span:nth-child(2) {
     transform: rotate(-45deg) translate(-5px, 5px);
   }
 
-  .menu-toggle input:checked ~ span:nth-child(3) {
+  .menu-toggle input:checked~span:nth-child(3) {
     opacity: 0;
   }
 
-  .menu-toggle input:checked ~ span:nth-child(4) {
+  .menu-toggle input:checked~span:nth-child(4) {
     transform: rotate(45deg) translate(-5px, -5px);
   }
 
-  .menu-toggle input:checked ~ ul {
+  .menu-toggle input:checked~ul {
     display: block;
     width: 100%;
   }
 
-  .menu-toggle input:checked ~ ul li {
+  .menu-toggle input:checked~ul li {
     text-align: center;
     margin-right: 0;
     padding: 10px 0;
   }
 
-  .menu-toggle input:checked ~ ul li a {
+  .menu-toggle input:checked~ul li a {
     padding: 10px;
     font-size: 20px;
   }

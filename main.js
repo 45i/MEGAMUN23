@@ -1,31 +1,31 @@
-const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
 
-document.querySelector("h1").onmouseover = event => {
+document.querySelectorAll("h6").forEach(h6 => {
+  h6.onmouseover = event => {
     let iterations = 0;
 
     const interval = setInterval(() => {
-    event.target.innerText = event.target.innerText
-    .split("")
-    .map((letter, index) =>{
-        if(index<iterations){
+      event.target.innerText = event.target.innerText
+        .split("")
+        .map((letter, index) => {
+          if (index < iterations) {
             return event.target.dataset.value[index];
-        }    
-    return letters[Math.floor(Math.random() * 26)]
-    })
-    .join("");
+          }
+          return letters[Math.floor(Math.random() * (26 + 10))];
+        })
+        .join("");
 
-    if(iterations>= event.target.dataset.value.length) {
-        clearInterval(interval); 
-    }
+      if (iterations >= event.target.dataset.value.length) {
+        clearInterval(interval);
+      }
 
-    iterations += 1/2;
-
- }, 70);
-};
-
+      iterations += 1 / 2;
+    }, 100);
+  };
+});
 var loader = document.getElementById("preloader");
-window.addEventListener("load", function() {
-  loader.style.display = "none";
+window.addEventListener("load", function () {
+    loader.style.display = "none";
 });
 
 let launchDate = new Date("October 5, 2023 00:00:00").getTime();
@@ -35,25 +35,21 @@ let timer = setInterval(tick, 1000);
 function tick() {
     let now = new Date().getTime();
     let t = launchDate - now;
-    if(t>0){
-        let days = Math.floor(t / (1000 * 60 * 60 *24));
-        if(days<10)
-        {
+    if (t > 0) {
+        let days = Math.floor(t / (1000 * 60 * 60 * 24));
+        if (days < 10) {
             days = "0" + days;
         }
-        let hours = Math.floor(t % (1000 * 60 * 60 * 24) / (1000 * 60 * 60 ));
-        if(hours<10)
-        {
+        let hours = Math.floor(t % (1000 * 60 * 60 * 24) / (1000 * 60 * 60));
+        if (hours < 10) {
             hours = "0" + hours;
         }
         let minutes = Math.floor(t % (1000 * 60 * 60) / (1000 * 60));
-        if(minutes<10)
-        {
+        if (minutes < 10) {
             minutes = "0" + minutes;
         }
         let seconds = Math.floor(t % (1000 * 60) / 1000);
-        if(seconds<10)
-        {
+        if (seconds < 10) {
             seconds = "0" + seconds;
         }
 
@@ -66,6 +62,6 @@ function tick() {
 const menuToggle = document.querySelector('.menu-toggle input');
 const menu = document.querySelector('.menu');
 
-menuToggle.addEventListener('click', function() {
-  menu.classList.toggle('slide');
+menuToggle.addEventListener('click', function () {
+    menu.classList.toggle('slide');
 });

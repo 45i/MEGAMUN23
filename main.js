@@ -31,7 +31,6 @@ window.addEventListener("load", function () {
 let launchDate = new Date("October 5, 2023 00:00:00").getTime();
 
 let timer = setInterval(tick, 1000);
-
 function tick() {
     let now = new Date().getTime();
     let t = launchDate - now;
@@ -53,9 +52,18 @@ function tick() {
             seconds = "0" + seconds;
         }
 
-        let time = `${days} : ${hours} : ${minutes} : ${seconds}`;
+        let time = `<span class="days">${days} </span> : ${hours} : ${minutes} : ${seconds}`;
 
-        document.querySelector('.countdown').innerText = time;
+        document.querySelector('.countdown').innerHTML = time;
+
+        // Add event listener to the days span element
+        // const daysSpan = document.querySelector('.days');
+        // daysSpan.addEventListener('mouseover', () => {
+        //     daysSpan.innerText = `${days} days`;
+        // });
+        // daysSpan.addEventListener('mouseout', () => {
+        //     daysSpan.innerText = `${days}`;
+        // });
     }
 }
 

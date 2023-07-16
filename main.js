@@ -24,18 +24,7 @@ document.querySelectorAll("[data-value]").forEach(element => {
     };
 });
 // Define a function to insert the navbar
-function insertNavbar() {
-    // Fetch the contents of the navbar HTML file
-    fetch("navbar.html")
-        .then(response => response.text())
-        .then(data => {
-            // Insert the navbar HTML into the navbar-container element
-            const navbarContainers = document.querySelectorAll('.navbar-container');
-            navbarContainers.forEach(navbarContainer => {
-                navbarContainer.innerHTML = data;
-            });
-        });
-}
+
 
 // Call the insertNavbar function when the DOM is ready
 document.addEventListener('DOMContentLoaded', insertNavbar);

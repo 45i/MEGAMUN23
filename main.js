@@ -3,7 +3,7 @@ window.addEventListener("load", function () {
     loader.style.display = "none";
 });
 
-let launchDate = new Date("July 16, 2023 00:00:00").getTime();
+let launchDate = new Date("July 16, 2023 12:24:20").getTime();
 
 let timer = setInterval(tick, 1000);
 

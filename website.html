@@ -12,8 +12,7 @@
 
 <body>
     
-    <div class="navbar-container"></div>
-    <script>insertNavbar();</script>
+    <div class="navbar-container" ></div>
 
 
     <div id="preloader"></div>
@@ -27,7 +26,16 @@
         </div>
     </header>
     <script src="main.js"></script>
-    
+    <script>
+        // Fetch the contents of the navbar HTML file
+        fetch("navbar.html")
+            .then(response => response.text())
+            .then(data => {
+                // Insert the navbar HTML into the navbar-container element
+                const navbarContainer = document.querySelector('.navbar-container');
+                navbarContainer.innerHTML = data;
+            });
+    </script>
 </body>
 
 </html>

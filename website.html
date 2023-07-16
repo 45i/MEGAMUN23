@@ -11,30 +11,9 @@
 </head>
 
 <body>
-    <!-- <nav>
-        <div class="logo">Logo</div>
-        <ul class="menu">
-            <li><a href="#">
-                    <h6 data-value="Home">Home</h6>
-                </a></li>
-            <li><a href="#">
-                    <h6 data-value="About">About</h6>
-                </a></li>
-            <li><a href="#">
-                    <h6 data-value="Services">Services</h6>
-                </a></li>
-            <li><a href="#">
-                    <h6 data-value="Contact">Contact</h6>
-                </a></li>
-        </ul>
-        <div class="menu-toggle">
-            <input type="checkbox">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-    </nav> -->
-    <div class="navbar-container" include="navbar.html"></div>
+    
+    <div class="navbar-container"></div>
+    <script>insertNavbar();</script>
 
 
     <div id="preloader"></div>
@@ -48,16 +27,7 @@
         </div>
     </header>
     <script src="main.js"></script>
-    <!-- <script>
-        // Fetch the contents of the navbar HTML file
-        fetch("navbar.html")
-            .then(response => response.text())
-            .then(data => {
-                // Insert the navbar HTML into the navbar-container element
-                const navbarContainer = document.querySelector('.navbar-container');
-                navbarContainer.innerHTML = data;
-            });
-    </script> -->
+    
 </body>
 
 </html>

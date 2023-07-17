@@ -244,7 +244,7 @@ nav {
   margin: 10px;
   border-radius: 50px;
   background: url(download.jpeg);
-  background-size: cover;
+  background-size: contain;
   background-position: center;
   position: relative;
   transition: width 0.5s; 

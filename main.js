@@ -1,7 +1,7 @@
 const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
 
 document.querySelectorAll("[data-value]").forEach(element => {
-  element.onmouseover = event => {
+  element.addEventListener('mouseenter', event => {
     let iterations = 0;
 
     const interval = setInterval(() => {
@@ -21,9 +21,12 @@ document.querySelectorAll("[data-value]").forEach(element => {
 
       iterations += 1 / 2;
     }, 100);
-  };
-});
+  });
 
+  element.addEventListener('mouseleave', event => {
+    event.target.innerText = event.target.dataset.value;
+  });
+});
 var loader = document.getElementById("preloader");
 window.addEventListener("load", function () {
     loader.style.display = "none";

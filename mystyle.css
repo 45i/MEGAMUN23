@@ -243,7 +243,7 @@ nav {
   height: 500px;  
   margin: 10px;
   border-radius: 50px;
-  background: url(img/download.jpeg);
+  background: url(download.jpeg);
   background-size: cover;
   background-position: center;
   position: relative;
@@ -251,19 +251,19 @@ nav {
 }
 
 .img-box:nth-child(2){
-  background: url(img/images\ \(1\).jpeg);
+  background: url(images\ \(1\).jpeg);
   background-size: cover;
   background-position: center;
 }
 
 .img-box:nth-child(3){
-  background: url(img/images\ \(2\).jpeg);
+  background: url(images\ \(2\).jpeg);
   background-size: cover;
   background-position: center;
 }
 
 .img-box:nth-child(4){
-  background: url(img/images\ \(3\).jpeg);
+  background: url(images\ \(3\).jpeg);
   background-size: cover;
   background-position: center;
 }

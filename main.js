@@ -96,3 +96,20 @@ const menu = document.querySelector('.menu');
 menuToggle.addEventListener('click', function () {
     menu.classList.toggle('slide');
 });
+const imgBoxes = document.querySelectorAll('.img-box');
+
+imgBoxes.forEach(imgBox => {
+  imgBox.addEventListener('mousemove', e => {
+    const x = e.clientX - imgBox.offsetLeft;
+    const y = e.clientY - imgBox.offsetTop;
+    const centerX = imgBox.clientWidth / 2;
+    const centerY = imgBox.clientHeight / 2;
+    const deltaX = (centerX - x) / centerX;
+    const deltaY = (centerY - y) / centerY;
+    imgBox.querySelector('img').style.transform = `perspective(1000px) rotateY(${deltaX * 10}deg) rotateX(${deltaY * 10}deg) scale(1.1)`;
+  });
+  
+  imgBox.addEventListener('mouseleave', () => {
+    imgBox.querySelector('img').style.transform = 'perspective(1000px) rotateY(0deg) rotateX(0deg) scale(1.1)';
+  });
+});

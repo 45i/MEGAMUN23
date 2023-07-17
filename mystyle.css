@@ -232,23 +232,26 @@ nav {
   justify-content: center;
 }
 
-.gallery{
+.gallery {
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.img-box{
-  width: 100px;
-  height: 500px;  
+.img-box {
+  width: 100%;
+  height: 100%;
   margin: 10px;
   border-radius: 50px;
-  
-  background-size: contain;
+
+  background-size: cover;
+  /* background-size: contain; */
   background-position: center;
   position: relative;
-  transition: width 0.5s; 
+  transition: width 0.5s;
+  
 }
+
 /* 
 .img-box:nth-child(2){
   background: url(images\ \(1\).jpeg);
@@ -268,7 +271,7 @@ nav {
   background-position: center;
 } */
 
-.img-box h3{
+.img-box h3 {
   color: #ffffff;
   position: absolute;
   bottom: 0;
@@ -277,12 +280,12 @@ nav {
   transition: bottom 0.5s, opacity 0.5s;
 }
 
-.img-box:hover{
-  width: 300px;
+.img-box:hover {
+  width: 100%;
   cursor: pointer;
 }
 
-.img-box:hover h3{
+.img-box:hover h3 {
   opacity: 1;
   bottom: 25px;
 }

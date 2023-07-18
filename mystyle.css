@@ -273,7 +273,7 @@ nav {
 }
 
 .img-box:hover h3 {
-  bottom: 50px; /* Move the text up */
+  bottom: 25px; /* Move the text up */
   opacity: 1; /* Show the text */
 }
 

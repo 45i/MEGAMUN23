@@ -1,4 +1,4 @@
-const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
+const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
 document.querySelectorAll("[data-value]").forEach(element => {
   element.addEventListener('mouseenter', event => {

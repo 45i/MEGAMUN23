@@ -31,7 +31,7 @@ header {
 
 
 
-/* header:after {
+header:after {
   content: ' ';
   position: absolute;
   top: 0;
@@ -40,7 +40,7 @@ header {
   height: 100%;
   z-index: -1;
   background-color: rgba(34, 34, 34, 0.7);
-} */
+}
 
 .content {
   position: relative;

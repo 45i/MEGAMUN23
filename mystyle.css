@@ -256,7 +256,7 @@ nav {
   color: #ffffff;
   position: absolute;
   bottom: 0;
-  left: 30px;
+  left: 20px;
   opacity: 0;
   transition: bottom 0.5s, opacity 0.5s;
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.973);
@@ -268,12 +268,12 @@ nav {
 }
 
 .img-box:hover img {
-  transform: perspective(10%) rotateY(0deg) rotateX(0deg) scale(1.1); /* Add a 3D effect */
+  transform: perspective(70%) rotateY(0deg) rotateX(0deg) scale(1.01); /* Add a 3D effect */
   transition: 0.5s;
 }
 
 .img-box:hover h3 {
-  bottom: 25px; /* Move the text up */
+  bottom: 20px; /* Move the text up */
   opacity: 1; /* Show the text */
 }
 

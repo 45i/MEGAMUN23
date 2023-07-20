@@ -1,4 +1,4 @@
-const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
 
 document.querySelectorAll("[data-value]").forEach(element => {
   element.addEventListener('mouseenter', event => {
@@ -9,9 +9,9 @@ document.querySelectorAll("[data-value]").forEach(element => {
         .split("")
         .map((letter, index) => {
           if (index < iterations) {
-            return event.target.dataset.value[index];
+            return event.target.dataset.value[ index ];
           }
-          return letters[Math.floor(Math.random() * (26 + 10))];
+          return letters[ Math.floor(Math.random() * (26 + 10)) ];
         })
         .join("");
 
@@ -24,27 +24,14 @@ document.querySelectorAll("[data-value]").forEach(element => {
   });
 
   element.addEventListener('mouseleave', event => {
-      let iterations = 0;
-
-      const interval = setInterval(() => {
-          event.target.innerText = event.target.innerText
-              .split("")
-              .map((letter, index) => {
-                  if (index < iterations) {
-                      return event.target.dataset.value[ index ];
-                  }
-                  return letters[ Math.floor(Math.random() * (26 + 10)) ];
-              })
-              .join("");
-
-          if (iterations >= event.target.dataset.value.length) {
-              clearInterval(interval);
-          }
-
-          iterations += 1 / 2;
-      }, 100);                  
+    event.target.innerText = event.target.dataset.value;
   });
 });
+var loader = document.getElementById("preloader");
+window.addEventListener("load", function () {
+  loader.style.display = "none";
+});
+
 
 var loader = document.getElementById("preloader");
 window.addEventListener("load", function () {

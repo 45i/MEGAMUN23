@@ -21,7 +21,7 @@ header {
   height: 100%;
 }
 
-header {
+body {
   position: relative;
   display: flex;
   flex-direction: column;
@@ -32,7 +32,7 @@ header {
   background-color: #fff;
 }
 
-header:after {
+/* header:after {
   content: ' ';
   position: absolute;
   top: 0;
@@ -41,13 +41,19 @@ header:after {
   height: 100%;
   z-index: -1;
   background-color: rgba(34, 34, 34, 0.7);
-}
+} */
 
 .content {
   position: relative;
   z-index: 1;
+  
+  text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    
 }
 
+.highlight{
+  background-color: #ffe600;
+}
 h1 {
   color: #fff;
   font-size: 28px;
@@ -63,7 +69,9 @@ h1 span {
     font-size: 36px;
   }
 }
-
+b{
+font-weight: 900;
+}
 h2 {
   color: #fff;
   font-size: 42px;

@@ -96,7 +96,7 @@ h2 {
 }
 
 #preloader {
-  background: #000 url('preloader.gif') no-repeat center center;
+  background: linear-gradient(45deg, #08001f, #30197d) url('preloader.gif') no-repeat center center;
   background-size: 30%;
   height: 100vh;
   width: 100%;

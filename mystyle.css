@@ -139,7 +139,9 @@ nav {
   padding: 10px 20px;
   display: flex;
 }
-
+.item {
+  align-self: flex-start;
+}
 .logo {
   font-size: 48px;
   font-weight: 700;

@@ -143,14 +143,19 @@ nav {
 .item {
   align-self: flex-start;
 }
-.logo {
+nav.logo {
   font-size: 48px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2px;
   color: #fff;
-  
+  transform: translateX(-50%);
 
+}
+nav.logo :hover {
+  width: 110%;
+  height: 110%;
+  transition: 0.5s;
 }
 
 .menu {

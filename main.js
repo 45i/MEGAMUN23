@@ -33,11 +33,6 @@ window.addEventListener("load", function () {
 });
 
 
-var loader = document.getElementById("preloader");
-window.addEventListener("load", function () {
-    loader.style.display = "none";
-});
-
 let launchDate = new Date("October 5, 2023 00:00:00").getTime();
 
 let timer = setInterval(tick, 1000);

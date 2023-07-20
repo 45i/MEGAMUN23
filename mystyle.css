@@ -17,7 +17,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  /* align-items: center; */
   text-align: center;
   background: linear-gradient(45deg, #08001f, #30197d);
   background-color: #fff;

@@ -30,7 +30,16 @@ header {
 }
 
 
-
+header {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: linear-gradient(45deg, #08001f, #30197d);
+  background-color: #fff;
+}
 header:after {
   content: ' ';
   position: absolute;
@@ -47,9 +56,9 @@ header:after {
   z-index: 1;
 }
 
-/* .highlight {
+.highlight {
   background-color: #ffe600;
-} */
+}
 
 h1 {
   color: #fff;
@@ -67,9 +76,9 @@ h1 span {
   }
 }
 
-/* b {
+b {
   font-weight: 900;
-} */
+}
 
 h2 {
   color: #fff;

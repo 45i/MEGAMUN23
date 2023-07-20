@@ -129,7 +129,7 @@ h2 {
 nav {
   height: 80px;
   width: 100%;
-  position: fixed;
+  position: relative;
   background: #30197d77;
   backdrop-filter: blur(50);
   transition: 0.75s;
@@ -138,6 +138,7 @@ nav {
   align-items: center;
   padding: 10px 20px;
   display: flex;
+
 }
 .item {
   align-self: flex-start;

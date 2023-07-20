@@ -39,6 +39,8 @@ header {
   background: linear-gradient(45deg, #08001f, #30197d);
   background-color: #fff;
   height: 100vh;
+  outline: #000;
+  outline-style: dashed;
 }
 header:after {
   content: ' ';
@@ -48,7 +50,7 @@ header:after {
   width: 100vw;
   height: 100vh;
   z-index: -1;
-  background-color: rgba(34, 34, 34, 0.7);
+  /* background-color: rgba(34, 34, 34, 0.7); */
 }
 
 .content {
@@ -130,7 +132,7 @@ h2 {
 nav {
   height: 80px;
   width: 100%;
-  position: relative;
+  position: fixed;
   background: #30197d77;
   backdrop-filter: blur(50);
   transition: 0.75s;
@@ -272,8 +274,16 @@ nav.logo:hover .text {
   display: flex;
   align-items: center;
   justify-content: center;
+  color: #b6b6b6;
 }
-
+.info_text{
+  color: #b6b6b6;
+  font-size: 22px;
+  font-weight: 700;
+  align-items: center;
+  justify-content: center;
+  margin: 30px 0px;
+}
 .gallery {
   display: flex;
   align-items: center;

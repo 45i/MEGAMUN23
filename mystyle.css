@@ -29,8 +29,6 @@ header {
   height: 100%;
   width: 100%;
 }
-
-
 header {
   position: relative;
   display: flex;
@@ -40,14 +38,15 @@ header {
   text-align: center;
   background: linear-gradient(45deg, #08001f, #30197d);
   background-color: #fff;
+  height: 100vh;
 }
 header:after {
   content: ' ';
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
+  width: 100vw;
+  height: 100vh;
   z-index: -1;
   background-color: rgba(34, 34, 34, 0.7);
 }
@@ -55,6 +54,8 @@ header:after {
 .content {
   position: relative;
   z-index: 1;
+
+  
 }
 
 .highlight {
@@ -152,10 +153,24 @@ nav.logo {
   transform: translateX(-50%);
 
 }
-nav.logo :hover {
-  width: 110%;
-  height: 110%;
-  transition: 0.5s;
+nav.logo .text {
+  position: absolute;
+  left: 0;
+  top: 0;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  transition: transform 0.5s ease;
+}
+
+nav.logo:hover .text {
+  transform: translateX(100%);
+  opacity: 1;
+  transition: transform 0.5s ease;
 }
 
 .menu {
@@ -284,7 +299,7 @@ nav.logo :hover {
   color: #ffffff;
   position: absolute;
   bottom: 0;
-  left: 20px;
+  left: 2%;
   opacity: 0;
   transition: bottom 0.5s, opacity 0.5s;
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.973);
@@ -302,7 +317,7 @@ nav.logo :hover {
 }
 
 .img-box:hover h3 {
-  bottom: 20px;
+  bottom: 2%;
   /* Move the text up */
   opacity: 1;
   /* Show the text */

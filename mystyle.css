@@ -147,6 +147,8 @@ nav {
   letter-spacing: 2px;
   color: #fff;
   align-items: flex-start;
+  float: left;
+
 }
 
 .menu {

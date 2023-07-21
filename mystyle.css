@@ -194,8 +194,39 @@ nav.sticky.hidden {
 .menu-toggle {
   display: none;
 }
+abbr {
+  text-decoration: underline;
+  cursor: help;
+}
 
-.menu-toggle input {
+span.days abbr::after {
+  content: " (days)";
+  font-size: 0.8em;
+  color: #999;
+  margin-left: 5px;
+}
+
+span.hours abbr::after {
+  content: " (hours)";
+  font-size: 0.8em;
+  color: #999;
+  margin-left: 5px;
+}
+
+span.minutes abbr::after {
+  content: " (minutes)";
+  font-size: 0.8em;
+  color: #999;
+  margin-left: 5px;
+}
+
+span.seconds abbr::after {
+  content: " (seconds)";
+  font-size: 0.8em;
+  color: #999;
+  margin-left: 5px;
+}
+  .menu-toggle input {
   display: none;
 }
 
@@ -292,15 +323,15 @@ nav.sticky.hidden {
   width: 100%;
   height: auto;
   transition: transform 0.5s;
-
+  
 }
 
 .img-box {
   position: relative;
   width: 30%;
   margin: 1.66%;
-  overflow: hidden;
-  box-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+  /* overflow: hidden; */
+  /* box-shadow: 0 0 3px rgba(0, 0, 0, 0.5); */
   transition: 0.5s;
 
 }
@@ -333,7 +364,7 @@ nav.sticky.hidden {
 
 
 }
-.fa-chevron-down {
+.fa-angle-double-down{
   background: linear-gradient(to bottom, #200080,
       #4926bd, #9583d1);
   -webkit-background-clip: text;
@@ -342,15 +373,20 @@ nav.sticky.hidden {
 }
 
 .img-box:hover img {
-  transform: scale(1.2);
+  z-index: 9999;
+  transform: scale(0.001);
   /* Add a smooth transition */
-  transition: transform 0.5s ease-in-out;
+  /* transition: transform 0.s ease-in-out; */
 }
 
 
 
 .img-box:hover {
-  width: 100%;
+  width: 50%;
   cursor: pointer;
-  transition: 0.5s;
+  /* transition: 0.5s; */
 }
+canvas {
+  background: #232323;
+}
+

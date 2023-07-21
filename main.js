@@ -1,3 +1,4 @@
+
 let prevScrollpos = window.scrollY;
 window.onscroll = function() {
   let currentScrollPos = window.scrollY;
@@ -8,6 +9,38 @@ window.onscroll = function() {
   }
   prevScrollpos = currentScrollPos;
 }
+// const days = document.querySelector('.days');
+// const text = 'days ';
+// let index = 0;
+// let isDeleting = false;
+
+// function type() {
+//   const currentText = days.textContent;
+
+//   if (!isDeleting) {
+//     days.textContent = text.slice(0, index);
+//     index++;
+//   } else {
+//     days.textContent = text.slice(0, index);
+//     index--;
+//   }
+
+//   if (index > text.length) {
+//     isDeleting = true;
+//   }
+
+//   if (index === 0) {
+//     isDeleting = false;
+//   }
+
+//   const delay = isDeleting ? 100 : 200;
+
+//   setTimeout(type, delay);
+// }
+
+// days.addEventListener('mouseover', () => {
+//   type();
+// });
 const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
 
 document.querySelectorAll("[data-value]").forEach(element => {
@@ -74,7 +107,7 @@ function tick() {
             seconds = "0" + seconds;
         }
 
-        let time = `<span class="days">${days} </span> : ${hours} : ${minutes} : ${seconds}`;
+      let time = `<span class="days">${days}</span> : <span class="hours">${hours}</span> : <span class="minutes">${minutes}</span> : <span class="seconds">${seconds}</span>`;
 
         document.querySelector('.countdown').innerHTML = time;
 
@@ -106,7 +139,7 @@ imgBoxes.forEach(imgBox => {
     const centerY = imgBox.clientHeight / 2;
     const deltaX = (centerX - x) / centerX;
     const deltaY = (centerY - y) / centerY;
-    imgBox.querySelector('img').style.transform = `perspective(1000px) rotateY(${deltaX * 10}deg) rotateX(${deltaY * 10}deg) scale(1.1)`;
+    imgBox.querySelector('img').style.transform = `perspective(1000px) rotateY(${deltaX * 5.1}deg) rotateX(${deltaY * 5.1}deg) scale(1.1)`;
   });
   
   imgBox.addEventListener('mouseleave', () => {
@@ -116,3 +149,4 @@ imgBoxes.forEach(imgBox => {
   
   
 });
+

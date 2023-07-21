@@ -13,22 +13,14 @@
 body {
   font-family: 'Montserrat', sans-serif;
   margin: 0;
-  position: relative;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  /* align-items: center; */
-  text-align: center;
-  background: linear-gradient(45deg, #08001f, #30197d);
-  background-color: #fff;
 }
 
 html,
 body,
 header {
   height: 100%;
-  width: 100%;
 }
+
 header {
   position: relative;
   display: flex;
@@ -38,30 +30,22 @@ header {
   text-align: center;
   background: linear-gradient(45deg, #08001f, #30197d);
   background-color: #fff;
-  height: 100vh;
-  outline: #000;
-  outline-style: dashed;
 }
+
 header:after {
   content: ' ';
   position: absolute;
   top: 0;
   left: 0;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   z-index: -1;
-  /* background-color: rgba(34, 34, 34, 0.7); */
+  background-color: rgba(34, 34, 34, 0.7);
 }
 
 .content {
   position: relative;
   z-index: 1;
-
-  
-}
-
-.highlight {
-  background-color: #ffe600;
 }
 
 h1 {
@@ -78,10 +62,6 @@ h1 span {
   h1 {
     font-size: 36px;
   }
-}
-
-b {
-  font-weight: 900;
 }
 
 h2 {
@@ -134,45 +114,21 @@ nav {
   width: 100%;
   position: fixed;
   background: #30197d77;
-  backdrop-filter: blur(50);
+  backdrop-filter: blur(10px);
   transition: 0.75s;
-  z-index: 1;
-  /* justify-content: space-between; */
+  z-index: 1000;
+  justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
   display: flex;
+}
 
-}
-.item {
-  align-self: flex-start;
-}
-nav.logo {
+.logo {
   font-size: 48px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2px;
   color: #fff;
-  transform: translateX(-50%);
-
-}
-nav.logo .text {
-  position: absolute;
-  left: 0;
-  top: 0;
-  opacity: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  
-  transition: transform 0.5s ease;
-}
-
-nav.logo:hover .text {
-  transform: translateX(100%);
-  opacity: 1;
-  transition: transform 0.5s ease;
 }
 
 .menu {
@@ -274,16 +230,8 @@ nav.logo:hover .text {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #b6b6b6;
 }
-.info_text{
-  color: #b6b6b6;
-  font-size: 22px;
-  font-weight: 700;
-  align-items: center;
-  justify-content: center;
-  margin: 30px 0px;
-}
+
 .gallery {
   display: flex;
   align-items: center;
@@ -309,7 +257,7 @@ nav.logo:hover .text {
   color: #ffffff;
   position: absolute;
   bottom: 0;
-  left: 2%;
+  left: 20px;
   opacity: 0;
   transition: bottom 0.5s, opacity 0.5s;
   text-shadow: 0 0 10px rgba(0, 0, 0, 0.973);
@@ -327,7 +275,7 @@ nav.logo:hover .text {
 }
 
 .img-box:hover h3 {
-  bottom: 2%;
+  bottom: 20px;
   /* Move the text up */
   opacity: 1;
   /* Show the text */
@@ -338,3 +286,4 @@ nav.logo:hover .text {
   cursor: pointer;
   transition: 0.5s;
 }
+

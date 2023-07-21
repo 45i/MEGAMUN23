@@ -3,6 +3,7 @@
     @content;
   }
 }
+@import url('https://fonts.googleapis.com/css?family=Varela+Round');
 
 * {
   margin: 0;
@@ -20,11 +21,23 @@ body,
 header {
   height: 100%;
 }
-b{
-    /* text-shadow: 0 0 10px #8f8f8f, 0 0 20px #8f8f8f, 0 0 30px #8f8f8f;
+
+.btn-3 {
+  background: linear-gradient(45deg, #08001f, #210c5e, #30197d);
+  color: #f0f0f0;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+}
+
+b {
+  /* text-shadow: 0 0 10px #8f8f8f, 0 0 20px #8f8f8f, 0 0 30px #8f8f8f;
      */
   font-weight: 10000;
 }
+
 header {
   position: relative;
   display: flex;
@@ -32,9 +45,10 @@ header {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: linear-gradient(45deg, #08001f, #30197d);
+  background: linear-gradient(45deg, #08001f,#210c5e, #30197d);
   background-color: #fff;
   line-height: 2.5;
+  transition: background 0.3s ease-out;
   /*   
   border-color: #000;
   border-style: dashed;
@@ -162,6 +176,7 @@ nav.sticky.hidden {
   display: flex;
   list-style: none;
 }
+
 .dropdown-menu {
   max-height: 0;
   overflow: hidden;
@@ -171,6 +186,7 @@ nav.sticky.hidden {
 .dropdown-menu.slide {
   max-height: 500px;
 }
+
 .menu li {
   font-size: 17px;
   font-weight: 700;
@@ -202,39 +218,20 @@ nav.sticky.hidden {
 .menu-toggle {
   display: none;
 }
+
 abbr {
   text-decoration: underline;
-  cursor: help;
+  cursor: cell;
 }
 
-span.days abbr::after {
-  content: " (days)";
-  font-size: 0.8em;
-  color: #999;
-  margin-left: 5px;
+abbr :hover {
+  color: #fff;
+  text-decoration: none;
+  cursor: grabbing;
+  content: attr(title);
 }
 
-span.hours abbr::after {
-  content: " (hours)";
-  font-size: 0.8em;
-  color: #999;
-  margin-left: 5px;
-}
-
-span.minutes abbr::after {
-  content: " (minutes)";
-  font-size: 0.8em;
-  color: #999;
-  margin-left: 5px;
-}
-
-span.seconds abbr::after {
-  content: " (seconds)";
-  font-size: 0.8em;
-  color: #999;
-  margin-left: 5px;
-}
-  .menu-toggle input {
+.menu-toggle input {
   display: none;
 }
 
@@ -310,6 +307,7 @@ span.seconds abbr::after {
   opacity: 1;
   /* Show the text */
 }
+
 /* 
 .container {
   width: 100%;
@@ -331,7 +329,7 @@ span.seconds abbr::after {
   width: 100%;
   height: auto;
   transition: transform 0.5s;
-  
+
 }
 
 .img-box {
@@ -372,7 +370,8 @@ span.seconds abbr::after {
 
 
 }
-.fa-angle-double-down{
+
+.fa-angle-double-down {
   background: linear-gradient(to bottom, #200080,
       #4926bd, #9583d1);
   -webkit-background-clip: text;
@@ -394,9 +393,11 @@ span.seconds abbr::after {
   cursor: pointer;
   /* transition: 0.5s; */
 }
+
 canvas {
   background: #232323;
 }
+
 .cols {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -414,6 +415,7 @@ canvas {
   margin: 1rem;
   cursor: pointer;
 }
+
 .container {
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
@@ -443,16 +445,20 @@ canvas {
 }
 
 .back {
-    background: linear-gradient(45deg, #08001f, #30197d);
+  /* background:  */
+  background: #190d41f1 linear-gradient(135deg, #08001f, #29146d);
+    backdrop-filter: blur(10px);
   /* background: -webkit-linear-gradient(45deg, #cedce7 0%, #596a72 100%);
   background: -o-linear-gradient(45deg, #cedce7 0%, #596a72 100%);
   background: linear-gradient(45deg, #cedce7 0%, #596a72 100%); */
 }
-.info_text{
-    background: linear-gradient(45deg, #30197d, #30197d);
-    color: #fff;
-    font-size: 1.5rem;
+
+.info_text {
+  background: linear-gradient(45deg, #30197d, #30197d);
+  color: #fff;
+  font-size: 1.5rem;
 }
+
 .front:after {
   position: absolute;
   top: 0;
@@ -572,4 +578,3 @@ canvas {
     margin: 0 0 2rem 0;
   }
 }
-

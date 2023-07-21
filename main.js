@@ -70,6 +70,13 @@ document.querySelectorAll("[data-value]").forEach(element => {
     event.target.innerText = event.target.dataset.value;
   });
 });
+const back = document.querySelector('.header');
+
+window.addEventListener('scroll', () => {
+  const scrollPos = window.scrollY;
+  const angle = scrollPos / 1;
+  back.style.background = `linear-gradient(${angle*100}deg, #08001f, #210c5e, #30197d)`;
+});
 var loader = document.getElementById("preloader");
 window.addEventListener("load", function () {
   loader.style.display = "none";

@@ -1,3 +1,13 @@
+let prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+  let currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.querySelector("nav").classList.remove("hidden");
+  } else {
+    document.querySelector("nav").classList.add("hidden");
+  }
+  prevScrollpos = currentScrollPos;
+}
 const letters = "ABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
 
 document.querySelectorAll("[data-value]").forEach(element => {
@@ -18,7 +28,7 @@ document.querySelectorAll("[data-value]").forEach(element => {
       if (iterations >= event.target.dataset.value.length) {
         clearInterval(interval);
       }
-
+      
       iterations += 1 / 2;
     }, 100);
   });
@@ -43,8 +53,8 @@ function tick() {
         let days = Math.floor(t / (1000 * 60 * 60 * 24));
         if (days < 10) {
             days = "0" + days;
-        }
-        let hours = Math.floor(t % (1000 * 60 * 60 * 24) / (1000 * 60 * 60));
+          }
+          let hours = Math.floor(t % (1000 * 60 * 60 * 24) / (1000 * 60 * 60));
         if (hours < 10) {
             hours = "0" + hours;
         }
@@ -72,7 +82,7 @@ function tick() {
     }
 }
 
-const menuToggle = document.querySelector('.menu-toggle input');
+const menuToggle = document.querySelector('.menu-toggle');
 const menu = document.querySelector('.menu');
 
 menuToggle.addEventListener('click', function () {
@@ -94,14 +104,7 @@ imgBoxes.forEach(imgBox => {
   imgBox.addEventListener('mouseleave', () => {
     imgBox.querySelector('img').style.transform = 'perspective(1000px) rotateY(0deg) rotateX(0deg) scale(1.1)';
   });
+
+  
+  
 });
-let prevScrollpos = window.pageYOffset;
-window.onscroll = function() {
-  let currentScrollPos = window.pageYOffset;
-  if (prevScrollpos > currentScrollPos) {
-    document.querySelector("nav").classList.remove("hidden");
-  } else {
-    document.querySelector("nav").classList.add("hidden");
-  }
-  prevScrollpos = currentScrollPos;
-}

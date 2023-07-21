@@ -1,6 +1,6 @@
-let prevScrollpos = window.pageYOffset;
+let prevScrollpos = window.scrollY;
 window.onscroll = function() {
-  let currentScrollPos = window.pageYOffset;
+  let currentScrollPos = window.scrollY;
   if (prevScrollpos > currentScrollPos) {
     document.querySelector("nav").classList.remove("hidden");
   } else {
@@ -41,7 +41,14 @@ var loader = document.getElementById("preloader");
 window.addEventListener("load", function () {
   loader.style.display = "none";
 });
+const scrollDown = document.querySelector('.scroll-down');
+const targetElement = document.querySelector('#target-element');
 
+scrollDown.addEventListener('click', () => {
+  targetElement.scrollIntoView({
+    behavior: 'smooth'
+  });
+});
 
 let launchDate = new Date("October 5, 2023 00:00:00").getTime();
 
@@ -81,12 +88,13 @@ function tick() {
         // });
     }
 }
+document.addEventListener('DOMContentLoaded', function () {
+  const menuToggle = document.querySelector('.menu-toggle');
+  const menu = document.querySelector('.menu');
 
-const menuToggle = document.querySelector('.menu-toggle');
-const menu = document.querySelector('.menu');
-
-menuToggle.addEventListener('click', function () {
-    menu.classList.toggle('slide');
+  menuToggle.addEventListener('click', function () {
+      menu.classList.toggle('slide');
+  });
 });
 const imgBoxes = document.querySelectorAll('.img-box');
 

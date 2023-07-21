@@ -95,3 +95,13 @@ imgBoxes.forEach(imgBox => {
     imgBox.querySelector('img').style.transform = 'perspective(1000px) rotateY(0deg) rotateX(0deg) scale(1.1)';
   });
 });
+let prevScrollpos = window.pageYOffset;
+window.onscroll = function() {
+  let currentScrollPos = window.pageYOffset;
+  if (prevScrollpos > currentScrollPos) {
+    document.querySelector("nav").classList.remove("hidden");
+  } else {
+    document.querySelector("nav").classList.add("hidden");
+  }
+  prevScrollpos = currentScrollPos;
+}

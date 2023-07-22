@@ -22,7 +22,7 @@
 /* Basic Setting */
 /* ------------- */
 
-html,
+/* html,
 body {
     box-sizing: border-box;
     font-family: 'neuzeit-grotesk', sans-serif;
@@ -32,7 +32,7 @@ body {
     line-height: 1.5;
     color: #ffffffee;
     scroll-behavior: smooth;
-}
+} */
 
 *,
 *::before,

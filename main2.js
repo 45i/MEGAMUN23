@@ -33,10 +33,19 @@ document.querySelectorAll("[data-value]").forEach(element => {
         event.target.innerText = event.target.dataset.value;
     });
 });
+
 var googleMap = document.querySelector('.google-map');
 var mapHeight = 0;
 var maxMapHeight = 500;
 var scrollThreshold = 500;
+
+googleMap.addEventListener('transitionend', function () {
+    if (googleMap.style.height > '31px') {
+        googleMap.style.backgroundColor = 'transparent';
+    } else {
+        googleMap.style.backgroundColor = 'red';
+    }
+});
 
 window.addEventListener('scroll', function () {
     var scrollPosition = window.scrollY;
@@ -44,5 +53,6 @@ window.addEventListener('scroll', function () {
         mapHeight = Math.min(maxMapHeight, (scrollPosition - scrollThreshold) * 2);
         googleMap.style.height = mapHeight + 'px';
         googleMap.style.borderRadius = (50 - mapHeight / maxMapHeight * 50) + '%';
+        googleMap.style.backgroundColor = 'transparent';
     }
 });

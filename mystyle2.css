@@ -3,7 +3,7 @@
     --light-theme:linear-gradient(45deg, #08001f, #210c5e, #30197d);;
 
     /* Circle Width */
-    --circle-diameter: 30px;
+    --circle-diameter: calc(5*100vh/100 );
 
     /* Font Family */
     --fonts-style-x: 'neuzeit-grotesk', sans-serif;
@@ -70,9 +70,12 @@ main {
     height: var(--circle-diameter);
     overflow: hidden;
     border-radius: var(--circle-diameter);
-    background-color: #ffffff;
+    /* background-color: #ff0000; */
     transition: 5000ms;
     cursor: grab;
+box-shadow: 0 10 50px rgba(0, 0, 0, 1);
+    
+    
 }
 
 /*
@@ -98,7 +101,8 @@ main {
     width: 100vw;
     height: 100vh;
     pointer-events: visibleStroke;
-    
+    /* background-color: #ff0000; */
+    display: block;
 }
 /* .hover_text{
     z-index: 10;
@@ -112,7 +116,8 @@ main {
     width: 100vw;
     height: 100vh;
     border-radius: 0;
-    /* display: none; */
+    
 }
+
 
 

@@ -1,0 +1,113 @@
+:root {
+    /* Font Color */
+    --light-theme: #535353;
+
+    /* Circle Width */
+    --circle-diameter: 300px;
+
+    /* Font Family */
+    --fonts-style-x: 'neuzeit-grotesk', sans-serif;
+    --fonts-style-y: 'neuzeit-grotesk', sans-serif;
+
+    /* Font Weight */
+    --light: 300;
+    --regular: 400;
+    --bold: 700;
+    --black: 900;
+
+}
+
+
+/* ------------- */
+/* Basic Setting */
+/* ------------- */
+
+html,
+body {
+    box-sizing: border-box;
+    font-family: 'neuzeit-grotesk', sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    font-size: 1em;
+    line-height: 1.5;
+    color: #ffffffee;
+    scroll-behavior: smooth;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+main {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+    min-height: 640px;
+    background-color: var(--light-theme);
+}
+
+::selection {
+    color: #ffffff;
+    background-color: var(--light-theme);
+}
+
+
+/* ------------- */
+/* Content Style */
+/* ------------- */
+
+.google-map {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: var(--circle-diameter);
+    height: var(--circle-diameter);
+    overflow: hidden;
+    border-radius: var(--circle-diameter);
+    background-color: #ffffff;
+    transition: 5000ms;
+    cursor: grab;
+}
+
+/*
+.google-map::after {
+    content: "";
+    position: absolute;
+    width: var(--circle-diameter);
+    height: var(--circle-diameter);
+    border-radius: var(--circle-diameter);
+    background: radial-gradient(circle, #ffffff00 0%, #f8f9fa 50%);
+    pointer-events: none;
+}
+*/
+
+.google-map .map-frame {
+    width: 100vw;
+    height: calc(100vh-12.1%);
+    background-color: var(--light-theme);
+}
+
+.google-map iframe {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: visibleStroke;
+}
+
+
+/* ------------------ */
+/* Interactive Effect */
+/* ------------------ */
+
+.google-map:hover {
+    width: 100vw;
+    height: 100vh;
+    border-radius: 0;
+}
+

@@ -154,4 +154,3 @@ imgBoxes.forEach(imgBox => {
   
   
 });
-

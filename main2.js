@@ -33,3 +33,16 @@ document.querySelectorAll("[data-value]").forEach(element => {
         event.target.innerText = event.target.dataset.value;
     });
 });
+var googleMap = document.querySelector('.google-map');
+var mapHeight = 0;
+var maxMapHeight = 500;
+var scrollThreshold = 500;
+
+window.addEventListener('scroll', function () {
+    var scrollPosition = window.scrollY;
+    if (scrollPosition > scrollThreshold) {
+        mapHeight = Math.min(maxMapHeight, (scrollPosition - scrollThreshold) * 2);
+        googleMap.style.height = mapHeight + 'px';
+        googleMap.style.borderRadius = (50 - mapHeight / maxMapHeight * 50) + '%';
+    }
+});

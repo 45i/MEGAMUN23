@@ -1,9 +1,9 @@
 :root {
     /* Font Color */
-    --light-theme: #535353;
+    --light-theme:linear-gradient(45deg, #08001f, #210c5e, #30197d);;
 
     /* Circle Width */
-    --circle-diameter: 300px;
+    --circle-diameter: 30px;
 
     /* Font Family */
     --fonts-style-x: 'neuzeit-grotesk', sans-serif;
@@ -48,7 +48,7 @@ main {
     width: 100%;
     height: 100vh;
     min-height: 640px;
-    background-color: var(--light-theme);
+    background: linear-gradient(45deg,  #210c5e, #30197d);;
 }
 
 ::selection {
@@ -98,8 +98,11 @@ main {
     width: 100vw;
     height: 100vh;
     pointer-events: visibleStroke;
+    
 }
-
+/* .hover_text{
+    z-index: 10;
+} */
 
 /* ------------------ */
 /* Interactive Effect */
@@ -109,5 +112,7 @@ main {
     width: 100vw;
     height: 100vh;
     border-radius: 0;
+    /* display: none; */
 }
+
 

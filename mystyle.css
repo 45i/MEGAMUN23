@@ -3,6 +3,7 @@
     @content;
   }
 }
+
 @import url('https://fonts.googleapis.com/css?family=Varela+Round');
 
 * {
@@ -21,21 +22,32 @@ body,
 header {
   height: 100%;
 }
-
 .btn-3 {
-  background: linear-gradient(45deg, #08001f, #210c5e, #30197d);
-  color: #f0f0f0;
+  background: linear-gradient(45deg, #0e0625, #210c5e, #30197d);
+  background: #30197d;
+  color: wheat;
   border: none;
   padding: 10px 20px;
   border-radius: 5px;
   cursor: pointer;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s ease-out;
 }
 
+.btn-3:hover {
+  background: #30197d;
+  box-shadow: 0 0 10px #00000070;
+  transform: scale(1.2);
+  transition: transform 0.2s ease-out;
+}
 b {
   /* text-shadow: 0 0 10px #8f8f8f, 0 0 20px #8f8f8f, 0 0 30px #8f8f8f;
      */
   font-weight: 10000;
+}
+.thin {
+  font-family: 'Roboto Thin', sans-serif;
+  
+  letter-spacing: -1px;
 }
 
 header {
@@ -45,7 +57,7 @@ header {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: linear-gradient(45deg, #08001f,#210c5e, #30197d);
+  background: linear-gradient(45deg, #08001f, #210c5e, #30197d);
   background-color: #fff;
   line-height: 2.5;
   transition: background 0.3s ease-out;
@@ -345,14 +357,17 @@ abbr :hover {
 @keyframes bounce {
   0% {
     transform: translateY(0);
+    
   }
 
   50% {
     transform: translateY(-20px);
+    
   }
 
   100% {
     transform: translateY(0);
+   
   }
 }
 
@@ -370,13 +385,12 @@ abbr :hover {
 
 
 }
-
 .fa-angle-double-down {
-  background: linear-gradient(to bottom, #200080,
-      #4926bd, #9583d1);
+  background: radial-gradient( #9583d1, #3e18b1, #4926bd, #9583d1);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  text-shadow: 0 0 10px #200080, 0 0 20px #4926bd, 0 0 30px #9583d1;
+  /* text-shadow: 0 0 10px #9583d1, 0 0 20px #4926bd, 0 0 30px #9583d1; */
+  /* border: 2px solid white; */
 }
 
 .img-box:hover img {
@@ -446,8 +460,8 @@ canvas {
 
 .back {
   /* background:  */
-  background: #190d41f1 linear-gradient(135deg, #08001f, #29146d);
-    backdrop-filter: blur(10px);
+  background: #190d4186 ;
+  backdrop-filter: blur(10px);
   /* background: -webkit-linear-gradient(45deg, #cedce7 0%, #596a72 100%);
   background: -o-linear-gradient(45deg, #cedce7 0%, #596a72 100%);
   background: linear-gradient(45deg, #cedce7 0%, #596a72 100%); */
@@ -457,6 +471,7 @@ canvas {
   background: linear-gradient(45deg, #30197d, #30197d);
   color: #fff;
   font-size: 1.5rem;
+  align-content:center;
 }
 
 .front:after {
@@ -477,11 +492,11 @@ canvas {
 
 .container:hover .front,
 .container:hover .back {
-  -webkit-transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
-  transition: -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
-  -o-transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
-  transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
-  transition: transform .7s cubic-bezier(0.4, 0.2, 0.2, 1), -webkit-transform .7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  -webkit-transition: -webkit-transform 1.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  transition: -webkit-transform 1.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  -o-transition: transform 1.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  transition: transform 1.7s cubic-bezier(0.4, 0.2, 0.2, 1);
+  transition: transform 1.7s cubic-bezier(0.4, 0.2, 0.2, 1), -webkit-transform 1.7s cubic-bezier(0.4, 0.2, 0.2, 1);
 }
 
 .back {
@@ -578,3 +593,4 @@ canvas {
     margin: 0 0 2rem 0;
   }
 }
+

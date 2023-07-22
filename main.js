@@ -70,6 +70,11 @@ document.querySelectorAll("[data-value]").forEach(element => {
     event.target.innerText = event.target.dataset.value;
   });
 });
+document.addEventListener('DOMContentLoaded', function () {
+  new Splide('#image-carousel', {
+    heightRatio: 0.5,
+  }).mount();
+});
 const back = document.querySelector('.header');
 
 window.addEventListener('scroll', () => {

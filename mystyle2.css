@@ -73,7 +73,7 @@ main {
     /* background-color: #ff0000; */
     transition: 5000ms;
     cursor: grab;
-box-shadow: 0 10 50px rgba(0, 0, 0, 1);
+    box-shadow: 0 0 10px rgb(0, 0, 0);
     
     
 }
@@ -94,6 +94,7 @@ box-shadow: 0 10 50px rgba(0, 0, 0, 1);
     width: 100vw;
     height: calc(100vh-12.1%);
     background-color: var(--light-theme);
+    box-shadow: 0 10 50px rgba(0, 0, 0, 1);
 }
 
 .google-map iframe {
@@ -103,6 +104,7 @@ box-shadow: 0 10 50px rgba(0, 0, 0, 1);
     pointer-events: visibleStroke;
     /* background-color: #ff0000; */
     display: block;
+    box-shadow: 0 0 50px rgba(255, 0, 0, 0.705);
 }
 /* .hover_text{
     z-index: 10;

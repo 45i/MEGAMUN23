@@ -155,7 +155,7 @@ nav {
   height: 12.1%;
   width: 100%;
   position: fixed;
-  background: #fff;
+  background: yellowgreen;
   backdrop-filter: blur(10px);
   transition: 0.75s;
   z-index: 1000;

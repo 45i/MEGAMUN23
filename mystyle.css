@@ -22,6 +22,7 @@ body,
 header {
   height: 100%;
 }
+
 .btn-3 {
   background: linear-gradient(45deg, #0e0625, #210c5e, #30197d);
   background: #30197d;
@@ -39,14 +40,16 @@ header {
   transform: scale(1.2);
   transition: transform 0.2s ease-out;
 }
+
 b {
   /* text-shadow: 0 0 10px #8f8f8f, 0 0 20px #8f8f8f, 0 0 30px #8f8f8f;
      */
   font-weight: 10000;
 }
+
 .thin {
   font-family: 'Roboto Thin', sans-serif;
-  
+
   letter-spacing: -1px;
 }
 
@@ -61,7 +64,7 @@ header {
   background-color: #fff;
   line-height: 2.5;
   transition: background 0.3s ease-out;
-  
+
   /*   
   border-color: #000;
   border-style: dashed;
@@ -87,10 +90,12 @@ header:after {
   z-index: 1;
 
 }
+
 ::selection {
   color: #ffffff;
   background-color: #360063;
 }
+
 h1 {
   color: #fff;
   font-size: 28px;
@@ -166,6 +171,7 @@ nav {
   display: flex;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
 }
+
 .menu-toggle .hamburger-menu {
   display: none;
   opacity: 0;
@@ -175,8 +181,9 @@ nav {
 .menu-toggle:hover .hamburger-menu {
   display: block;
   opacity: 1;
-  transition: opacity 0.5s ease-out;                               
+  transition: opacity 0.5s ease-out;
 }
+
 nav.sticky {
   position: fixed;
   top: 0;
@@ -185,6 +192,7 @@ nav.sticky {
   transition: transform 0.7s ease-in-out;
   transform: translateY(0);
 }
+
 .sticky-side {
   position: fixed;
   top: 0;
@@ -193,6 +201,7 @@ nav.sticky {
   transition: transform 0.7s ease-in-out;
   transform: translateX(0);
 }
+
 nav.sticky.hidden {
   transform: translateY(-100%);
 }
@@ -230,6 +239,7 @@ nav.sticky.hidden {
   /* width: 70px; */
   transition: 3s;
 }
+
 /* 
 .menu li:hover {
   font-size: 17px;
@@ -305,7 +315,8 @@ abbr :hover {
   .menu-toggle input:checked~ul {
     display: block;
     width: 100%;
-    .hamburger-menu{
+
+    .hamburger-menu {
       display: none;
     }
   }
@@ -381,17 +392,17 @@ abbr :hover {
 @keyframes bounce {
   0% {
     transform: translateY(0);
-    
+
   }
 
   50% {
     transform: translateY(-20px);
-    
+
   }
 
   100% {
     transform: translateY(0);
-   
+
   }
 }
 
@@ -409,8 +420,9 @@ abbr :hover {
 
 
 }
+
 .fa-angle-double-down {
-  background: radial-gradient( #9583d1, #3e18b1, #4926bd, #9583d1);
+  background: radial-gradient(#9583d1, #3e18b1, #4926bd, #9583d1);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   /* text-shadow: 0 0 10px #9583d1, 0 0 20px #4926bd, 0 0 30px #9583d1; */
@@ -484,7 +496,7 @@ canvas {
 
 .back {
   /* background:  */
-  background: #190d4186 ;
+  background: #190d4186;
   backdrop-filter: blur(10px);
   /* background: -webkit-linear-gradient(45deg, #cedce7 0%, #596a72 100%);
   background: -o-linear-gradient(45deg, #cedce7 0%, #596a72 100%);
@@ -495,8 +507,8 @@ canvas {
   background: linear-gradient(45deg, #30197d, #30197d);
   color: #fff;
   font-size: 1.5rem;
-  align-content:center;
-  
+  align-content: center;
+
 }
 
 .front:after {

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <link rel="stylesheet" href="mystyle.css">
+    <link rel="stylesheet" href="formstyle.css">
+</head>
+
+<body>
+
+    <div class="navbar-container"></div>
+    <div style="background: linear-gradient(45deg, #0e0625, #210c5e, #30197d);
+        background: #30197d;
+    display: flex;"><br>
+    <br>
+    <br>
+    <br>
+    <br></div>
+    <div class="container">
+        
+        <form name="product">
+            <h1 style="color: gray;">Registration for MEGAMUN23</h1>
+            <input type="text" id="name" name="name" placeholder="Your Name" required>
+            <input type="email" id="email" name="email" placeholder="Email Id" required>
+            <input type="text" id="school" name="school" placeholder="School" required>
+            <input type="number" id="phone" name="phone" placeholder="Phone no." required min="1">
+            <textarea id="message" rows="4" name="message" placeholder="Additional Remarks" style="width: 100%; resize: none;"></textarea>
+            <button type="submit">Register</button>
+        </form>
+    </div>
+    <script src="formscript.js"></script>
+    <script src="main.js" defer></script>
+    <script>
+        // Fetch the contents of the navbar HTML file
+        fetch("navbar.html")
+            .then(response => response.text())
+            .then(data => {
+                // Insert the navbar HTML into the navbar-container element
+                const navbarContainer = document.querySelector('.navbar-container');
+                navbarContainer.innerHTML = data;
+            });
+    </script>
+</body>
+
+</html>
+

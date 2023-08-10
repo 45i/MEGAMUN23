@@ -92,8 +92,12 @@ header:after {
 }
 
 ::selection {
-  color: #ffffff;
-  background-color: #360063;
+  color: goldenrod;
+  
+  /* back: #ffffff; */
+  background: linear-gradient(45deg, #440000be, #290d7adc, #351797be);
+  text-shadow: 0 0 10px #000;
+  
 }
 
 h1 {
@@ -263,15 +267,15 @@ nav.sticky.hidden {
 }
 
 abbr {
-  text-decoration: underline;
-  cursor: cell;
-}
-
-abbr :hover {
-  color: #fff;
-  text-decoration: none;
-  cursor: grabbing;
-  content: attr(title);
+  text-decoration: dotted underline;
+  text-emphasis: inherit;
+  text-decoration-thickness: 2px;
+  text-decoration-skip-ink: auto;
+  text-decoration-color: #383838;
+  /* cursor: cell; */
+  font-weight: 700;
+  color: wheat;
+  font-size: 1.5rem;
 }
 
 .menu-toggle input {
@@ -604,6 +608,12 @@ canvas {
   right: 0;
   margin: 0 auto;
   bottom: -.75rem;
+}
+
+abbr:hover {
+  text-decoration-line: none;
+  cursor: pointer;
+
 }
 
 .front .inner span {

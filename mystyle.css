@@ -61,6 +61,7 @@ header {
   background-color: #fff;
   line-height: 2.5;
   transition: background 0.3s ease-out;
+  
   /*   
   border-color: #000;
   border-style: dashed;
@@ -495,6 +496,7 @@ canvas {
   color: #fff;
   font-size: 1.5rem;
   align-content:center;
+  
 }
 
 .front:after {
@@ -616,4 +618,3 @@ canvas {
     margin: 0 0 2rem 0;
   }
 }
-

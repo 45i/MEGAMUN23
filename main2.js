@@ -1,3 +1,11 @@
+const menuIcon = document.querySelector('.bx-menu');
+const navbar = document.querySelector('.navbar');
+
+menuIcon.onclick = () => {
+    console.log('Menu icon clicked');
+    menuIcon.classList.toggle('bx-x');
+    navbar.classList.toggle('open');
+};
 const menuToggle = document.querySelector('.menu-toggle');
 const menu = document.querySelector('.menu');
 

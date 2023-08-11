@@ -98,8 +98,7 @@
         </div>
 
     </div>
-    <script src="main.js" defer></script>
-    <script>
+    <script defer>
         // Fetch the contents of the navbar HTML file
         fetch("navbar.html")
             .then(response => response.text())
@@ -107,9 +106,21 @@
                 // Insert the navbar HTML into the navbar-container element
                 const navbarContainer = document.querySelector('.navbar-container');
                 navbarContainer.innerHTML = data;
+
+                // Access the menuIcon element and add a click event listener
+                const menuIcon = document.querySelector('.bx-menu');
+                const navbar = document.querySelector('.navbar');
+
+                menuIcon.onclick = () => {
+                    console.log("clicked");
+                    
+                    menuIcon.classList.toggle('bx-x');
+                    navbar.classList.toggle('open');
+                };
             });
     </script>
 
+        <script src="main.js" async="false"></script>
 
 
 </body>

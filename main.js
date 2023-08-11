@@ -1,4 +1,11 @@
+// const menuIcon = document.querySelector('.bx-menu');
+// const navbar = document.querySelector('.navbar');
 
+// menuIcon.onclick = () => {
+//   console.log('Menu icon clicked');
+//   menuIcon.classList.toggle('bx-x');
+//   navbar.classList.toggle('open');
+// };
 let prevScrollpos = window.scrollY;
 window.onscroll = function() {
   let currentScrollPos = window.scrollY;
@@ -70,18 +77,18 @@ document.querySelectorAll("[data-value]").forEach(element => {
     event.target.innerText = event.target.dataset.value;
   });
 });
-document.addEventListener('DOMContentLoaded', function () {
-  new Splide('#image-carousel', {
-    heightRatio: 0.5,
-  }).mount();
-});
+// document.addEventListener('DOMContentLoaded', function () {
+//   new Splide('#image-carousel', {
+//     heightRatio: 0.5,
+//   }).mount();
+// });
 const back = document.querySelector('.header');
 
-window.addEventListener('scroll', () => {
-  const scrollPos = window.scrollY;
-  const angle = scrollPos / 1;
-  back.style.background = `linear-gradient(${angle*100}deg, #08001f, #210c5e, #30197d)`;
-});
+// window.addEventListener('scroll', () => {
+//   const scrollPos = window.scrollY;
+//   const angle = scrollPos / 1;
+//   back.style.background = `linear-gradient(${angle*100}deg, #08001f, #210c5e, #30197d)`;
+// });
 var loader = document.getElementById("preloader");
 window.addEventListener("load", function () {
   loader.style.display = "none";

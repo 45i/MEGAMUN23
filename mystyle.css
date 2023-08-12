@@ -694,6 +694,9 @@ abbr:hover {
   .navbar.open {
     right: 0;
   }
+  .bx bx-menu{
+    color:#fff;
+  }
 /* Hide horizontal scrollbar */
 body {
   overflow-x: hidden;

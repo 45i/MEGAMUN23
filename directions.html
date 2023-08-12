@@ -47,19 +47,37 @@
     <!-- Google Map Element -->
     <!-- ================== -->
   </main>
+<script defer>
+  // Fetch the contents of the navbar HTML file
+  fetch("navbar.html")
+    .then(response => response.text())
+    .then(data => {
+      // Insert the navbar HTML into the navbar-container element
+      const navbarContainer = document.querySelector('.navbar-container');
+      navbarContainer.innerHTML = data;
 
-  <script src="main.js" defer></script>
+      // Access the menuIcon element and add a click event listener
+      const icon = document.querySelector('.main');
+      const menuIcon = document.querySelector('.bx-menu');
+      const navbar = document.querySelector('.navbar');
+
+      menuIcon.onclick = () => {
+        console.log("clicked");
+        icon.classList.toggle('open');
+        if (menuIcon.classList.contains('open')) {
+          menuIcon.innerHTML = '<i class="fas fa-times"></i>';
+        } else {
+          menuIcon.innerHTML = '<i class="fas fa-bars"></i>';
+        }
+        menuIcon.classList.toggle('bx-x');
+        navbar.classList.toggle('open');
+
+      };
+    });
+</script>
+  <!-- <script src="main.js" defer></script> -->
   <script src="main2.js" defer></script>
-  <script>
-    // Fetch the contents of the navbar HTML file
-    fetch("navbar.html")
-      .then(response => response.text())
-      .then(data => {
-        // Insert the navbar HTML into the navbar-container element
-        const navbarContainer = document.querySelector('.navbar-container');
-        navbarContainer.innerHTML = data;
-      });
-  </script>
+  
 
 
 

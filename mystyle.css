@@ -298,7 +298,9 @@ abbr {
   .navbar {
     display: none;
   }
-
+.bx bx-menu{
+  display: none;
+}
   .menu-toggle {
     display: block;
     cursor: pointer;

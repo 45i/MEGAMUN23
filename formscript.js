@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbxxULJ0y-ugsyf23cVX3MUNUR41MBozlSP3FDOiAqiGtCq__oMfq1vPFFQR21LrqvU/exec'; // Replace SCRIPT_ID with your Google Apps Script ID
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbwph-i4-YnJHg2-sw4mAOjhucXEvY7CSyPtEQE84LvEzTbw059K5Ddrss3RHAnq3sJP/exec'; // Replace SCRIPT_ID with your Google Apps Script ID
     const form = document.forms['product'];
 
     form.addEventListener('submit', e => {

@@ -11,17 +11,20 @@
 </head>
 
 <body>
-
+    <!-- <div id="target-element">
+        <div id="preloader"></div>
+    </div> -->
     <div class="navbar-container"></div>
-    <div style="background: linear-gradient(45deg, #0e0625, #210c5e, #30197d);
+    <!-- <div style="background: linear-gradient(45deg, #0e0625, #210c5e, #30197d);
         background: #30197d;
     display: flex;"><br>
+    <br></div> -->
     <br>
     <br>
     <br>
-    <br></div>
+    
     <div class="container">
-        
+        <div class="scroll-down"><i class="fas fa-angle-double-down"></i></div>
         <form name="product">
             <h1 style="color: gray;">Registration for MEGAMUN23</h1>
             <input type="text" id="name" name="name" placeholder="Your Name" required>
@@ -32,8 +35,6 @@
             <button type="submit">Register</button>
         </form>
     </div>
-    <script src="formscript.js"></script>
-    <script src="main.js" defer></script>
     <script defer>
         // Fetch the contents of the navbar HTML file
         fetch("navbar.html")
@@ -44,17 +45,27 @@
                 navbarContainer.innerHTML = data;
 
                 // Access the menuIcon element and add a click event listener
+                const icon = document.querySelector('.main');
                 const menuIcon = document.querySelector('.bx-menu');
                 const navbar = document.querySelector('.navbar');
 
                 menuIcon.onclick = () => {
                     console.log("clicked");
-
+                    icon.classList.toggle('open');
+                    if (menuIcon.classList.contains('open')) {
+                        menuIcon.innerHTML = '<i class="fas fa-times"></i>';
+                    } else {
+                        menuIcon.innerHTML = '<i class="fas fa-bars"></i>';
+                    }
                     menuIcon.classList.toggle('bx-x');
                     navbar.classList.toggle('open');
+
                 };
             });
     </script>
+    <script src="formscript.js"></script>
+    <!-- <script src="main.js" defer></script> -->
+    
 </body>
 
 </html>

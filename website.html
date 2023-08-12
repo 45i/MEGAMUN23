@@ -17,39 +17,20 @@
     <header>
         <div class="content">
             <h1><b>MEGA</b><span class="thin">MUN</span><b>2023</b> </h1>
-            <h1><b data-value="STARTS">STARTS</b><span> IN</span> </h1>
+            <h1><b >STARTS</b><span> IN</span> </h1>
 
             <b><abbr title= "Days : Hours : Minutes : Seconds" class="countdown">
                 -- : -- : -- : --
             </abbr>
             </b>
         </div>
-        <a  href="form.html"><button class="btn-3"><b>Register Now</b></button></a>
+        <div class="cols">
+        <a  href="form.html"><button ><b>Register Now</b></button></a>
+        <a  href="directions.html"><button ><b>Get Directions</b></button></a>
+        </div>
         <div class="scroll-down"><i class="fas fa-angle-double-down"></i></div>
     </header>
-    <!-- <nav>
-        <div class="logo">Logo</div>
-        <ul class="menu">
-            <li><a href="#">
-                    <h6 data-value="Home">Home</h6>
-                </a></li>
-            <li><a href="#">
-                    <h6 data-value="About">About</h6>
-                </a></li>
-            <li><a href="#">
-                    <h6 data-value="Services">Services</h6>
-                </a></li>
-            <li><a href="#">
-                    <h6 data-value="Contact">Contact</h6>
-                </a></li>
-        </ul>
-        <div class="menu-toggle">
-            <input type="checkbox">
-            <span></span>
-            <span></span>
-            <span></span>
-        </div>
-    </nav> -->
+    
 
     <div id="target-element">
         <div id="preloader"></div>
@@ -108,14 +89,21 @@
                 navbarContainer.innerHTML = data;
 
                 // Access the menuIcon element and add a click event listener
+                const icon = document.querySelector('.main');
                 const menuIcon = document.querySelector('.bx-menu');
                 const navbar = document.querySelector('.navbar');
 
                 menuIcon.onclick = () => {
                     console.log("clicked");
-                    
+                    icon.classList.toggle('open');
+                    if (menuIcon.classList.contains('open')) {
+                        menuIcon.innerHTML = '<i class="fas fa-times"></i>';
+                    } else {
+                        menuIcon.innerHTML = '<i class="fas fa-bars"></i>';
+                    }
                     menuIcon.classList.toggle('bx-x');
                     navbar.classList.toggle('open');
+
                 };
             });
     </script>

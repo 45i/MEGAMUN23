@@ -11,8 +11,10 @@ window.onscroll = function() {
   let currentScrollPos = window.scrollY;
   if (prevScrollpos > currentScrollPos) {
     document.querySelector("nav").classList.remove("hidden");
+    
   } else {
     document.querySelector("nav").classList.add("hidden");
+
   }
   prevScrollpos = currentScrollPos;
 }

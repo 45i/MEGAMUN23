@@ -21,7 +21,8 @@ body{
 }
 
 form {
-    background: #fff;
+    background: #ffffff;
+    /* background:linear-gradient(45deg, #c0c0c0, #d1d1d1, #d4d4d4); */
     display: flex;
     flex-direction: column;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
@@ -34,15 +35,35 @@ z-index: 1;
     width: 100vw-calc(25*100vw/100);
 }
 
+.fa-undo {
+    background: #000000;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 
+    /* text-shadow: 0 0 10px #9583d1, 0 0 20px #4926bd, 0 0 30px #9583d1; */
+    /* border: 2px solid white; */
+}
 /* form h3 {
     color: #555;
     font-weight: 800;
     margin-bottom: 20px;
 } */
-form [required] {
-  border: 2px dashed rgba(255, 0, 0, 0.411);
-  /* background: linear-gradient(45deg, #ff000015, #ffff0010); */
+body [required] {
+  position: relative;
+    /* animation: blink 1s linear infinite alternate; */
+  border: 2px ridge rgba(255, 0, 0, 0.384);
+  box-shadow: inset  0 2px rgba(117, 117, 117, 0.384);
+  /* box-shadow:   0 2px rgba(255, 255, 255, 0.384); */
+  
+}
+
+body [required]::before {
+  content: "*";
+  color: red;
+  position: absolute;
+  top: 0;
+  right: -10px;
+  font-size: 12px;
 }
 form input,
 form textarea,
@@ -67,6 +88,7 @@ form button {
   border: 2px dashed transparent;
   
   /* background: linear-gradient(45deg, #0e0585, #206c5e, #30157d); */
+  font-size: large;
   background-clip: padding-box;
 }
 form button:hover {
@@ -77,6 +99,16 @@ form button:hover {
 @keyframes dash {
     to {
         border-color: #000000;
+    }
+
+    from {
+        border-color: currentColor;
+    }
+}
+
+@keyframes blink {
+    to {
+        color: goldenrod;
     }
 
     from {

@@ -11,9 +11,11 @@
     <link rel="stylesheet" href="formstyle.css">
 </head>
 
-<body><div><div class="navbar-container"></div>
-    <div class="scroll-down"><i class="fas fa-angle-double-down"></i></div>
-</div>
+<body>
+    <div>
+        <div class="navbar-container"></div>
+        <div class="scroll-down"><i class="fas fa-angle-double-down"></i></div>
+    </div>
 
     <div id="target-element">
         <div id="preloader"></div>
@@ -27,23 +29,37 @@
     <br>
 
     <div class="container2">
-        <form name="product">
-            <h1 style="color: gray;">Registration for MEGAMUN23</h1>
-            <input type="text" id="name" name="name" placeholder="Your Name" required>
-            <input type="email" id="email" name="email" placeholder="Email Id" required>
-            <input type="text" id="school" name="school" placeholder="School" required>
-            <input type="number" id="phone" name="phone" placeholder="Phone no." required min="1">
+        <div class="form-container">
+            <form name="product">
+                <h1
+                    style="color: rgb(185, 184, 184); align-self: center; font-weight: 1000; letter-spacing: 0.1px;text-shadow: 0 2px #00000081;">
+                    Registration</h1>
 
-            <select id="committee" name="committee" required>
-                <option value="" disabled selected>Select a committee</option>
-                <option value="committee1">Committee 1</option>
-                <option value="committee2">Committee 2</option>
-                <option value="committee3">Committee 3</option>
-            </select>
+                <input type="text" id="name" name="name" placeholder="Your Name" required>
+                <input type="email" id="email" name="email" placeholder="Email ID" required>
+                <input type="text" id="school" name="school" placeholder="School" required>
+                <input type="number" id="phone" name="phone" placeholder="Phone no." required min="1">
 
-            <!-- <textarea id="message" rows="4" name="message" placeholder="Additional Remarks" style="width: 100%; resize: none;"></textarea>  -->
-            <button type="submit">Register</button>
-        </form>
+                <select id="committee" name="committee" required>
+                    <option value="" disabled selected>Select a committee</option>
+                    <option value="committee1">Committee 1</option>
+                    <option value="committee2">Committee 2</option>
+                    <option value="committee3">Committee 3</option>
+                </select>
+
+                <!-- <textarea id="message" rows="4" name="message" placeholder="Additional Remarks" style="width: 100%; resize: none;"></textarea>  -->
+                <div class="cols">
+                    <button type="submit">Register</button>
+                    <button type="reset"><abbr title="Reset Form">🔁</abbr></button>
+                </div>
+            </form>
+
+            <div style="text-align: center;">
+                <br>
+                <a href="website.html"><button required><b style="font-size: x-large;">Return to Home</b></button></a>
+            </div>
+        </div>
+
     </div>
     <script defer>
         // Fetch the contents of the navbar HTML file

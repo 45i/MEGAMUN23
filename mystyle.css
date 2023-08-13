@@ -114,28 +114,43 @@ button {
   height: 10vh;
   background: #a02f54;
   position: relative;
-  background: #f3f0f1;
-  /* margin-bottom: 25px; */
+  background: #f3f0f100;
+  margin-bottom: 0px;
   border-radius: 36px;
   text-align: center;
   cursor: pointer;
   transition: all 01s ease-in-out;
-
-
+  color: #fff;
+  outline: none;
   font-size: 70%;
+  border: none; 
+  border: 2px dashed transparent;/* Add this line to remove the border */
   span {
-    line-height: 100px;
+    line-height: 0px;
     font-family: "Montserrat", sans-serif;
     font-weight: semibold;
   }
+  box-shadow: 0 0 10px #000 ;
 }
 button:hover {
   /* box-shadow: -6px -6px 10px rgba(255, 255, 255, 0.8), */
   /* 6px 6px 10px rgba(0, 0, 0, 0.2); */
   color: #410ee9;
   background: #a8a8a8;
+
+  /* transition: all 0.3s ease-in-out; */
+  animation: dash 1s linear infinite alternate;
 }
 
+@keyframes dash {
+  to {
+    border-color: #000000;
+  }
+
+  from {
+    border-color: currentColor;
+  }
+}
 button:active {
   opacity: 1;
   box-shadow: inset -4px -4px 8px rgba(255, 255, 255, 0.5),
@@ -209,7 +224,7 @@ nav {
   background: #30197d77;
   backdrop-filter: blur(10px);
   transition: 0.75s;
-  z-index: 1000;
+  z-index: 10001;
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
@@ -250,15 +265,20 @@ nav.sticky {
 nav.sticky.hidden {
   transform: translateY(-100%);
 }
-
 .logo {
   font-size: 48px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2px;
   color: #fff;
+  overflow: hidden;
+  transform: scale(1.0);
+  transition: transform 0.5s ease-in-out;
 }
 
+nav:hover .logo {
+  /* transform: scale(0.8); */
+}
 .navbar {
   display: flex;
   list-style: none;
@@ -716,7 +736,7 @@ abbr:hover {
     height: auto;
     background: #30197d86;
     backdrop-filter: blur(10px);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5) ;
+    box-shadow: 1 0 10px rgba(0, 0, 0, 0.5) ;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -766,7 +786,7 @@ body::-webkit-scrollbar-thumb {
   font-size: 35px;
   
   cursor: pointer;
-  z-index: -1;
+  z-index: 1000000000;
   display: none;
 }
 

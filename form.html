@@ -1,20 +1,23 @@
 <!DOCTYPE html>
+<html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Test</title>
+    <title>Self-Registration</title>
     <link rel="stylesheet" href="mystyle.css">
     <link rel="stylesheet" href="formstyle.css">
 </head>
 
-<body>
-    <!-- <div id="target-element">
+<body><div><div class="navbar-container"></div>
+    <div class="scroll-down"><i class="fas fa-angle-double-down"></i></div>
+</div>
+
+    <div id="target-element">
         <div id="preloader"></div>
-    </div> -->
-    <div class="navbar-container"></div>
+    </div>
     <!-- <div style="background: linear-gradient(45deg, #0e0625, #210c5e, #30197d);
         background: #30197d;
     display: flex;"><br>
@@ -22,16 +25,23 @@
     <br>
     <br>
     <br>
-    
-    <div class="container">
-        <div class="scroll-down"><i class="fas fa-angle-double-down"></i></div>
+
+    <div class="container2">
         <form name="product">
             <h1 style="color: gray;">Registration for MEGAMUN23</h1>
             <input type="text" id="name" name="name" placeholder="Your Name" required>
             <input type="email" id="email" name="email" placeholder="Email Id" required>
             <input type="text" id="school" name="school" placeholder="School" required>
             <input type="number" id="phone" name="phone" placeholder="Phone no." required min="1">
-            <textarea id="message" rows="4" name="message" placeholder="Additional Remarks" style="width: 100%; resize: none;"></textarea>
+
+            <select id="committee" name="committee" required>
+                <option value="" disabled selected>Select a committee</option>
+                <option value="committee1">Committee 1</option>
+                <option value="committee2">Committee 2</option>
+                <option value="committee3">Committee 3</option>
+            </select>
+
+            <!-- <textarea id="message" rows="4" name="message" placeholder="Additional Remarks" style="width: 100%; resize: none;"></textarea>  -->
             <button type="submit">Register</button>
         </form>
     </div>
@@ -64,9 +74,8 @@
             });
     </script>
     <script src="formscript.js"></script>
-    <!-- <script src="main.js" defer></script> -->
-    
+    <script src="main.js" defer></script>
+
 </body>
 
 </html>
-

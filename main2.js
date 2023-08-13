@@ -1,3 +1,12 @@
+const scrollDown = document.querySelector('.scroll-down');
+const targetElement = document.querySelector('#target-element');
+
+scrollDown.addEventListener('click', () => {
+    targetElement.scrollIntoView({
+        behavior: 'smooth'
+    });
+});
+
 const menuIcon = document.querySelector('.bx-menu');
 const navbar = document.querySelector('.navbar');
 

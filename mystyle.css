@@ -5,15 +5,31 @@
 }
 
 @import url('https://fonts.googleapis.com/css?family=Varela+Round');
+@font-face {
+  font-family: st;
+  src: url(regular.OTF);
+}
+@font-face {
+  font-family: bold;
+  src: url(bold.OTF);
+}
+@font-face {
+  font-family: medium;
+  src: url(medium.OTF);
+}
+@font-face {
+  font-family: thin;
+  src: url(thin.otf);
+}
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: st;
 }
 
 body {
-  font-family: 'Montserrat', sans-serif;
   margin: 0;
   background: linear-gradient(45deg, #30197d, #30197d);
 }
@@ -45,12 +61,13 @@ header {
 b {
   /* text-shadow: 0 0 10px #8f8f8f, 0 0 20px #8f8f8f, 0 0 30px #8f8f8f;
      */
-  font-weight: 10000;
+  font-weight: 10000000;
+  font-family: bold;
 }
 
 .thin {
-  font-family: 'Roboto Thin', sans-serif;
-
+  /* font-family: 'Roboto Thin', sans-serif; */
+font-family: thin;
   letter-spacing: -1px;
 }
 
@@ -94,7 +111,7 @@ header:after {
 
 ::selection {
   background-color: goldenrod;
-  
+  font-family: thin;
   /* back: #ffffff; */
   position: absolute;
     top: 50%;
@@ -164,13 +181,13 @@ button:hover::before {
   font-weight: bold;
   color: #007bff00;
   transition: transform 0.3s ease-in-out;
+  font-family: st;
 }
 
 button:hover {
   /* box-shadow: -6px -6px 10px rgba(255, 255, 255, 0.8), */
   /* 6px 6px 10px rgba(0, 0, 0, 0.2); */
   color: #9f8ae6;
-  
   font-size: small;
   letter-spacing: 2px;
   background: #a8a8a8;
@@ -179,6 +196,7 @@ button:hover {
   animation: dash 1s linear infinite alternate;
 }
 button:hover .button-text {
+  font-family: bold;
   bottom: 20px;
     /* Move the text up */
     opacity: 1;
@@ -230,7 +248,8 @@ h2 {
 .countdown {
   color: #fff;
   font-size: 36px;
-  font-weight: 400;
+  font-family: thin;
+  /* font-weight: 400; */
 }
 
 @include breakpoint(480px) {

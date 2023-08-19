@@ -148,7 +148,7 @@ button:hover::before {
   width: 200px;
   padding: 10px;
   background-color: #007bff00;
-  color: #fff;
+  /* color: #fff; */
   border-radius: 5px;
   /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); */
   transition: transform 0.3s ease-in-out;

@@ -8,13 +8,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Self-Registration</title>
     <link rel="stylesheet" href="mystyle.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="formstyle.css">
 </head>
 
 <body>
     <div>
         <div class="navbar-container"></div>
-        <div class="scroll-down"><i class="fas fa-angle-double-down"></i></div>
+        <!-- <div class="scroll-down"><i class="fas fa-angle-double-down"></i></div> -->
     </div>
 
     <div id="target-element">
@@ -49,15 +50,32 @@
 
                 <!-- <textarea id="message" rows="4" name="message" placeholder="Additional Remarks" style="width: 100%; resize: none;"></textarea>  -->
                 <div class="cols">
-                    <button type="submit">Register</button>
-                    <button type="reset"><abbr title="Reset Form">🔁</abbr></button>
+                    <div style="margin-right: 10px;">
+                        <div class="button-container">
+                            <button hovertext="Register" type="submit"><i class="fas fa-check"
+                                    style="color: #00a761; font-size: 200%; "></i></button>
+
+                        </div>
+                        <span class="button-text" style="color: #000000;"></span>
+                    </div>
+                    <div style="margin-right: 10px;">
+                        <div class="button-container">
+                            <button hovertext="Reset Form"  type="reset"><i class="fas fa-times"
+                                    style="color: #ff1e00; font-size: 200%; "></i></button>
+                    
+                        </div>
+                        <span class="button-text" style="color: #000000;"></span>
+                    </div>
+                    <!-- <button type="reset"><abbr title="Reset Form">🔁</abbr></button> -->
                 </div>
+                <br>
+                <br>
             </form>
 
-            <div style="text-align: center;">
+            <!-- <div style="text-align: center;">
                 <br>
                 <a href="website.html"><button required><b style="font-size: x-large;">Return to Home</b></button></a>
-            </div>
+            </div> -->
         </div>
 
     </div>

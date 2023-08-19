@@ -17,7 +17,7 @@ body{
 .content {
     position: relative;
     z-index: 1;
-    color: white; 
+    
 }
 
 form {
@@ -35,14 +35,14 @@ z-index: 1;
     width: 100vw-calc(25*100vw/100);
 }
 
-.fa-undo {
+/* .fa-undo {
     background: #000000;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
     /* text-shadow: 0 0 10px #9583d1, 0 0 20px #4926bd, 0 0 30px #9583d1; */
-    /* border: 2px solid white; */
-}
+    /* border: 2px solid white; 
+} 
 /* form h3 {
     color: #555;
     font-weight: 800;
@@ -80,22 +80,32 @@ form select{
     color: gray;
     border-radius: 10;
 }
-form button {
+/* form button {
   color: #020202;
   width: 150px;
   margin: 20px auto 0;
   border-radius: 30px;
   border: 2px dashed transparent;
   
-  /* background: linear-gradient(45deg, #0e0585, #206c5e, #30157d); */
+  /* background: linear-gradient(45deg, #0e0585, #206c5e, #30157d); 
   font-size: large;
-  background-clip: padding-box;
+  /* background-clip: padding-box; 
 }
 form button:hover {
     transition: all 0.3s ease-in-out;
     animation: dash 1s linear infinite alternate;
+} */
+select:focus {
+    border-color: #007bff;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.582);
 }
-
+select option {
+    padding: 10px;
+    font-size: 1rem;
+    color: #333;
+    background-color: #ffffff;
+            backdrop-filter: blur(10px);
+}
 @keyframes dash {
     to {
         border-color: #000000;

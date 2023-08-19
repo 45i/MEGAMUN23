@@ -127,17 +127,50 @@ padding: 10px 20px;
   border: 2px dashed transparent;/* Add this line to remove the border */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.158);
   font-weight: 1000;
-  overflow: hidden;
+  /* overflow: hidden; */
   span {
     line-height: 0px;
     font-family: "Montserrat", sans-serif;
     font-weight: semibold;
   }
 }
+.button-container {
+  position: relative;
+}
+
+button:hover::before {
+  content: attr(hovertext);
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  width: 200px;
+  padding: 10px;
+  background-color: #007bff00;
+  color: #fff;
+  border-radius: 5px;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); */
+  transition: transform 0.3s ease-in-out;
+}
+
+.button-text {
+  position: absolute;
+  top: -100%;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #007bff00;
+  transition: transform 0.3s ease-in-out;
+}
+
 button:hover {
   /* box-shadow: -6px -6px 10px rgba(255, 255, 255, 0.8), */
   /* 6px 6px 10px rgba(0, 0, 0, 0.2); */
-  color: #410ee9;
+  color: #9f8ae6;
+  
   font-size: small;
   letter-spacing: 2px;
   background: #a8a8a8;
@@ -145,7 +178,12 @@ button:hover {
   /* transition: all 0.3s ease-in-out; */
   animation: dash 1s linear infinite alternate;
 }
-
+button:hover .button-text {
+  bottom: 20px;
+    /* Move the text up */
+    opacity: 1;
+  transition: transform 0.3s ease-in-out;
+}
 @keyframes dash {
   to {
     border-color: #ffffff;

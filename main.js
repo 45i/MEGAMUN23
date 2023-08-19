@@ -104,7 +104,7 @@ scrollDown.addEventListener('click', () => {
   });
 });
 
-let launchDate = new Date("October 5, 2023 00:00:00").getTime();
+let launchDate = new Date("October 11, 2023 00:00:00").getTime();
 
 let timer = setInterval(tick, 1000);
 function tick() {

@@ -168,6 +168,7 @@ button:hover::before {
   /* color: #fff; */
   border-radius: 5px;
   /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); */
+  font-family: thin;
   transition: transform 0.3s ease-in-out;
 }
 
@@ -181,17 +182,39 @@ button:hover::before {
   font-weight: bold;
   color: #007bff00;
   transition: transform 0.3s ease-in-out;
-  font-family: st;
+  font-family: thin;
 }
-
+@media (max-width: 1090px) {
+  .countdown {
+    position: relative;
+    cursor: pointer;
+  }
+  
+  .countdown:hover::after,
+  .countdown:focus::after, .countdown:active::after {
+    content: attr(title);
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 5px;
+    background-color: #ffffff0e;
+                backdrop-filter: blur(10px);
+    color: #fff;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    z-index: 999999999;
+  }
+}
 button:hover {
   /* box-shadow: -6px -6px 10px rgba(255, 255, 255, 0.8), */
   /* 6px 6px 10px rgba(0, 0, 0, 0.2); */
   color: #9f8ae6;
   font-size: small;
   letter-spacing: 2px;
-  background: #a8a8a8;
+  background: #a8a8a84d;
 
+  font-family: bold;
   /* transition: all 0.3s ease-in-out; */
   animation: dash 1s linear infinite alternate;
 }
@@ -336,7 +359,9 @@ nav.sticky.hidden {
   transform: scale(1.0);
   transition: transform 0.5s ease-in-out;
 }
-
+nav a {
+  font-family: thin;
+}
 nav:hover .logo {
   /* transform: scale(0.8); */
 }
@@ -368,6 +393,7 @@ nav:hover .logo {
   margin-right: 48px;
   /* width: 70px; */
   transition: 3s;
+  font-family: thin;
 }
 
 /* 
@@ -398,6 +424,7 @@ abbr {
   text-decoration-thickness: 2px;
   text-decoration-skip-ink: auto;
   text-decoration-color: #383838;
+  
   /* cursor: cell; */
   font-weight: 700;
   color: wheat;
@@ -806,8 +833,9 @@ abbr:hover {
     right: -270px;
     width: 270px;
     height: auto;
-    background: #30197d86;
-    backdrop-filter: blur(10px);
+    font-family: thin;
+    background-color: #ffffff0e;
+      backdrop-filter: blur(10px);
     box-shadow: 1 0 10px rgba(0, 0, 0, 0.5) ;
     display: flex;
     flex-direction: column;

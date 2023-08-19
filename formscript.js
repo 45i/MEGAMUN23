@@ -19,3 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
   });
+window.addEventListener('beforeunload', function (e) {
+  e.preventDefault();
+  e.returnValue = 'Are you sure you want to discard the form?';
+});

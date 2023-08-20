@@ -190,8 +190,8 @@ button:hover::before {
     cursor: pointer;
   }
   
-  .countdown:hover::after,
-  .countdown:focus::after, .countdown:active::after {
+  abbr:hover::after,
+  abbr:focus::after{
     content: attr(title);
     position: absolute;
     top: 100%;
@@ -200,7 +200,9 @@ button:hover::before {
     padding: 5px;
     background-color: #ffffff0e;
                 backdrop-filter: blur(10px);
-    color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.767);
+  
+                color: #fff;
     border-radius: 5px;
     font-size: 0.8rem;
     z-index: 999999999;

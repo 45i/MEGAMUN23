@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+<link rel="stylesheet" href="mystyle.css">
+
+<body>
+    <div class="navbar-container"></div>
+
+    <header>
+        <h1>Socials</h1>
+        <div class="instagram"><span class="thin" style="color: #fff ; letter-spacing: 2px; font-size: xxx-large;"><i
+                    class="fab fa-instagram" style="background: linear-gradient(220deg,#4f5bd5 ,#962fbf ,#d62976 , #fa7e1e , #feda75 );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;"></i> <span class="thin" style=" font-size: large;letter-spacing: 2px;"><a
+                        class="thin" href="#"
+                        style="text-decoration: none; color: #fff; font: bold;font-size: large;letter-spacing: 2px;">@megamun23</a></span></span>
+        </div>
+
+    </header>
+    <script defer>
+        // Fetch the contents of the navbar HTML file
+        fetch("navbar.html")
+            .then(response => response.text())
+            .then(data => {
+                // Insert the navbar HTML into the navbar-container element
+                const navbarContainer = document.querySelector('.navbar-container');
+                navbarContainer.innerHTML = data;
+
+                // Access the menuIcon element and add a click event listener
+                const icon = document.querySelector('.main');
+                const menuIcon = document.querySelector('.bx-menu');
+                const navbar = document.querySelector('.navbar');
+
+                menuIcon.onclick = () => {
+                    console.log("clicked");
+                    icon.classList.toggle('open');
+                    if (menuIcon.classList.contains('open')) {
+                        menuIcon.innerHTML = '<i class="fas fa-times"></i>';
+                    } else {
+                        menuIcon.innerHTML = '<i class="fas fa-bars"></i>';
+                    }
+                    menuIcon.classList.toggle('bx-x');
+                    navbar.classList.toggle('open');
+
+                };
+            });
+    </script>
+    <!-- <script src="main.js" defer></script> -->
+    <script src="main2.js" defer></script>
+</body>
+
+</html>

@@ -4,7 +4,8 @@
  <div class="logo">
   <a href="website.html"><img src="megamun.png" width="10%" height="10%" style="float: left;"></a>
  
- 
+
+
  </div>
  
  <ul class="navbar">
@@ -42,3 +43,16 @@
   </div>
 </nav>
 <script src="main2.js" defer></script>
+<script>
+  const toggleModeButton = document.getElementById('toggle-mode');
+  const root = document.documentElement;
+
+  toggleModeButton.addEventListener('click', () => {
+    if (root.getAttribute('data-theme') === 'dark') {
+      root.setAttribute('data-theme', 'light');
+    } else {
+      root.setAttribute('data-theme', 'dark');
+    }
+  });
+</script>
+

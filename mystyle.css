@@ -1,3 +1,9 @@
+:root {
+  --black: #111;
+  --yellow: #fdb813;
+  --grey: #514e4b;
+  --white: #fff;
+}
 @mixin breakpoint($breakpoint) {
   @media screen and (min-width: $breakpoint) {
     @content;
@@ -27,11 +33,16 @@
   padding: 0;
   box-sizing: border-box;
   font-family: st;
+  user-select: none;
 }
-
+/* *:hover::before {
+  cursor: pointer;
+  content: attr(hovertext);
+  font: st;
+} */
 body {
   margin: 0;
-  background: linear-gradient(45deg, #30197d, #30197d);
+  background: linear-gradient(45deg, #240E64, #2D1778);
 }
 
 html,
@@ -78,7 +89,7 @@ header {
   justify-content: center;
   align-items: center;
   text-align: center;
-  background: linear-gradient(45deg, #08001f, #210c5e, #30197d);
+  background: linear-gradient(45deg, #110437,#190849, #240E64, #2D1778);
   background-color: #fff;
   line-height: 2.5;
   transition: background 0.3s ease-out;
@@ -316,6 +327,7 @@ nav {
   padding: 10px 20px;
   display: flex;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+  overflow: hidden;
 }
 
 .menu-toggle .hamburger-menu {
@@ -676,7 +688,7 @@ canvas {
 }
 
 .info_text {
-  background: linear-gradient(45deg, #30197d, #30197d);
+  background: linear-gradient(45deg, #240E64, #2D1778);
   color: #fff;
   font-size: 1.5rem;
   align-content: center;
@@ -822,30 +834,125 @@ abbr:hover {
     margin: 0px 20px;
   }
 }
+.switch {
+  width: 110px;
+  height: 60px;
+  padding-top: 2px;
+  background-color: var(--grey);
+  border-radius: 40px;
+  cursor: pointer;
+  outline: none;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
 
+.toggle-button {
+  transform: scale(0.8);
+  transform-origin: center center;
+}
+
+.toggle {
+  position: relative;
+  width: 35px;
+  height: 35px;
+  margin: 12px;
+  margin-top: 12px;
+  background-color: var(--yellow);
+  border-radius: 50%;
+}
+
+.moon-mask {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  margin: -74px 0 0 34px;
+  background-color: var(--grey);
+  border-radius: 50%;
+}
+
+.circles-wrapper {
+  .circle {
+    position: absolute;
+    width: 4px;
+    height: 8px;
+    background-color: var(--white);
+    border-radius: 10px;
+
+    &:first-child {
+      margin: -57px 0 0 27px;
+    }
+
+    &:nth-child(2) {
+      margin: -9px 0 0 28px;
+    }
+
+    &:nth-child(3) {
+      margin: -32px 0 0 51px;
+      transform: rotate(90deg);
+    }
+
+    &:nth-child(4) {
+      margin: -33px 0 0 4px;
+      transform: rotate(90deg);
+    }
+
+    &:nth-child(5) {
+      margin: -14px 0 0 10px;
+      transform: rotate(45deg);
+    }
+
+    &:nth-child(6) {
+      margin: -14px 0 0 45px;
+      transform: rotate(320deg);
+    }
+
+    &:nth-child(7) {
+      margin: -50px 0 0 10px;
+      transform: rotate(135deg);
+    }
+
+    &:nth-child(8) {
+      margin: -50px 0 0 45px;
+      transform: rotate(235deg);
+    }
+  }
+}
 @media (max-width: 1090px) {
   .main {
     display: block;
   }
 
   .navbar {
-    position: absolute;
-    z-index: 999999;
-    top: 100%;
-    right: -270px;
-    width: 270px;
-    height: auto;
-    font-family: thin;
-    background-color: #ffffff0e;
-      backdrop-filter: blur(10px);
-    box-shadow: 1 0 10px rgba(0, 0, 0, 0.5) ;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    border-radius: 10px;
-    transition: all 0.5s ease;
-  }
+  position: absolute;
+  z-index: 999999;
+  top: 100%;
+  right: -270px;
+  width: 270px;
+  height: auto;
+  font-family: sans-serif;
+  background-color: #110437;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  color: #333;
+}
 
+.navbar li {
+  padding: 10px;
+  font-size: 16px;
+  color: #333;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.navbar li:hover {
+  background-color: #190849;
+  color: #111;
+}
   .navbar a {
     display: block;
     margin: 12px 0;
@@ -872,14 +979,14 @@ body {
 body::-webkit-scrollbar {
   width: 0.5em;
   background-color: #ffffff;
-    background: linear-gradient(45deg, #311b74, #210c5e, #30197d);
+      background: linear-gradient(45deg,  #190849, #240E64, #2D1778);
 
     backdrop-filter: blur(10px);
 }
 
 body::-webkit-scrollbar-thumb {
   background-color: #000000;
-  background: linear-gradient(45deg, #0e0625, #210c5e, #30197d);
+    background: linear-gradient(45deg, #110437, #190849, #240E64, #2D1778);
   border-radius: 10px;
     box-shadow: 0 0 10px #00000070;
     backdrop-filter: blur(10px);
@@ -899,7 +1006,6 @@ body::-webkit-scrollbar-thumb {
 }
 body::-webkit-scrollbar-track {
   background-color: #ffffff;
-    background: linear-gradient(45deg, #311b74, #210c5e, #30197d);
-
+  background: linear-gradient(45deg,#190849, #240E64, #2D1778);
     backdrop-filter: blur(10px);
 }

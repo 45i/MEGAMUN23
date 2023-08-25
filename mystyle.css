@@ -5,18 +5,22 @@
 }
 
 @import url('https://fonts.googleapis.com/css?family=Varela+Round');
+
 @font-face {
   font-family: st;
   src: url(regular.OTF);
 }
+
 @font-face {
   font-family: bold;
   src: url(bold.OTF);
 }
+
 @font-face {
   font-family: medium;
   src: url(medium.OTF);
 }
+
 @font-face {
   font-family: thin;
   src: url(thin.otf);
@@ -41,6 +45,7 @@ body,
 header {
   height: 100%;
 }
+
 /* 
 .btn-3 {
   background: linear-gradient(45deg, #150641, #190849, #2A1472);
@@ -69,7 +74,7 @@ b {
 
 .thin {
   /* font-family: 'Roboto Thin', sans-serif; */
-font-family: thin;
+  font-family: thin;
   letter-spacing: -1px;
 }
 
@@ -104,6 +109,7 @@ header:after {
   border-style: dashed; */
 
 }
+
 footer {
   position: relative;
   display: flex;
@@ -115,14 +121,31 @@ footer {
   margin: 2px 0px;
   background-color: #383838;
   color: #fff;
-  
+
   line-height: 2.5;
   transition: background 0.3s ease-out;
 
-    
+
   /* border-color: #ffffff; */
   /* border-style: dashed; */
   /* border-image: linear-gradient(45deg, #0F0331, #2A1472) 1; */
+}
+
+.legacy {
+  margin-top: 10px;
+  
+}
+
+.invitation {
+  margin-top: 20px;
+  
+}
+
+.glimpse,
+.unveiling {
+  margin-top: 20px;
+  margin-bottom: 30px;
+  
 }
 
 footer:after {
@@ -150,21 +173,22 @@ footer:after {
   font-family: thin;
   /* back: #ffffff; */
   position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    /* font-size: 25vw; */
-    animation-name: wave;
-    animation-iteration-count: infinite;
-    animation-timing-function: ease-in-out;
-    font-family: "Righteous", cursive;
-    -webkit-text-stroke-width: 0.1vw;
-    -webkit-text-stroke-color: black;
-  
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* font-size: 25vw; */
+  animation-name: wave;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  font-family: "Righteous", cursive;
+  -webkit-text-stroke-width: 0.1vw;
+  -webkit-text-stroke-color: black;
+
 }
+
 button {
-padding: 10px 20px;
-  min-width: 100px; 
+  padding: 10px 20px;
+  min-width: 100px;
   background: #a02f54;
   position: relative;
   background: #f3f0f100;
@@ -176,10 +200,12 @@ padding: 10px 20px;
   color: #fff;
   outline: none;
   font-size: 70%;
-/* border: none;  */
-  border: 2px dashed transparent;/* Add this line to remove the border */
+  /* border: none;  */
+  border: 2px dashed transparent;
+  /* Add this line to remove the border */
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.158);
   font-weight: 1000;
+
   /* overflow: hidden; */
   span {
     line-height: 0px;
@@ -187,6 +213,7 @@ padding: 10px 20px;
     font-weight: semibold;
   }
 }
+
 .button-container {
   position: relative;
 }
@@ -220,30 +247,32 @@ button:hover::before {
   transition: transform 0.3s ease-in-out;
   font-family: thin;
 }
+
 @media (max-width: 1090px) {
   .countdown {
     position: relative;
     cursor: pointer;
   }
-  
+
   abbr:hover::after,
-  abbr:focus::after{
+  abbr:focus::after {
     content: attr(title);
     position: absolute;
     top: 100%;
     left: 50%;
     transform: translateX(-50%);
     padding: 5px;
-        background-color: #0F0331;
-                backdrop-filter: blur(10px);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.767);
-  
-                color: #fff;
+    background-color: #0F0331;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.767);
+
+    color: #fff;
     border-radius: 5px;
     font-size: 0.8rem;
     z-index: 999999999;
   }
 }
+
 button:hover {
   /* box-shadow: -6px -6px 10px rgba(255, 255, 255, 0.8), */
   /* 6px 6px 10px rgba(0, 0, 0, 0.2); */
@@ -256,13 +285,15 @@ button:hover {
   /* transition: all 0.3s ease-in-out; */
   animation: dash 1s linear infinite alternate;
 }
+
 button:hover .button-text {
   font-family: bold;
   bottom: 20px;
-    /* Move the text up */
-    opacity: 1;
+  /* Move the text up */
+  opacity: 1;
   transition: transform 0.3s ease-in-out;
 }
+
 @keyframes dash {
   to {
     border-color: #ffffff;
@@ -272,30 +303,44 @@ button:hover .button-text {
     border-color: currentColor;
   }
 }
+
 button:active {
   opacity: 1;
   box-shadow: inset -4px -4px 8px rgba(255, 255, 255, 0.5),
     inset 8px 8px 16px rgba(0, 0, 0, 0.1);
 }
-h1,h2,h3,h4 {
+
+h1,
+h2,
+h3,
+h4 {
   color: #fff;
   font-size: 28px;
   font-weight: 700;
 }
 
-h1,h2,h3,h4 span {
+h1,
+h2,
+h3,
+h4 span {
   font-weight: 100;
 }
-.socials{
+
+.socials {
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: center;
-  
+
   font-size: 40px;
 }
+
 @include breakpoint(480px) {
-  h1,h2,h3,h4 {
+
+  h1,
+  h2,
+  h3,
+  h4 {
     font-size: 36px;
   }
 }
@@ -394,6 +439,7 @@ nav.sticky {
 nav.sticky.hidden {
   transform: translateY(-100%);
 }
+
 .logo {
   font-size: 48px;
   font-weight: 700;
@@ -404,19 +450,22 @@ nav.sticky.hidden {
   transform: scale(1.0);
   transition: transform 0.5s ease-in-out;
 }
+
 nav a {
   font-family: thin;
 }
+
 nav:hover .logo {
   /* transform: scale(0.8); */
 }
+
 .navbar {
   display: flex;
   list-style: none;
-  
-    
-    border-radius: 10px;
-    
+
+
+  border-radius: 10px;
+
 }
 
 .dropdown-menu {
@@ -469,7 +518,7 @@ abbr {
   text-decoration-thickness: 2px;
   text-decoration-skip-ink: auto;
   text-decoration-color: #383838;
-  
+
   /* cursor: cell; */
   font-weight: 700;
   color: wheat;
@@ -492,9 +541,11 @@ abbr {
   .navbar {
     display: none;
   }
-.bx bx-menu{
-  display: none;
-}
+
+  .bx bx-menu {
+    display: none;
+  }
+
   .menu-toggle {
     display: block;
     cursor: pointer;
@@ -629,14 +680,15 @@ abbr {
   background: radial-gradient(#9583d1, #3e18b1, #4926bd, #9583d1);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  
+
   /* text-shadow: 0 0 10px #9583d1, 0 0 20px #4926bd, 0 0 30px #9583d1; */
   /* border: 2px solid white; */
 }
-.fa-angle-double-down:hover{
+
+.fa-angle-double-down:hover {
   background: radial-gradient(#705fa8, #26087e, #2c1183, #5b4d8b);
   -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent;
   /* border: 2px solid #ffffff; */
   /* background: radial-gradient(#9583d1, #3e18b1, #4926bd, #9583d1); */
   /* -webkit-background-clip: text;
@@ -720,15 +772,15 @@ canvas {
 
 .info_text {
   background: linear-gradient(45deg, #0F0331, #2A1472);
-  color: #ffffff62;
+  color: #ffffffa4;
   font-size: 1.5rem;
   align-content: center;
   position: relative;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
+  display: flex;
+  /* flex-direction: column; */
+  justify-content: center;
+  align-items: center;
+  text-align: center;
 
 }
 
@@ -826,6 +878,7 @@ canvas {
   margin: 0 auto;
   bottom: -.75rem;
 }
+
 .main {
   color: white;
 }
@@ -860,6 +913,7 @@ abbr:hover {
     margin: 0 0 2rem 0;
   }
 }
+
 @media (max-width: 1280px) {
   #main-things {
     padding: 14px 2%;
@@ -886,8 +940,8 @@ abbr:hover {
     height: auto;
     font-family: thin;
     background-color: #0F0331;
-      backdrop-filter: blur(10px);
-    box-shadow: 10px 1px 10px rgb(0, 0, 0) ;
+    backdrop-filter: blur(10px);
+    box-shadow: 10px 1px 10px rgb(0, 0, 0);
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -912,6 +966,7 @@ abbr:hover {
     right: 0;
   }
 }
+
 /* Hide horizontal scrollbar */
 body {
   overflow-x: hidden;
@@ -922,21 +977,22 @@ body {
 body::-webkit-scrollbar {
   width: 0.5em;
   background-color: #ffffff;
-    background: linear-gradient(45deg, #1E0A56, #190849, #2A1472);
+  background: linear-gradient(45deg, #1E0A56, #190849, #2A1472);
 
-    backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
 }
 
 body::-webkit-scrollbar-thumb {
   background-color: #000000;
   background: linear-gradient(45deg, #150641, #190849, #2A1472);
   border-radius: 10px;
-    box-shadow: 0 0 10px #00000070;
-    backdrop-filter: blur(10px);
+  box-shadow: 0 0 10px #00000070;
+  backdrop-filter: blur(10px);
 }
+
 .main {
   font-size: 35px;
-  
+
   cursor: pointer;
   z-index: 1000000000;
   display: none;
@@ -947,9 +1003,10 @@ body::-webkit-scrollbar-thumb {
     display: block;
   }
 }
+
 body::-webkit-scrollbar-track {
   background-color: #ffffff;
-    background: linear-gradient(45deg, #1E0A56, #190849, #2A1472);
+  background: linear-gradient(45deg, #1E0A56, #190849, #2A1472);
 
-    backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
 }

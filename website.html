@@ -61,8 +61,21 @@
 
 
     <div class="info_text">
-        <h1>What Is Megamun?</h1>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad quasi laudantium, nesciunt deleniti quidem repellat sit, veniam blanditiis tempore, fuga harum similique nihil! Sequi quod inventore delectus incidunt quia excepturi. </div>
-
+        <h1>What Is Megamun?</h1>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Ad quasi laudantium, nesciunt
+        deleniti quidem repellat sit, veniam blanditiis tempore, fuga harum similique nihil! Sequi quod inventore
+        delectus incidunt quia excepturi.
+    </div>
+    <div class="footer"></div>
+    <script defer>
+        fetch("footer.html")
+                .then(response => response.text())
+                .then(data => {
+                    // Insert the navbar HTML into the navbar-container element
+                    const navbarContainer = document.querySelector('.footer');
+                    navbarContainer.innerHTML = data;
+                }
+                );
+    </script>
     <!-- <div class="cols">
         <div class="col" ontouchstart="this.classList.toggle('hover');">
             <div class="container">
@@ -129,6 +142,7 @@
 
                 };
             });
+            
     </script>
 
     <script src="main.js" async="false"></script>

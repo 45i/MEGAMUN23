@@ -24,7 +24,17 @@
   </header>
 
 
-
+<div class="footer"></div>
+<script defer>
+  fetch("footer.html")
+    .then(response => response.text())
+    .then(data => {
+      // Insert the navbar HTML into the navbar-container element
+      const navbarContainer = document.querySelector('.footer');
+      navbarContainer.innerHTML = data;
+    }
+    );
+</script>
   <!-- Inline the page's JavaScript file. -->
   <script>
     // Manual reload feature.

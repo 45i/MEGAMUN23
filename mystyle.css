@@ -111,12 +111,14 @@ header:after {
 }
 
 footer {
+  list-style: none;
+  list-style: none;
   position: relative;
   display: flex;
-  flex-direction: column;
+  /* flex-direction: flex-end;
   justify-content: center;
   align-items: center;
-  text-align: center;
+  text-align: center; */
   /* background: linear-gradient(45deg, #0c0227, #190849, #2A1472); */
   margin: 2px 0px;
   background-color: #383838;
@@ -130,7 +132,14 @@ footer {
   /* border-style: dashed; */
   /* border-image: linear-gradient(45deg, #0F0331, #2A1472) 1; */
 }
-
+footer ul{
+    list-style: none;
+    flex-direction: row;
+  }
+  footer ul li a{
+    /* color: #ffffff; */
+  text-decoration: none;
+}
 .legacy {
   margin-top: 10px;
   

@@ -92,10 +92,23 @@ header {
 
   /*   
   border-color: #000;
-  border-style: dashed;
   border-image: linear-gradient(45deg, #0F0331, #2A1472) 1; */
 }
+table 
+{
+  color: #fff;
+  background-color: #ffffff2d;
+  border-radius: 10px;
+  max-width: 90vw;
+  max-height: 90vh;
+  font-size: calc(1vw + 3px);
+}
+table tr  td{
+  border-style: dashed;
+  border-radius: 10px;
+  border-color: #ffffff0c;
 
+}
 header:after {
   content: ' ';
   position: absolute;
@@ -115,22 +128,63 @@ footer {
   list-style: none;
   position: relative;
   display: flex;
+  /* bottom: 0; */
   /* flex-direction: flex-end;
   justify-content: center;
   align-items: center;
   text-align: center; */
   /* background: linear-gradient(45deg, #0c0227, #190849, #2A1472); */
   margin: 2px 0px;
-  background-color: #383838;
+  
+  background-color: #38383800;
   color: #fff;
-
+  
   line-height: 2.5;
   transition: background 0.3s ease-out;
-
-
+  
+  
   /* border-color: #ffffff; */
   /* border-style: dashed; */
   /* border-image: linear-gradient(45deg, #0F0331, #2A1472) 1; */
+}
+.footer .cols .col a,.footer .cols .col i{
+font-size: calc(1vw + 10px);
+}
+.readmoretext {
+  /* max-height: 20vw; */
+  /* Set the desired maximum width */
+  
+  position: relative;
+  /* Add a gradient overlay */
+  /* background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 1) 100%); */
+  /* Add a blur effect */
+  backdrop-filter: blur(10px);
+}
+
+.read-more-button {
+  content: "Read more";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  /* background-color: rgb(0, 0, 0); */
+  padding: 5px 10px;
+  cursor: pointer;
+  z-index: 9999999;
+}
+.more-dots{
+z-index: 9999999;
+
+}
+
+.hidden-text {
+  display: none;
+  
+  top: 100%;
+  left: 0;
+  /* background-color: rgba(255, 255, 255, 0.9); */
+  /* padding: 10px; */
+  /* z-index: 1; */
+  /* max-width: 20vw; */
 }
 footer ul{
     list-style: none;
@@ -704,7 +758,24 @@ abbr {
   -webkit-text-fill-color: transparent; */
   /* text-shadow: 0 0 10px #9583d1, 0 0 20px #4926bd, 0 0 30px #9583d1; */
 }
+button {
+  max-width: 200px;
+  font-size: calc(1vw + 10px);
+}
 
+@media screen and (max-width: 768px) {
+  button {
+    max-width: 150px;
+    font-size: calc(1vw + 8px);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  button {
+    max-width: 100px;
+    font-size: calc(1vw + 6px);
+  }
+}
 .img-box:hover img {
   z-index: 9999;
   transform: scale(0.001);
@@ -738,7 +809,7 @@ canvas {
 
 .col {
   width: calc(25% - 2rem);
-  margin: 1rem;
+  margin: 2rem;
   cursor: pointer;
 }
 

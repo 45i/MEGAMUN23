@@ -76,9 +76,13 @@ form select {
     font-size: 16px;
     border-radius: 20px;
 }
-form select{
+form select {
     color: gray;
-    border-radius: 10;
+    border-radius: 10px;
+}
+
+form select option:hover {
+    background-color: lightgray;
 }
 /* form button {
   color: #020202;

@@ -6,6 +6,34 @@
 //   menuIcon.classList.toggle('bx-x');
 //   navbar.classList.toggle('open');
 // };
+document.addEventListener("DOMContentLoaded", function () {
+  var readMoreElements = document.querySelectorAll('.readmoretext');
+  readMoreElements.forEach(function (element) {
+    var content = element.innerHTML;
+    var limit = 100; // Set the character limit
+    if (content.length > limit) {
+      var visibleText = content.substring(0, limit);
+      var hiddenText = content.substring(limit);
+      console.log("Read More");
+
+      element.innerHTML = visibleText +
+        '<span class="more-dots">...</span>' +
+        '<span class="hidden-text">' + hiddenText + '</span>' +
+        '<span class="read-more-button"> Read more</span>';
+
+      var readMoreButton = element.querySelector('.read-more-button');
+      var moreDots = element.querySelector('.more-dots');
+      var hiddenTextSpan = element.querySelector('.hidden-text');
+
+      readMoreButton.addEventListener('click', function () {
+        hiddenTextSpan.style.display = 'inline';
+        console.log("Read More");
+        moreDots.style.display = 'none';
+        readMoreButton.style.display = 'none';
+      });
+    }
+  });
+});
 let prevScrollpos = window.scrollY;
 window.onscroll = function() {
   let currentScrollPos = window.scrollY;

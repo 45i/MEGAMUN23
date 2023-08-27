@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset=" UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="mystyle.css">
+    <title>Mega Mun 2023</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+
+</head>
+
+<body>
+    <div class="navbar-container"></div>
+    <header>
+        <h1>
+            Committees for <b>MEGA</b><span class="thin">MUN</span> <b>2023</b>
+        </h1>
+    
+            <table>
+            <tr>
+                <th>Committee Name</th>
+                <th>Agenda</th>
+            </tr>
+            <tr>
+                <td>UNSC</td>
+                <td>Discussing the Yugoslav wars(1987-1991 with special emphasis on the Kosovo region</td>
+            </tr>
+            <tr>
+                <td>Committee of the Parties of the Council of Europe Convention on Action Against Trafficking in Human Beings
+                </td>
+                <td>Combating human trafficking with special emphasis on violation of human rights and trans-border organized crime in the
+                Balkan states</td>
+            </tr>
+            <tr>
+                <td>Special Session on the Ogaden Crisis 1977</td>
+                <td>Discussing the rising tensions in Ogaden(1977)</td>
+            </tr>
+            <tr>
+                <td>AIPPM</td>
+                <td>Deliberating upon the future economic prospects of the country in lieu of the New Economic Policy
+                1991(Liberalization,Privatisation and Globalisation).</td>
+            </tr>
+            <tr>
+                <td>IPC</td>
+                <td><p>Agenda 1. Discussing the role of media and safety of journalists in conflict zones.
+                </p>
+                Agenda 2.Role of propaganda in influencing popular media and its severe consequences on press freedom
+</td>
+            </tr>
+        </table>
+    </header>
+    
+    <div class="footer"></div>
+    <script defer>
+        fetch("footer.html")
+            .then(response => response.text())
+            .then(data => {
+                // Insert the navbar HTML into the navbar-container element
+                const navbarContainer = document.querySelector('.footer');
+                navbarContainer.innerHTML = data;
+            }
+            );
+    </script>
+    <script defer>
+        // Fetch the contents of the navbar HTML file
+        fetch("navbar.html")
+            .then(response => response.text())
+            .then(data => {
+                // Insert the navbar HTML into the navbar-container element
+                const navbarContainer = document.querySelector('.navbar-container');
+                navbarContainer.innerHTML = data;
+
+                // Access the menuIcon element and add a click event listener
+                const icon = document.querySelector('.main');
+                const menuIcon = document.querySelector('.bx-menu');
+                const navbar = document.querySelector('.navbar');
+
+                menuIcon.onclick = () => {
+                    console.log("clicked");
+                    icon.classList.toggle('open');
+                    if (menuIcon.classList.contains('open')) {
+                        menuIcon.innerHTML = '<i class="fas fa-times"></i>';
+                    } else {
+                        menuIcon.innerHTML = '<i class="fas fa-bars"></i>';
+                    }
+                    menuIcon.classList.toggle('bx-x');
+                    navbar.classList.toggle('open');
+
+                };
+            });
+
+    </script>
+    
+    <script src="main.js" async="false"></script>
+    
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var readMoreElements = document.querySelectorAll('.readmoretext');
+
+            readMoreElements.forEach(function (element) {
+                var content = element.innerHTML;
+                var height = window.innerHeight;
+                var width = window.innerWidth;
+                var limit;
+
+                if (width < 768) {
+                    limit = 50;
+                } else if (width < 992) {
+                    limit = 75;
+                } else {
+                    limit = 100;
+                }
+
+                if (height < 600) {
+                    limit -= 25;
+                }
+
+                // Use the limit variable to truncate the content as before
+                if (content.length > limit) {
+                    var visibleText = content.substring(0, limit);
+                    var hiddenText = content.substring(limit);
+
+                    element.innerHTML = '<div class="visible-text">' +
+                        visibleText +
+                        '<span class="more-dots">...</span>' +
+                        '<div class="hidden-text">' + '&nbsp;' + hiddenText + '</div>' +
+                        '<span class="read-more-button"> <button style="max-width: 200px; font-size: calc(1vw + 10px);bottom:-50px;right:0; ">Read more</button></span>' +
+                        '</div>';
+
+                    var readMoreButton = element.querySelector('.read-more-button');
+                    var readMoreDiv = element.querySelector('.readmoretext');
+                    var moreDots = element.querySelector('.more-dots');
+                    var hiddenTextDiv = element.querySelector('.visible-text');
+
+                    readMoreButton.addEventListener('click', function () {
+                        hiddenTextDiv.innerHTML = visibleText + hiddenText;
+                        // hiddenTextDiv.style.display = 'block';
+                        // hiddenTextDiv.style.color = '#fff';
+                        // hiddenTextDiv.style.zIndex = '9999999';
+                        // readMoreDiv.style.maxheight = '100%vh';
+                        if (moreDots && readMoreButton) {
+                            moreDots.remove();
+                            readMoreButton.remove();
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+</body>

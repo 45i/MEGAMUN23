@@ -60,28 +60,29 @@
 
 
 
-    <div class="info_text" >
-        
-        <div style="flex-direction: column; align-self: center;"><b style="color: #eeeeee;font-size: xx-large;">MEGA<span class="thin">MUN</span> is back</b><br>
-        MEGAMUN is back after a brief hiatus of three years. The Model United
-        Conference organized by Delhi Public School, Megacity has been one of the premiere MUN’s in the city, and has a rich
-        history of providing attendees with exhilarating and enriching sessions. We at MegaMun have always stressed upon the
-        importance of global awareness associated with the event among individuals, and thus have always worked on and prepared
-        meticulously thought-out agendas and committees. With the 5th session of MegaMun this year being no different as we look
-        forward to a productive and fruitful conference
+    <div class="info_text">
+        <div class="col">
+            <div style="flex-direction: column; align-self: center;">
+                <h1 style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; text-size-adjust: 100%;"><b>MEGA<span class="thin">MUN</span> is BACK</b></h1>
+            </div>
+            <div class="cols">
+                <div class="col"><img src="megamun.png" width="90%vw"></div>
+                <div class="col" style="font-size: xx-large;">
+                    <div class="readmoretext">MEGAMUN is back after a brief hiatus of three years. The Model United
+                        Conference organized by Delhi Public School, Megacity has been one of the premiere MUN’s in the
+                        city, and has a rich
+                        history of providing attendees with exhilarating and enriching sessions. We at MegaMun have
+                        always stressed upon the
+                        importance of global awareness associated with the event among individuals, and thus have always
+                        worked on and prepared
+                        meticulously thought-out agendas and committees. With the 5th session of MegaMun this year being
+                        no different as we look
+                        forward to a productive and fruitful conference</div>
+                </div>
+            </div>
+        </div>
     </div>
-    </div>
-    <div class="footer"></div>
-    <script defer>
-        fetch("footer.html")
-                .then(response => response.text())
-                .then(data => {
-                    // Insert the navbar HTML into the navbar-container element
-                    const navbarContainer = document.querySelector('.footer');
-                    navbarContainer.innerHTML = data;
-                }
-                );
-    </script>
+    
     <!-- <div class="cols">
         <div class="col" ontouchstart="this.classList.toggle('hover');">
             <div class="container">
@@ -121,6 +122,17 @@
         </div>
 
     </div> -->
+    <div class="footer"></div>
+    <script defer>
+        fetch("footer.html")
+            .then(response => response.text())
+            .then(data => {
+                // Insert the navbar HTML into the navbar-container element
+                const navbarContainer = document.querySelector('.footer');
+                navbarContainer.innerHTML = data;
+            }
+            );
+    </script>
     <script defer>
         // Fetch the contents of the navbar HTML file
         fetch("navbar.html")
@@ -148,12 +160,65 @@
 
                 };
             });
-            
+
     </script>
 
     <script src="main.js" async="false"></script>
 
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            var readMoreElements = document.querySelectorAll('.readmoretext');
 
+            readMoreElements.forEach(function (element) {
+                var content = element.innerHTML;
+                var height = window.innerHeight;
+                var width = window.innerWidth;
+                var limit;
+
+                if (width < 768) {
+                    limit = 50;
+                } else if (width < 992) {
+                    limit = 75;
+                } else {
+                    limit = 100;
+                }
+
+                if (height < 600) {
+                    limit -= 25;
+                }
+
+                // Use the limit variable to truncate the content as before
+                if (content.length > limit) {
+                    var visibleText = content.substring(0, limit);
+                    var hiddenText = content.substring(limit);
+
+                    element.innerHTML = '<div class="visible-text">' +
+                        visibleText +
+                        '<span class="more-dots">...</span>' +
+                        '<div class="hidden-text">' + '&nbsp;' + hiddenText + '</div>' +
+                        '<span class="read-more-button"> <button style="max-width: 200px; font-size: calc(1vw + 10px);bottom:-50px;right:0; ">Read more</button></span>' +
+                        '</div>' ;
+
+                    var readMoreButton = element.querySelector('.read-more-button');
+                    var readMoreDiv = element.querySelector('.readmoretext');
+                    var moreDots = element.querySelector('.more-dots');
+                    var hiddenTextDiv = element.querySelector('.visible-text');
+
+                    readMoreButton.addEventListener('click', function () {
+                        hiddenTextDiv.innerHTML=visibleText+hiddenText;
+                        // hiddenTextDiv.style.display = 'block';
+                        // hiddenTextDiv.style.color = '#fff';
+                        // hiddenTextDiv.style.zIndex = '9999999';
+                        // readMoreDiv.style.maxheight = '100%vh';
+                        if (moreDots && readMoreButton) {
+                            moreDots.remove();
+                            readMoreButton.remove();
+                        }
+                    });
+                }
+            });
+        });
+    </script>
 </body>
 
 </html>

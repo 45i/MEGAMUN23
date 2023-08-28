@@ -143,14 +143,16 @@
                 navbarContainer.innerHTML = data;
 
                 // Access the menuIcon element and add a click event listener
-                const icon = document.querySelector('.main');
-                const menuIcon = document.querySelector('.bx-menu');
-                const navbar = document.querySelector('.navbar');
-
-                menuIcon.onclick = () => {
+                var icon = document.querySelector('.main');
+                var menuIcon = document.querySelector('.icon');
+                var navbar = document.querySelector('.navbar');
+console.log(menuIcon);
+                console.log(icon);
+                
+                menuIcon.addEventListener('click', function () {
                     console.log("clicked");
                     icon.classList.toggle('open');
-                    if (menuIcon.classList.contains('open')) {
+                    if (icon.classList.contains('open')) {
                         menuIcon.innerHTML = '<i class="fas fa-times"></i>';
                     } else {
                         menuIcon.innerHTML = '<i class="fas fa-bars"></i>';
@@ -158,14 +160,14 @@
                     menuIcon.classList.toggle('bx-x');
                     navbar.classList.toggle('open');
 
-                };
+                });
             });
 
     </script>
 
     <script src="main.js" async="false"></script>
 
-    <script>
+    <script defer>
         document.addEventListener("DOMContentLoaded", function () {
             var readMoreElements = document.querySelectorAll('.readmoretext');
 

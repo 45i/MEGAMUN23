@@ -110,6 +110,9 @@ table tr  td{
   border-color: #ffffff0c;
 
 }
+table tr td{
+
+}
 header:after {
   content: ' ';
   position: absolute;
@@ -149,7 +152,9 @@ footer {
   /* border-image: linear-gradient(45deg, #0F0331, #2A1472) 1; */
 }
 .footer .cols .col a,.footer .cols .col i{
-font-size: calc(1vw + 10px);
+
+    font-size: clamp(16px, 4vw, 24px);
+
 }
 .readmoretext {
   /* max-height: 20vw; */
@@ -163,14 +168,14 @@ font-size: calc(1vw + 10px);
 }
 
 .read-more-button {
-  content: "Read more";
+   /* content: "Read more"; */
   position: absolute;
   bottom: 0;
   right: 0;
-  /* background-color: rgb(0, 0, 0); */
+  /* background-color: rgb(0, 0, 0);
   padding: 5px 10px;
   cursor: pointer;
-  z-index: 9999999;
+  z-index: 9999999;*/
 }
 .more-dots{
 z-index: 9999999;
@@ -263,7 +268,7 @@ button {
   transition: all 01s ease-in-out;
   color: #fff;
   outline: none;
-  font-size: 70%;
+  font-size: clamp(16px, 4vw, 24px);
   /* border: none;  */
   border: 2px dashed transparent;
   /* Add this line to remove the border */
@@ -761,20 +766,20 @@ abbr {
 }
 button {
   max-width: 200px;
-  font-size: calc(1vw + 10px);
+  /* font-size: calc(1vw + 10px); */
 }
 
 @media screen and (max-width: 768px) {
   button {
     max-width: 150px;
-    font-size: calc(1vw + 8px);
+    /* font-size: calc(1vw + 8px); */
   }
 }
 
 @media screen and (max-width: 480px) {
   button {
     max-width: 100px;
-    font-size: calc(1vw + 6px);
+    /* font-size: calc(1vw + 6px); */
   }
 }
 .img-box:hover img {

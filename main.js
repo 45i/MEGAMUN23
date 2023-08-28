@@ -170,7 +170,20 @@ function tick() {
         // });
     }
 }
+const tds = document.querySelectorAll('td');
 
+tds.forEach(td => {
+  td.addEventListener('click', function() {
+    const text = this.innerText;
+    const tempInput = document.createElement('input');
+    tempInput.setAttribute('value', text);
+    document.body.appendChild(tempInput);
+    tempInput.select();
+    document.execCommand('copy');
+    document.body.removeChild(tempInput);
+    console.log('Copied to clipboard:', text);
+  });
+});
 const imgBoxes = document.querySelectorAll('.img-box');
 
 imgBoxes.forEach(imgBox => {

@@ -38,7 +38,7 @@
 
           <iframe
             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d240.76801816979423!2d88.49864548713926!3d22.587282625293472!2m3!1f0!2f39.4247856168604!3f0!3m2!1i1024!2i768!4f35!3m3!1m2!1s0x3a020aeab291e7d3%3A0xd9b3fc04bea40456!2sDelhi%20Public%20School%20Megacity!5e1!3m2!1sen!2sin!4v1692953111717!5m2!1sen!2sin"
-            width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+            width="600" height="450" style="border:0;" allowfullscreen="true" loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"></iframe>
         </div>
       </section>
@@ -68,14 +68,16 @@
         navbarContainer.innerHTML = data;
 
         // Access the menuIcon element and add a click event listener
-        const icon = document.querySelector('.main');
-        const menuIcon = document.querySelector('.bx-menu');
-        const navbar = document.querySelector('.navbar');
+        var icon = document.querySelector('.main');
+        var menuIcon = document.querySelector('.icon');
+        var navbar = document.querySelector('.navbar');
+        console.log(menuIcon);
+        console.log(icon);
 
-        menuIcon.onclick = () => {
+        menuIcon.addEventListener('click', function () {
           console.log("clicked");
           icon.classList.toggle('open');
-          if (menuIcon.classList.contains('open')) {
+          if (icon.classList.contains('open')) {
             menuIcon.innerHTML = '<i class="fas fa-times"></i>';
           } else {
             menuIcon.innerHTML = '<i class="fas fa-bars"></i>';
@@ -83,10 +85,11 @@
           menuIcon.classList.toggle('bx-x');
           navbar.classList.toggle('open');
 
-        };
+        });
       });
+
   </script>
-  <!-- <script src="main.js" defer></script> -->
+  <script src="main.js" defer></script>
   <script src="main2.js" defer></script>
 
 

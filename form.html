@@ -32,11 +32,11 @@
     <br>
     <br>
     <br>
-        <div class="info_text"  style="background-color: #ffffff00; background: none; ">
-Please go through the list of committees and their agendas  before registering.
+    <div class="info_text" style="background-color: #ffffff00; background: none; ">
+        Please go through the list of committees and their agendas before registering.
 
-<p><a href="committees.html"><button style="font-size: medium;">Learn More</button></a></p>
-    
+        <p><a href="committees.html"><button style="font-size: medium;">Learn More</button></a></p>
+
     </div>
 
     <div class="container2">
@@ -45,7 +45,7 @@ Please go through the list of committees and their agendas  before registering.
                 <h1
                     style="color: rgb(185, 184, 184); align-self: center; font-weight: 1000; letter-spacing: 0.4px; text-decoration: underline;">
                     Registration</h1>
-                
+
                 <input type="text" id="name" name="name" placeholder="Your Name" required>
                 <input type="email" id="email" name="email" placeholder="Email ID" required>
                 <input type="text" id="school" name="school" placeholder="School" required>
@@ -112,14 +112,16 @@ Please go through the list of committees and their agendas  before registering.
                 navbarContainer.innerHTML = data;
 
                 // Access the menuIcon element and add a click event listener
-                const icon = document.querySelector('.main');
-                const menuIcon = document.querySelector('.bx-menu');
-                const navbar = document.querySelector('.navbar');
+                var icon = document.querySelector('.main');
+                var menuIcon = document.querySelector('.icon');
+                var navbar = document.querySelector('.navbar');
+                console.log(menuIcon);
+                console.log(icon);
 
-                menuIcon.onclick = () => {
+                menuIcon.addEventListener('click', function () {
                     console.log("clicked");
                     icon.classList.toggle('open');
-                    if (menuIcon.classList.contains('open')) {
+                    if (icon.classList.contains('open')) {
                         menuIcon.innerHTML = '<i class="fas fa-times"></i>';
                     } else {
                         menuIcon.innerHTML = '<i class="fas fa-bars"></i>';
@@ -127,8 +129,9 @@ Please go through the list of committees and their agendas  before registering.
                     menuIcon.classList.toggle('bx-x');
                     navbar.classList.toggle('open');
 
-                };
+                });
             });
+
     </script>
     <script src="formscript.js"></script>
     <script src="main.js" defer></script>

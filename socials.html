@@ -1,37 +1,42 @@
 <!DOCTYPE html>
 <html>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
-<link rel="stylesheet" href="mystyle.css">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+    <link rel="stylesheet" href="mystyle.css">
+</head>
 
 <body>
+    <div id="preloader"></div>
     <div class="navbar-container"></div>
 
     <header>
         <h1><b>Socials</b></h1>
         <div class="socials">
             <div class="instagram-logo"><span class="thin"
-                        style="color: #fff ; letter-spacing: 2px; font-size: xxx-large;"><i class="fab fa-instagram"
-                            style="background: linear-gradient(220deg,#4f5bd5 ,#962fbf ,#d62976 , #fa7e1e , #feda75 );
+                    style="color: #fff ; letter-spacing: 2px; font-size: xxx-large;"><i class="fab fa-instagram" style="background: linear-gradient(220deg,#4f5bd5 ,#962fbf ,#d62976 , #fa7e1e , #feda75 );
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;"></i> </span></a><span class="thin" style=" font-size: large;letter-spacing: 2px;"><a class="thin"
-        href="https://www.instagram.com/megamun_23/"
-        style="text-decoration: none; color: #fff; font: bold;font-size: large;letter-spacing: 2px;">@megamun_23</span></a>
+  -webkit-text-fill-color: transparent;"></i> </span></a><span class="thin"
+                    style=" font-size: large;letter-spacing: 2px;"><a class="thin"
+                        href="https://www.instagram.com/megamun_23/"
+                        style="text-decoration: none; color: #fff; font: bold;font-size: large;letter-spacing: 2px;">@megamun_23</span></a>
             </div>
             <div class="website-logo"><span class="thin"
-                        style="color: #fff ; letter-spacing: 2px; font-size: xxx-large;"><i class="fas fa-globe"
-                            style="background: linear-gradient(40deg, #26045c , #4f5bd5 );
+                    style="color: #fff ; letter-spacing: 2px; font-size: xxx-large;"><i class="fas fa-globe" style="background: linear-gradient(40deg, #26045c , #4f5bd5 );
   -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;"></i> </span></a><span class="thin" style=" font-size: large;letter-spacing: 2px;"><a class="thin"
-        href="http://dpsmegacity.in/"
-        style="text-decoration: none; color: #fff; font: bold;font-size: large;letter-spacing: 2px;">dpsmegacity.in</span></a>
+  -webkit-text-fill-color: transparent;"></i> </span></a><span class="thin"
+                    style=" font-size: large;letter-spacing: 2px;"><a class="thin" href="http://dpsmegacity.in/"
+                        style="text-decoration: none; color: #fff; font: bold;font-size: large;letter-spacing: 2px;">dpsmegacity.in</span></a>
             </div>
         </div>
-            <div class="website-logo"><span class="thin" style="color: #fff ; letter-spacing: 2px; font-size: xxx-large;"><i class="fas fa-envelope" style="background: linear-gradient(40deg, #6e6e6e , #4f5bd5 );
+        <div class="website-logo"><span class="thin" style="color: #fff ; letter-spacing: 2px; font-size: xxx-large;"><i
+                    class="fas fa-envelope" style="background: linear-gradient(40deg, #6e6e6e , #4f5bd5 );
                               -webkit-background-clip: text;
-                              -webkit-text-fill-color: transparent;"></i> </span><span class="thin" style=" font-size: large;letter-spacing: 2px;"><a class="thin" href="mailto:megamun2023@gmail.com"
-                                    style="text-decoration: none; color: #fff; font: bold;font-size: large;letter-spacing: 2px;"></span>megamun2023@gmail.com</a>
-            </div>
+                              -webkit-text-fill-color: transparent;"></i> </span><span class="thin"
+                style=" font-size: large;letter-spacing: 2px;"><a class="thin" href="mailto:megamun2023@gmail.com"
+                    style="text-decoration: none; color: #fff; font: bold;font-size: large;letter-spacing: 2px;"></span>megamun2023@gmail.com</a>
+        </div>
         </div>
     </header>
     <div class="footer"></div>
@@ -55,14 +60,16 @@
                 navbarContainer.innerHTML = data;
 
                 // Access the menuIcon element and add a click event listener
-                const icon = document.querySelector('.main');
-                const menuIcon = document.querySelector('.bx-menu');
-                const navbar = document.querySelector('.navbar');
+                var icon = document.querySelector('.main');
+                var menuIcon = document.querySelector('.icon');
+                var navbar = document.querySelector('.navbar');
+                console.log(menuIcon);
+                console.log(icon);
 
-                menuIcon.onclick = () => {
+                menuIcon.addEventListener('click', function () {
                     console.log("clicked");
                     icon.classList.toggle('open');
-                    if (menuIcon.classList.contains('open')) {
+                    if (icon.classList.contains('open')) {
                         menuIcon.innerHTML = '<i class="fas fa-times"></i>';
                     } else {
                         menuIcon.innerHTML = '<i class="fas fa-bars"></i>';
@@ -70,10 +77,11 @@
                     menuIcon.classList.toggle('bx-x');
                     navbar.classList.toggle('open');
 
-                };
+                });
             });
+
     </script>
-    <!-- <script src="main.js" defer></script> -->
+    <script src="main.js" defer></script>
     <script src="main2.js" defer></script>
 </body>
 

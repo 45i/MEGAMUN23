@@ -1,26 +1,21 @@
 document.addEventListener('DOMContentLoaded', () => {
-  const recipient = 'sayakpalit61@gmail.com'; // Replace with your email address
-  const form = document.forms['product'];
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbwQs4yuM3ShYdJfyzEGfzx3hIO31MNlFxwnEvpK3MQSqbBm6mWmfTc59VFFbvllbqkphw/exec'; // Replace SCRIPT_ID with your Google Apps Script ID
+    const form = document.forms['product'];
 
-  form.addEventListener('submit', e => {
-    e.preventDefault();
-    const formData = new FormData(form);
-    const subject = 'New form submission';
-    let body = '';
-
-    for (const [key, value] of formData.entries()) {
-      body += `${key}: ${value}\n`;
-    }
-
-    const mailtoLink = `mailto:${recipient}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    window.location.href = mailtoLink;
-
-    const message = 'Please send the mail through your default mail app, which is going to open shortly..';
-    alert(message);
+    form.addEventListener('submit', e => {
+      e.preventDefault();
+      fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+        .then(response => {
+          if (response.ok) {
+            alert("Thank you! Your form has been submitted successfully.");
+            window.location.reload();
+          } else {
+            throw new Error('Network response was not ok.');
+          }
+        })
+        .catch(error => {
+          console.error('Error!', error.message);
+          alert('An error occurred while submitting the form. Please try again later.');
+        });
+    });
   });
-
-  window.addEventListener('beforeunload', function (e) {
-    e.preventDefault();
-    e.returnValue = 'Are you sure you want to discard the form?';
-  });
-});

@@ -102,6 +102,7 @@ table
   max-width: 90vw;
   max-height: 90vh;
   font-size: calc(1vw + 3px);
+  letter-spacing: 0.07rem;
 }
 table tr  td{
   border-style: dashed;

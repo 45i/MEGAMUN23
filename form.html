@@ -10,6 +10,8 @@
     <link rel="stylesheet" href="mystyle.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="stylesheet" href="formstyle.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" id="theme-styles">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
 </head>
 
 <body>
@@ -32,18 +34,12 @@
     <br>
     <br>
     <br>
-    <div class="info_text" style="background-color: #ffffff00; background: none; ">
-        Please go through the list of committees and their agendas before registering.
-
-        <p><a href="committees.html"><button style="font-size: medium;">Learn More</button></a></p>
-
-    </div>
-
+    
     <div class="container2">
         <div class="form-container">
             <form name="product">
                 <h1
-                    style="color: rgb(185, 184, 184); align-self: center; font-weight: 1000; letter-spacing: 0.4px; text-decoration: underline;">
+                    style="color: rgb(153, 151, 151); align-self: center; font-weight: 1000; letter-spacing: 0.4px; text-decoration: underline;">
                     Registration</h1>
 
                 <input type="text" id="name" name="name" placeholder="Your Name" required>
@@ -133,9 +129,26 @@
             });
 
     </script>
-    <script src="formscript.js"></script>
+    <script src="formscript.js" defer></script>
     <script src="main.js" defer></script>
-
+<script defer>
+    // Display the overlay when the page loads
+    Swal.fire({
+            title: '<strong>Before you begin...</strong>',
+            icon: 'warning',
+            html:
+                'Please go through the list of committees and their agendas before registering.',
+            // showCloseButton: true,
+            showCancelButton: true,
+            focusConfirm: false,
+            confirmButtonText:
+                '<a href="committees.html" style="text-decoration:none; color:#fff">I want to take a look at the committees</a> ',
+            confirmButtonAriaLabel: 'Thumbs up, great!',
+            cancelButtonText:
+                'I\'m already familiar with the committees',
+            cancelButtonAriaLabel: 'cancel'
+        })
+    </script>
 </body>
 
 </html>

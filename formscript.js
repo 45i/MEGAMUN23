@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
             })
             .catch(error => {
               console.error('Error!', error.message);
-              alert('An error occurred while submitting the form. Please try again later.\n' + error.message);
+              // alert('An error occurred while submitting the form. Please try again later.\n' + error.message);
               Swal.fire({
                 icon: 'error',
                 title: 'Oops...',

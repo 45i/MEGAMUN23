@@ -28,7 +28,7 @@
 
             <div style="margin-right: 10px;">
                 <div class="button-container">
-                    <a href="form.html"><button hovertext="Register Now"><i class="fas fa-user-plus"
+                    <a href="register.html"><button hovertext="Register Now"><i class="fas fa-user-plus"
                                 style="color: #ffffff; font-size: 200%;"></i><b>
                                 <p></p>
                             </b></button></a>
@@ -60,29 +60,74 @@
 
 
 
-    <div class="info_text">
+
+    <style>
+        /* Default styles for both narrow and wider screens */
+        .narrow-text {
+            display: none;
+            /* Initially hide the narrow screen text */
+        }
+
+        .wider-text {
+            display: block;
+            /* Initially show the wider screen text */
+        }
+
+        /* Media query for narrow screens */
+        @media (max-width: 1090px) {
+            .narrow-text {
+                display: block;
+                /* Show the narrow screen text */
+            }
+
+            .wider-text {
+                display: none;
+                /* Hide the wider screen text */
+            }
+        }
+    </style>
+
+    <div class="info_text" style=" text-overflow: ellipsis; text-overflow: ellipsis">
         <div class="col">
             <div style="flex-direction: column; align-self: center;">
-                <h1 style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; text-size-adjust: 100%;"><b>MEGA<span class="thin">MUN</span> is BACK</b></h1>
+                <h1 style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; text-size-adjust: 100%;">
+                    <b>MEGA<span class="thin">MUN</span> is BACK</b>
+                </h1>
             </div>
-            <div class="cols">
-                <div class="col"><img src="megamun.png" width="90%vw"></div>
-                <div class="col" style="font-size: xx-large;">
-                    <div class="readmoretext">MEGAMUN is back after a brief hiatus of three years. The Model United
-                        Conference organized by Delhi Public School, Megacity has been one of the premiere MUN’s in the
-                        city, and has a rich
-                        history of providing attendees with exhilarating and enriching sessions. We at MegaMun have
-                        always stressed upon the
-                        importance of global awareness associated with the event among individuals, and thus have always
-                        worked on and prepared
-                        meticulously thought-out agendas and committees. With the 5th session of MegaMun this year being
-                        no different as we look
-                        forward to a productive and fruitful conference</div>
+            <div class="wider-text">
+                <div class="cols">
+
+                    <div class="col" style="overflow: hidden; width: 90%vw;"><img src="megamun.png" width=" 90%"></div>
+                    <div class="col">
+                        <div class="g">MEGAMUN is back after a brief hiatus of three years. The Model United
+                            Conference organized by Delhi Public School, Megacity has been one of the premiere MUN’s
+                            in
+                            the
+                            city, and has a rich
+                            history of providing attendees with exhilarating and enriching sessions. We at MegaMun
+                            have
+                            always stressed upon the
+                            importance of global awareness associated with the event among individuals, and thus
+                            have
+                            always
+                            worked on and prepared
+                            meticulously thought-out agendas and committees. With the 5th session of MegaMun this
+                            year
+                            being
+                            no different as we look
+                            forward to a productive and fruitful conference</div>
+                    </div>
+
                 </div>
+            </div>
+            <div class="narrow-text">
+                <!-- Display this message on narrow screens -->
+                <p>This text only appears on wider screens, like your laptop, or tablet</p>
             </div>
         </div>
     </div>
-    
+    </div>
+
     <!-- <div class="cols">
         <div class="col" ontouchstart="this.classList.toggle('hover');">
             <div class="container">
@@ -146,9 +191,9 @@
                 var icon = document.querySelector('.main');
                 var menuIcon = document.querySelector('.icon');
                 var navbar = document.querySelector('.navbar');
-console.log(menuIcon);
+                console.log(menuIcon);
                 console.log(icon);
-                
+
                 menuIcon.addEventListener('click', function () {
                     console.log("clicked");
                     icon.classList.toggle('open');
@@ -165,7 +210,7 @@ console.log(menuIcon);
 
     </script>
 
-    <script src="main.js" async="false"></script>
+    <script src="main.js" defer></script>
 
     <script defer>
         document.addEventListener("DOMContentLoaded", function () {
@@ -199,7 +244,7 @@ console.log(menuIcon);
                         '<span class="more-dots">...</span>' +
                         '<div class="hidden-text">' + '&nbsp;' + hiddenText + '</div>' +
                         '<span class="read-more-button"> <button style="max-width: 200px; font-size: calc(1vw + 10px);bottom:-50px;right:0; ">Read more</button></span>' +
-                        '</div>' ;
+                        '</div>';
 
                     var readMoreButton = element.querySelector('.read-more-button');
                     var readMoreDiv = element.querySelector('.readmoretext');
@@ -207,7 +252,7 @@ console.log(menuIcon);
                     var hiddenTextDiv = element.querySelector('.visible-text');
 
                     readMoreButton.addEventListener('click', function () {
-                        hiddenTextDiv.innerHTML=visibleText+hiddenText;
+                        hiddenTextDiv.innerHTML = visibleText + hiddenText;
                         // hiddenTextDiv.style.display = 'block';
                         // hiddenTextDiv.style.color = '#fff';
                         // hiddenTextDiv.style.zIndex = '9999999';
@@ -220,6 +265,12 @@ console.log(menuIcon);
                 }
             });
         });
+    </script>
+    <script defer>
+        var externalLinks = document.querySelectorAll('a[href^="http"]');
+        for (var i = externalLinks.length - 1; i >= 0; i--) {
+            externalLinks[ i ].addEventListener("click", function () { alert("hi"); }, false);
+        }
     </script>
 </body>
 

@@ -6,6 +6,15 @@
 //   menuIcon.classList.toggle('bx-x');
 //   navbar.classList.toggle('open');
 // };
+// JavaScript to set the CSS variable based on computed background color
+// const elements = document.querySelectorAll('*'); // Select all elements, you can narrow this down as needed
+
+// elements.forEach(element => {
+//   const styles = getComputedStyle(element);
+//   const bgColor = styles.backgroundColor || 'transparent';
+//   element.style.setProperty('--fallback-bg-color', bgColor);
+// });
+
 document.addEventListener("DOMContentLoaded", function () {
   var readMoreElements = document.querySelectorAll('.readmoretext');
   readMoreElements.forEach(function (element) {

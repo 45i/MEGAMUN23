@@ -33,7 +33,11 @@
   font-family: st;
   user-select: none;
   user-zoom: fixed;
-}
+
+  -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+    background-color: var(--fallback-bg-color);
+  }
 
 body {
   margin: 0;
@@ -108,11 +112,57 @@ table tr  td{
   border-style: dashed;
   border-radius: 10px;
   border-color: #ffffff0c;
+  user-select: text;
 
 }
 table tr td{
 
 }
+.days:hover::after{
+  content: "d";
+  
+}
+.days:hover{
+  transition:0.5s;
+  
+}
+.days::content{
+  opacity: 0;
+}
+
+.hours:hover::after{
+  content: "h";
+  
+}
+.hours:hover{
+  transition:0.5s;
+  
+}
+.days::content{
+opacity: 0;}
+
+.minutes:hover::after{
+  content: "m";
+  
+}
+.minutes:hover{
+  transition:0.5s;
+  
+}
+.days::content{
+opacity: 0;}
+
+.seconds:hover::after{
+  content: "s";
+  
+}
+.seconds:hover{
+  transition:0.5s;
+  
+}
+.days::content{
+opacity: 0;}
+
 header:after {
   content: ' ';
   position: absolute;
@@ -460,12 +510,26 @@ h2 {
   color: #fff;
 } */
 
+/* Global CSS rule for elements with backdrop-filter property */
+
+
+/* Remove blur effect for iOS devices */
+@supports (-webkit-backdrop-filter: blur(10px)) or (backdrop-filter: blur(10px)) {
+  * {
+
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    background-color: var(--fallback-bg-color);
+
+  }
+}
+
+/* Global CSS rules for nav */
 nav {
   height: 12.1%;
   width: 100%;
   position: fixed;
   background: #2A147277;
-  backdrop-filter: blur(10px);
   transition: 0.75s;
   z-index: 10001;
   justify-content: space-between;
@@ -473,7 +537,6 @@ nav {
   padding: 10px 20px;
   display: flex;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
-  /* overflow: hidden; */
 }
 
 .menu-toggle .hamburger-menu {

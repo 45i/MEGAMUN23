@@ -140,11 +140,15 @@
             showCancelButton: true,
             focusConfirm: false,
             confirmButtonText:
-                '<a href="committees.html" style="text-decoration:none; color:#fff">I want to take a look at the committees</a> ',
+                'I want to take a look at the committees',
             confirmButtonAriaLabel: 'Thumbs up, great!',
             cancelButtonText:
                 'I\'m already familiar with the committees',
             cancelButtonAriaLabel: 'cancel'
+        }).then((result) => {
+            if (result.isConfirmed){
+                 window.location.href = "committees.html"; 
+            }
         })
     </script>
 </body>

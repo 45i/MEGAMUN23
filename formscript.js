@@ -8,12 +8,13 @@ document.addEventListener('DOMContentLoaded', () => {
       e.preventDefault();
       Swal.fire({
         title: 'Are you sure?',
-        text: "You won't be able to revert this!",
+        text: "You won't be able to retract this!",
         icon: 'warning',
         showCancelButton: true,
         confirmButtonColor: '#3085d6',
         cancelButtonColor: '#d33',
-        confirmButtonText: 'Yes, Submit it!'
+        confirmButtonText: 'Yes, Submit it!',
+        cancelButtonText: 'I\'ll recheck it once'
       }).then((result) => {
         if (result.isConfirmed) {
           fetch(scriptURL, { method: 'POST', body: new FormData(form) })
@@ -60,12 +61,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     Swal.fire({
       title: 'Are you sure?',
-      text: "You won't be able to revert this!",
+      text: "You won't be able to undo this change!",
       icon: 'warning',
       showCancelButton: true,
       confirmButtonColor: '#3085d6',
       cancelButtonColor: '#d33',
-      confirmButtonText: 'Yes, reset the form'
+      confirmButtonText: 'Yes, reset the form',
+      cancelButtonText:'No! This was a mistake!'
     }).then((result) => {
       if (result.isConfirmed) {
         window.location.reload();

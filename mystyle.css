@@ -37,8 +37,8 @@
     text-decoration: none;
     
   }
-  white-space: nowrap;
-  font-family:st,-apple-system,BlinkMacSystemFont,"Apple Color Emoji","Segoe UI Emoji";
+  /* white-space: nowrap; */
+  /* font-family:st,-apple-system,BlinkMacSystemFont,"Apple Color Emoji","Segoe UI Emoji"; */
 }
   /* -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);

@@ -33,6 +33,8 @@
   font-family: st;
   user-select: none;
   user-zoom: none;
+  zoom: none;
+  
   & a{
     text-decoration: none;
     

@@ -10,7 +10,7 @@
     <style>
         .kbd {
             display: inline-block;
-            font-family: "Consolas",system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            font-family: "Consolas", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
             min-width: 21px;
             padding: 0 4px;
             line-height: 1.5;
@@ -24,19 +24,25 @@
         }
     </style>
     <header>
-        <h1 style="font-size: 10vw; line-height: 0.14px;"><span class="kbd" style="font-family: 'Consolas';background-image:url(bg.png);background-repeat: no-repeat;background-size: cover;">404</span>
+        <h1 style="font-size: 10vw; line-height: 0.14px;"><span class="kbd"
+                style="font-family: 'Consolas';background-image:url(bg.png);background-repeat: no-repeat;background-size: cover;">404</span>
         </h1>
-        <span style="color: rgb(199, 199, 199);font-size: 2vw;">You've stumbled upon Apollo <p><span
-                    class="kbd" style="box-shadow:none ;">He doesn't bite</span></p>
+        <span style="color: rgb(199, 199, 199);font-size: 2vw;">You've stumbled upon Apollo! <p><span class="kbd"
+                    style="box-shadow:none ;">He's a good boy</span></p>
             <p></p>
         </span>
 
-        <br>
-        <img href="website.html" src="dog-11328.png" width="100%"
-            style="max-width: 20vh; position: absolute;bottom: 0; " alt="Apollo will keep you company">
+
+        <img class="Apollo" src="dog-11328.png" width="100%"
+                style="max-width: 20vh; position: absolute;bottom:0; " alt="Apollo will keep you company">
 
     </header>
-
+<script>
+    var apollo = document.querySelector(".Apollo");
+    apollo.addEventListener('click', function () {
+        window.location.href = "website.html"; 
+    });
+</script>
 </body>
 
 </html>

@@ -14,7 +14,39 @@
 //   const bgColor = styles.backgroundColor || 'transparent';
 //   element.style.setProperty('--fallback-bg-color', bgColor);
 // });
+document.addEventListener("DOMContentLoaded", function () {
+  const footer = document.querySelector(".juto");
+  var button = document.querySelector(".retract");
+  const retractButton = document.querySelector('.retract');
+  button=retractButton;
+  // const icon = button.getElementById("ret");
 
+  // Initial state
+  let isCollapsed = false;
+  footer.style.height = "auto"; // Show the footer initially
+
+  button.addEventListener('click', () => {
+      isCollapsed = !isCollapsed;
+      
+      console.log(button);
+      if (isCollapsed) {
+          // Collapse the footer
+          footer.style.height = "0";
+          button.innerHTML = '<i class="fas fa-chevron-up"></i>';
+          console.log(button);
+          // icon.classList.remove("fa-chevron-down");
+          // icon.classList.add("fa-chevron-up");
+      } else {
+          // Expand the footer
+          footer.style.height = "auto";
+          button.innerHTML = '<i class="fas fa-chevron-down"></i>';
+          console.log(button);
+
+          // icon.classList.remove("fa-chevron-up");
+          // icon.classList.add("fa-chevron-down");
+      }
+  });
+});
 document.addEventListener("DOMContentLoaded", function () {
   var readMoreElements = document.querySelectorAll('.readmoretext');
   readMoreElements.forEach(function (element) {

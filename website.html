@@ -19,10 +19,10 @@
             <h1><b>MEGA</b><span class="thin">MUN</span><b>2023</b> </h1>
             <h1><b>STARTS</b><span> IN</span> </h1>
 
-            <div ><abbr title="Days : Hours : Minutes : Seconds" class="countdown">
+            <div><abbr title="Days : Hours : Minutes : Seconds" class="countdown">
                     -- : -- : -- : --
                 </abbr>
-            </div >
+            </div>
         </div>
         <div class="cols">
 
@@ -63,28 +63,7 @@
 
     <style>
         /* Default styles for both narrow and wider screens */
-        .narrow-text {
-            display: none;
-            /* Initially hide the narrow screen text */
-        }
-
-        .wider-text {
-            display: block;
-            /* Initially show the wider screen text */
-        }
-
-        /* Media query for narrow screens */
-        @media (max-width: 1090px) {
-            .narrow-text {
-                display: block;
-                /* Show the narrow screen text */
-            }
-
-            .wider-text {
-                display: none;
-                /* Hide the wider screen text */
-            }
-        }
+        
     </style>
 
     <div class="info_text" style=" text-overflow: ellipsis; text-overflow: ellipsis">
@@ -269,7 +248,7 @@
     <script defer>
         var externalLinks = document.querySelectorAll('a[href^="http"]');
         for (var i = externalLinks.length - 1; i >= 0; i--) {
-            externalLinks[ i ].addEventListener("click", function () { alert("hi"); }, false);
+            externalLinks[i].addEventListener("click", function () { alert("hi"); }, false);
         }
     </script>
 </body>

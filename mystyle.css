@@ -10,7 +10,10 @@
   font-family: st;
   src: url(regular.OTF);
 }
-
+@font-face {
+  font-family: cursve;
+  src: url(Stylish\ Calligraphy\ Demo.ttf);
+}
 @font-face {
   font-family: bold;
   src: url(bold.OTF);
@@ -63,10 +66,18 @@ body {
 
   
 }
+q{
+  font-family: cursve;
+  font-size: xx-large;
+  color: #C6D4DF;
+  /* font-weight: 900; */
+
+}
 .kbd::after{
   /* background-image:url(partners_bg.f13db78.png);background-repeat: no-repeat;background-size: 100%; */
   background-position: 50%;
   z-index: -1;
+  border-radius: 6px;
 }
 html,
 body,

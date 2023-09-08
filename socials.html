@@ -1,40 +1,59 @@
 <!DOCTYPE html>
 
 <html>
+
 <head>
-<meta content="Official MEGAMUN'23 website" name="description"/>
-<meta content="MEGAMUN'23" name="og:site_name"/>
-<meta content="megamun.png" property="og:image"/>
-<link href="megamun.png" rel="icon" type="image/x-icon"/>
-<meta content="#2A1472" name="theme-color"/>
+    <meta content="Official MEGAMUN'23 website" name="description" />
+    <meta content="MEGAMUN'23" name="og:site_name" />
+    <meta content="megamun.png" property="og:image" />
+    <link href="megamun.png" rel="icon" type="image/x-icon" />
+    <meta content="#2A1472" name="theme-color" />
 
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"/>
-<title>Socials</title>
-<link href="mystyle.css" rel="stylesheet"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
+    <title>Socials</title>
+    <link href="mystyle.css" rel="stylesheet" />
 </head>
-<body>
-<div id="preloader"></div>
-<div class="navbar-container"></div>
-<header>
-<h1><b>Socials</b></h1>
-<div class="socials">
-<div class="instagram-logo"><span class="thin" style="color: #fff ; letter-spacing: 2px; font-size: xxx-large;"><i class="fab fa-instagram" style="background: linear-gradient(220deg,#4f5bd5 ,#962fbf ,#d62976 , #fa7e1e , #feda75 );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;"></i> </span><span class="thin" style=" font-size: large;letter-spacing: 2px;"><a class="thin" href="https://www.instagram.com/megamun_23/" style="text-decoration: none; color: #fff; font: bold;font-size: large;letter-spacing: 2px;">@megamun_23</a></span>
-</div>
-<div class="website-logo"><span class="thin" style="color: #fff ; letter-spacing: 2px; font-size: xxx-large;"><i class="fas fa-globe" style="background: linear-gradient(40deg, #26045c , #4f5bd5 );
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;"></i> </span><span class="thin" style=" font-size: large;letter-spacing: 2px;"><a class="thin" href="http://dpsmegacity.in/" style="text-decoration: none; color: #fff; font: bold;font-size: large;letter-spacing: 2px;">dpsmegacity.in</a></span>
-</div>
-</div>
-<div class="website-logo"><span class="thin" style="color: #fff ; letter-spacing: 2px; font-size: xxx-large;"><i class="fas fa-envelope" style="background: linear-gradient(40deg, #6e6e6e , #4f5bd5 );
-                              -webkit-background-clip: text;
-                              -webkit-text-fill-color: transparent;"></i> </span><span class="thin" style=" font-size: large;letter-spacing: 2px;"><a class="thin" href="mailto:megamun2023@gmail.com" style="text-decoration: none; color: #fff; font: bold;font-size: large;letter-spacing: 2px;"></a></span>megamun2023@gmail.com
-</div>
 
-</header>
-<div class="footer"></div>
-<script defer="">
+<body>
+    <div id="preloader"></div>
+    <div class="navbar-container"></div>
+    <header>
+        
+        <br style="font-size: calc(20vh); line-height: 20vh;">
+        <br style="font-size: calc(20vh); line-height: 20vh;">
+        <h1 style="font-size: calc(20vh); line-height: 20vh;"><b class="wider-text" style="font-size: calc(20vh); line-height: 20vh;">Socials</b></h1>
+        <div class="cols">
+            <!-- <div class="col">
+                <br>
+            </div> -->
+
+            <div class="col"><span class="thin" style="color: #fff ; letter-spacing: 2px; font-size: xxx-large;"><i
+                        class="fab fa-instagram" style="background: linear-gradient(220deg,#4f5bd5 ,#962fbf ,#d62976 , #fa7e1e , #feda75 );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;"></i> </span><span class="wider-text"
+                    style=" font-size: large;letter-spacing: 2px;"><a class="thin kbd"
+                        href="https://www.instagram.com/megamun_23/"
+                        style="text-decoration: none; color: #fff; font: bold;font-size: large;letter-spacing: 2px;">@megamun_23</a></span>
+            </div>
+            <div class="col"><span class="thin" style="color: #fff ; letter-spacing: 2px; font-size: xxx-large;"><i
+                        class="fas fa-globe" style="background: linear-gradient(40deg, #26045c , #4f5bd5 );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;"></i> </span><span class="wider-text"
+                    style=" font-size: large;letter-spacing: 2px;"><a class="thin kbd" href="http://dpsmegacity.in/"
+                        style="text-decoration: none; color: #fff; font: bold;font-size: large;letter-spacing: 2px;">dpsmegacity.in</a></span>
+            </div>
+        </div>
+        <div class="col"><span class="thin" style="color: #fff ; letter-spacing: 2px; font-size: xxx-large;"><i
+                    class="fas fa-envelope" style="background: linear-gradient(40deg, #6e6e6e , #4f5bd5 );
+                              -webkit-background-clip: text;
+                              -webkit-text-fill-color: transparent;"></i> </span><span class="wider-text"
+                style=" font-size: large;letter-spacing: 2px;"><a class="thin kbd" href="mailto:megamun2023@gmail.com"
+                    style="text-decoration: none; color: #fff; font: bold;font-size: large;letter-spacing: 2px;">megamun2023@gmail.com</a></span>
+        </div>
+
+    </header>
+    <div class="footer"></div>
+    <script defer="">
         fetch("footer.html")
             .then(response => response.text())
             .then(data => {
@@ -44,7 +63,7 @@
             }
             );
     </script>
-<script defer="">
+    <script defer="">
         // Fetch the contents of the navbar HTML file
         fetch("navbar.html")
             .then(response => response.text())
@@ -75,7 +94,8 @@
             });
 
     </script>
-<script defer="" src="main.js"></script>
-<script defer="" src="main2.js"></script>
+    <script defer="" src="main.js"></script>
+    <script defer="" src="main2.js"></script>
 </body>
+
 </html>

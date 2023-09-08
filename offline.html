@@ -1,31 +1,40 @@
 <!DOCTYPE html>
+
 <html lang="en">
-
 <head>
-  <meta charset="utf-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
+<meta content="Official MEGAMUN'23 website" name="description"/>
+<meta content="MEGAMUN'23" name="og:site_name"/>
+<meta content="megamun.png" property="og:image"/>
+<link href="megamun.png" rel="icon" type="image/x-icon"/>
+<meta content="#2A1472" name="theme-color"/>
 
-  <title>You are offline</title>
-
-  <!-- Inline the page's stylesheet. -->
-  <link rel="stylesheet" href="mystyle.css">
+<meta content="Official MEGAMUN'23 website" name="description"/>
+<meta content="MEGAMUN'23" name="og:site_name"/>
+<meta content="megamun.png" property="og:image"/>
+<link href="megamun.png" rel="icon" type="image/x-icon"/>
+<meta content="#2A1472" name="theme-color"/>
+<meta content="Official MEGAMUN'23 website" name="description"/>
+<meta content="MEGAMUN'23" name="og:site_name"/>
+<meta content="megamun.png" property="og:image"/>
+<link href="megamun.png" rel="icon" type="image/x-icon"/>
+<meta content="#2A1472" name="theme-color"/>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>You are offline</title>
+<!-- Inline the page's stylesheet. -->
+<link href="mystyle.css" rel="stylesheet"/>
 </head>
-
 <body style="background-color: blue;">
-  <div class="navbar-container"></div>
-  <header>
-    <div class="content">
-      <h1>You are <b>OFFLINE</b></h1>
-      <h3 style="color: white;">Check back again when you're connected to the internet!</h3>
-    </div>
-
-
-  </header>
-
-
+<div class="navbar-container"></div>
+<header>
+<div class="content">
+<h1>You are <b>OFFLINE</b></h1>
+<h3 style="color: white;">Check back again when you're connected to the internet!</h3>
+</div>
+</header>
 <div class="footer"></div>
-<script defer>
+<script defer="">
   fetch("footer.html")
     .then(response => response.text())
     .then(data => {
@@ -35,8 +44,8 @@
     }
     );
 </script>
-  <!-- Inline the page's JavaScript file. -->
-  <script>
+<!-- Inline the page's JavaScript file. -->
+<script>
     // Manual reload feature.
     document.querySelector("button").addEventListener("click", () => {
       window.location.reload();
@@ -68,5 +77,4 @@
     checkNetworkAndReload();
   </script>
 </body>
-
 </html>

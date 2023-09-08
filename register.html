@@ -1,92 +1,84 @@
 <!DOCTYPE html>
+
 <html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Self-Registration</title>
-    <link rel="stylesheet" href="mystyle.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <link rel="stylesheet" href="formstyle.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" id="theme-styles">
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+<meta content="Official MEGAMUN'23 website" name="description"/>
+<meta content="MEGAMUN'23" name="og:site_name"/>
+<meta content="megamun.png" property="og:image"/>
+<link href="megamun.png" rel="icon" type="image/x-icon"/>
+<meta content="#2A1472" name="theme-color"/>
+
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Self-Registration</title>
+<link href="mystyle.css" rel="stylesheet"/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"/>
+<link href="formstyle.css" rel="stylesheet"/>
+<link href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" id="theme-styles" rel="stylesheet"/>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
 </head>
-
 <body>
-    <div>
-        <div class="navbar-container"></div>
-        <!-- <div class="scroll-down"><i class="fas fa-angle-double-down"></i></div> -->
-    </div>
-
-    <div id="target-element">
-        <div id="preloader"></div>
-    </div>
-    <!-- <div style="background: linear-gradient(45deg, #0e0625, #210c5e, #30197d);
+<div>
+<div class="navbar-container"></div>
+<!-- <div class="scroll-down"><i class="fas fa-angle-double-down"></i></div> -->
+</div>
+<div id="target-element">
+<div id="preloader"></div>
+</div>
+<!-- <div style="background: linear-gradient(45deg, #0e0625, #210c5e, #30197d);
         background: #30197d;
     display: flex;"><br>
     -->
-    
-    <br>
-    <br>
-    <br>
-    <br>
-
-    <div class="container2">
-        <div class="form-container">
-            <form name="product">
-                <h1
-                    style="color: rgb(153, 151, 151); align-self: center; font-weight: 1000; letter-spacing: 0.4px; text-decoration: underline;">
+<br/>
+<br/>
+<br/>
+<br/>
+<div class="container2">
+<div class="form-container">
+<form name="product">
+<h1 style="color: rgb(153, 151, 151); align-self: center; font-weight: 1000; letter-spacing: 0.4px; text-decoration: underline;">
                     Registration</h1>
-
-                <input type="text" id="name" name="name" placeholder="Your Name" required>
-                <input type="email" id="email" name="email" placeholder="Email ID" required>
-                <input type="text" id="school" name="school" placeholder="School" required>
-                <input type="number" id="phone" name="phone" placeholder="Phone no." required min="1">
-
-                <select id="committee" name="committee" required>
-                    <option value="" disabled selected>Select a committee</option>
-                    <option value="UNSC">UNSC</option>
-                    <option value="COE-ATIP">COE-ATIP</option>
-                    <option value="OGADEN-1977">Special Session on the Ogaden Crisis 1977</option>
-                    <option value="AIPPM">AIPPM</option>
-                    <option value="IPC">IPC</option>
-                </select>
-
-                <!-- <textarea id="message" rows="4" name="message" placeholder="Additional Remarks" style="width: 100%; resize: none;"></textarea>  -->
-                <div class="cols">
-                    <div style="margin-right: 10px;">
-                        <div class="button-container">
-                            <button hovertext="Register" type="submit"><i class="fas fa-check"
-                                    style="color: #00a761; font-size: 200%; "></i></button>
-
-                        </div>
-                        <span class="button-text" style="color: #000000;"></span>
-                    </div>
-                    <div style="margin-right: 10px;">
-                        <div class="button-container">
-                            <button hovertext="Reset Form" type="reset"><i class="fas fa-times"
-                                    style="color: #ff1e00; font-size: 200%; "></i></button>
-
-                        </div>
-                        <span class="button-text" style="color: #000000;"></span>
-                    </div>
-                    <!-- <button type="reset"><abbr title="Reset Form">🔁</abbr></button> -->
-                </div>
-                <br>
-                <br>
-            </form>
-
-            <!-- <div style="text-align: center;">
+<input id="name" name="name" placeholder="Your Name" required="" type="text"/>
+<input id="email" name="email" placeholder="Email ID" required="" type="email"/>
+<input id="school" name="school" placeholder="School" required="" type="text"/>
+<input id="phone" min="1" name="phone" placeholder="Phone no." required="" type="number"/>
+<select id="committee" name="committee" required="">
+<option disabled="" selected="" value="">Select a committee</option>
+<option value="UNSC">UNSC</option>
+<option value="COE-ATIP">COE-ATIP</option>
+<option value="OGADEN-1977">Special Session on the Ogaden Crisis 1977</option>
+<option value="AIPPM">AIPPM</option>
+<option value="IPC">IPC</option>
+</select>
+<!-- <textarea id="message" rows="4" name="message" placeholder="Additional Remarks" style="width: 100%; resize: none;"></textarea>  -->
+<div class="cols">
+<div style="margin-right: 10px;">
+<div class="button-container">
+<button hovertext="Register" type="submit"><i class="fas fa-check" style="color: #00a761; font-size: 200%; "></i></button>
+</div>
+<span class="button-text" style="color: #000000;"></span>
+</div>
+<div style="margin-right: 10px;">
+<div class="button-container">
+<button hovertext="Reset Form" type="reset"><i class="fas fa-times" style="color: #ff1e00; font-size: 200%; "></i></button>
+</div>
+<span class="button-text" style="color: #000000;"></span>
+</div>
+<!-- <button type="reset"><abbr title="Reset Form"></abbr></button> -->
+</div>
+<br/>
+<br/>
+</form>
+<!-- <div style="text-align: center;">
                 <br>
                 <a href="website.html"><button required><b style="font-size: x-large;">Return to Home</b></button></a>
             </div> -->
-        </div>
-
-    </div>
-    <div class="footer"></div>
-    <script defer>
+</div>
+</div>
+<div class="footer"></div>
+<script defer="">
         fetch("footer.html")
             .then(response => response.text())
             .then(data => {
@@ -96,7 +88,7 @@
             }
             );
     </script>
-    <script defer>
+<script defer="">
         // Fetch the contents of the navbar HTML file
         fetch("navbar.html")
             .then(response => response.text())
@@ -127,9 +119,9 @@
             });
 
     </script>
-    <script src="formscript.js" defer></script>
-    <script src="main.js" defer></script>
-<script defer>
+<script defer="" src="formscript.js"></script>
+<script defer="" src="main.js"></script>
+<script defer="">
     // Display the overlay when the page loads
     Swal.fire({
             title: '<strong>Before you begin...</strong>',
@@ -152,5 +144,5 @@
         })
     </script>
 </body>
-
+</html>
 </html>

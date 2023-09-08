@@ -307,14 +307,14 @@ footer {
   background-size: cover;
   /* background-position: 100% */
 }
-.footer .cols .col a,.footer .cols .col i{
+footer .cols .col a,footer .cols .col i{
 
     font-size: clamp(16px, 4vw, 24px);
     color: #fffefe60;
     transition: all 0.5s;
 
 }
-.footer .cols .col a:hover{
+footer .cols .col a:hover{
   color: #b8b8b8;
   transition: all 0.5s;
 }

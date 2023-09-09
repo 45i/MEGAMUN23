@@ -76,6 +76,8 @@ body {
 } */
 blockquote {
   font-size: 3rem;
+  
+
 }
 cite {
   display: block;
@@ -83,19 +85,20 @@ cite {
   font-family: st ;
   margin-top: 1rem;
   font-size: .9rem;
-  color: #aaa;
+  color: #666666;
   font-style: normal;
 }
 blockquote q {
   font-family: cursve;
-  font-size: calc(4.3vw); line-height: 4.3vw;
+  font-size: xxx-large;
   /* font-style: italic; */
   /* letter-spacing: .1rem; */
 }
 blockquote q span { 
   font-family: cursve;
   will-change: opacity, filter;
-  font-size: calc(4.3vw); line-height: 4.3vw;
+    font-size: xxx-large;
+
 
   opacity: 0;
   filter: blur(0px);
@@ -103,27 +106,31 @@ blockquote q span {
 q {
   font-family: cursve;
   quotes: "“" "”" "‘" "’";
-  font-size: calc(6.4vw); line-height: 6.4vw;
+    font-size: xxx-large;
+
 
 }
 q:before {
   font-family: cursve;
   content: open-quote;
   margin-right: .8rem;
-  font-size: calc(4.3vw); line-height: 4.3vw;
+    font-size: xxx-large;
+
 
 }
 q:after {
   font-family: cursve;
   content: close-quote;
-  font-size: calc(4.3vw); line-height: 4.3vw;
+    font-size: xxx-large;
+
 
 }
 q:before, q:after {
   font-family: cursve;
   color: #ccc;
   font-size: 4rem;
-  font-size: calc(4.3vw); line-height: 4.3vw;
+    font-size: xxx-large;
+
 
 }
 .kbd::after{
@@ -284,8 +291,11 @@ tr.inactive{
   user-select: text; */
 
 }
-.days:hover::after{
+.days::after{
   content: "d";
+  position: relative;
+  top:50%;
+  
   
 }
 .days:hover{
@@ -296,8 +306,11 @@ tr.inactive{
   opacity: 0;
 }
 
-.hours:hover::after{
+.hours::after{
   content: "h";
+  position: relative;
+  top:50%;
+  
   
 }
 .hours:hover{
@@ -307,8 +320,10 @@ tr.inactive{
 .days::content{
 opacity: 0;}
 
-.minutes:hover::after{
+.minutes::after{
   content: "m";
+  position: relative;
+  top:50%;
   
 }
 .minutes:hover{
@@ -318,8 +333,10 @@ opacity: 0;}
 .days::content{
 opacity: 0;}
 
-.seconds:hover::after{
+.seconds::after{
   content: "s";
+  position: relative;
+  top:50%;
   
 }
 .seconds:hover{
@@ -534,6 +551,7 @@ button:hover::before {
   /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); */
   font-family: thin;
   transition: transform 0.3s ease-in-out;
+  letter-spacing: 01px;
 }
 
 .button-text {
@@ -547,6 +565,7 @@ button:hover::before {
   color: #007bff00;
   transition: transform 0.3s ease-in-out;
   font-family: thin;
+  letter-spacing: 100px;
 }
 
 @media (max-width: 1090px) {

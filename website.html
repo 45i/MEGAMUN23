@@ -21,36 +21,37 @@
 
 <body>
     <div class="navbar-container"></div>
-    <header>
-        <div class="content">
-            <h1><b>MEGA</b><span class="thin">MUN</span><b>2023</b> </h1>
-            <h1><b>STARTS</b><span> IN</span> </h1>
-            <div><abbr class="countdown" title="Days : Hours : Minutes : Seconds">
-                    -- : -- : -- : --
-                </abbr>
-            </div>
-        </div>
-        <div class="cols">
-            <div style="margin-right: 10px;">
-                <div class="button-container">
-                    <a href="register.html"><button hovertext="Register Now"><i class="fas fa-user-plus"
-                                style="color: #ffffff; font-size: 200%;"></i><b>
-                                <p></p>
-                            </b></button></a>
+    <header
+        style="background-image: linear-gradient(360deg, #2A1472,#0000,#00000000),url(school.jpg); background-size: cover;background-repeat: no-repeat;  ">
+        <div style=" ">
+            <div class="content">
+                <h1><b>MEGA</b><span class="thin">MUN</span><b>2023</b> </h1>
+                <h1><b>STARTS</b><span> IN</span> </h1>
+                <div><abbr class="countdown" title="Days : Hours : Minutes : Seconds">
+                        -- : -- : -- : --
+                    </abbr>
                 </div>
-                <span class="button-text"></span>
             </div>
-            <br style="margin-right: 20px;" />
-            <br style="margin-right: 20px;" />
-            <br style="margin-right: 20px;" />
-            <div>
-                <div class="button-container">
-                    <a href="directions.html"><button hovertext="Get Directions"><i class="fas fa-map-marker-alt"
-                                style="color: #eeeeee; font-size: 200%;"></i><b>
-                                <p></p>
-                            </b></button></a>
+            <div class="cols">
+                <div  class="col">
+                    <div class="button-container">
+                        <a href="register.html"><button hovertext="Register Now"><i class="fas fa-user-plus"
+                                    style="color: #ffffff; font-size: 200%;"></i><b>
+                                    <p></p>
+                                </b></button></a>
+                    </div>
+                    <span class="button-text"></span>
                 </div>
-                <span class="button-text"></span>
+                
+                <div class="col">
+                    <div class="button-container">
+                        <a href="directions.html"><button hovertext="Get Directions"><i class="fas fa-map-marker-alt"
+                                    style="color: #eeeeee; font-size: 200%;"></i><b>
+                                    <p></p>
+                                </b></button></a>
+                    </div>
+                    <span class="button-text"></span>
+                </div>
             </div>
         </div>
         <div class="scroll-down"><i class="fas fa-angle-double-down"></i></div>
@@ -60,45 +61,54 @@
     </div>
     <style>
         /* Default styles for both narrow and wider screens */
-        </style>
+    </style>
     <div class="info_text" style=" text-overflow: ellipsis; text-overflow: ellipsis">
         <div class="col">
             <div style="flex-direction: column; align-self: center;">
-                <h1 style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; text-size-adjust: 100%;">
+                <h1
+                    style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; text-size-adjust: 100%; font-size: calc(7.5vw); line-height: 7.5vw;">
                     <b>MEGA<span class="thin">MUN</span> is BACK</b>
                 </h1>
             </div>
-            <div class="wider-text">
-                <div class="cols">
-                    <div class="col" style="overflow: hidden; width: 90%vw;"><img src="megamun.png" width=" 90%" />
-                    </div>
-                    <div class="col">
-                        <div class="">
-                            <h4><p><q>Dedication. Perseverence. Success.</q></p></h4>
-                            MEGAMUN is back after a brief hiatus of three years. The Model United
-                            Conference organized by Delhi Public School, Megacity has been one of the premiere MUN’s
-                            in
-                            the
-                            city, and has a rich
-                            history of providing attendees with exhilarating and enriching sessions. We at MegaMun
-                            have
-                            always stressed upon the
-                            importance of global awareness associated with the event among individuals, and thus
-                            have
-                            always
-                            worked on and prepared
-                            meticulously thought-out agendas and committees. With the 5th session of MegaMun this
-                            year
-                            being
-                            no different as we look
-                            forward to a productive and fruitful conference</div>
+            <div class="cols">
+
+                <div class="col wider-text" style="overflow: hidden; width: 90%vw;"><img src="megamun.png"
+                        width=" 90%" />
+
+                </div>
+
+                <div class="col">
+                    <div class="">
+                        <p>
+                        <blockquote contenteditable="false"><q>Dedication. Perseverance. Success.</q>
+                            <cite>School Motto</cite>
+                        </blockquote>
+                        </p>
+                        <br style="line-height: 900px;">
+                        <!-- <h4>
+                            <p><q>Dedication. Perseverance. Success.</q></p>
+                        </h4> -->
+                        MEGAMUN is back after a brief hiatus of three years. The Model United
+                        Conference organized by Delhi Public School, Megacity has been one of the premiere MUN’s
+                        in
+                        the
+                        city, and has a rich
+                        history of providing attendees with exhilarating and enriching sessions. We at MegaMun
+                        have
+                        always stressed upon the
+                        importance of global awareness associated with the event among individuals, and thus
+                        have
+                        always
+                        worked on and prepared
+                        meticulously thought-out agendas and committees. With the 5th session of MegaMun this
+                        year
+                        being
+                        no different as we look
+                        forward to a productive and fruitful conference
                     </div>
                 </div>
             </div>
-            <div class="narrow-text">
-                <!-- Display this message on narrow screens -->
-                <br /><span class="kbd">This text only appears on wider screens, like your laptop, or tablet</span>
-            </div>
+
         </div>
     </div>
 
@@ -149,8 +159,58 @@
                 // Insert the navbar HTML into the navbar-container element
                 const navbarContainer = document.querySelector('.footer-container');
                 navbarContainer.innerHTML = data;
+                console.log("Hit 1");
+                const footer = document.querySelector(".footer-container");
+                const button = footer.querySelector("footer").querySelector(".retract");
+                var btn2 = document.createElement('button');
+
+                // Set the button's innerHTML to the FontAwesome icon
+                btn2.innerHTML = '<i class="fas fa-chevron-up"></i>';
+
+                // Add CSS styles to the button
+                btn2.style.position = 'fixed';
+                btn2.style.bottom = '0';
+                btn2.style.right = '0';
+                btn2.style.zIndex = '9999';
+
+                // const icon = button.getElementById("ret");
+
+                // Initial state
+                let isCollapsed = false;
+                footer.insertAdjacentElement('beforebegin', btn2);
+                footer.style.display = "block"; // Show the footer initially
+
+                btn2.style.display = "none";
+                button.addEventListener('click', () => {
+                    isCollapsed = !isCollapsed;
+
+                    console.log("Hit 2");
+
+                    // Collapse the footer
+                    footer.style.display = "none";
+                    btn2.innerHTML = '<i class="fas fa-chevron-up"></i>';
+                    btn2.style.display = "block";
+
+                    console.log(button);
+                    // icon.classList.remove("fa-chevron-down");
+                    // icon.classList.add("fa-chevron-up");
+                });
+                btn2.addEventListener('click', () => {
+                    // Expand the footer
+                    footer.style.display = "block";
+                    button.innerHTML = '<i class="fas fa-chevron-down"></i>';
+                    console.log(button);
+                    btn2.style.display = "none";
+                    // icon.classList.remove("fa-chevron-up");
+                    // icon.classList.add("fa-chevron-down");
+                }
+                );
             }
             );
+
+
+
+
     </script>
     <script>
         // Fetch the contents of the navbar HTML file
@@ -244,42 +304,7 @@
             externalLinks[i].addEventListener("click", function () { alert("hi"); }, false);
         }
     </script>
-    <script>
-        document.addEventListener("DOMContentLoaded", function () {
-            console.log("Hit 1");
-            var footer = document.querySelector(".footer-container").querySelector("#juto");
-            var button = document.querySelector(".retract");
-            const retractButton = document.querySelector('.retract');
-            button = retractButton;
-            // const icon = button.getElementById("ret");
 
-            // Initial state
-            let isCollapsed = false;
-            footer.style.display = "block"; // Show the footer initially
-
-            button.addEventListener('click', () => {
-                isCollapsed = !isCollapsed;
-
-                console.log("Hit 2");
-                if (isCollapsed) {
-                    // Collapse the footer
-                    footer.style.display = "none";
-                    button.innerHTML = '<i class="fas fa-chevron-up"></i>';
-                    console.log(button);
-                    // icon.classList.remove("fa-chevron-down");
-                    // icon.classList.add("fa-chevron-up");
-                } else {
-                    // Expand the footer
-                    footer.style.display = "block";
-                    button.innerHTML = '<i class="fas fa-chevron-down"></i>';
-                    console.log(button);
-
-                    // icon.classList.remove("fa-chevron-up");
-                    // icon.classList.add("fa-chevron-down");
-                }
-            });
-        });
-    </script>
 </body>
 
 </html>

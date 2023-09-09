@@ -26,7 +26,7 @@
 
 @font-face {
   font-family: thin;
-  src: url(thin.otf);
+  src: url(BebasNeue\ Light.otf);
 }
 
 * {
@@ -80,7 +80,7 @@ blockquote {
 cite {
   display: block;
   text-align: right;
-  font-family: st;
+  font-family: st ;
   margin-top: 1rem;
   font-size: .9rem;
   color: #aaa;
@@ -103,7 +103,7 @@ blockquote q span {
 q {
   font-family: cursve;
   quotes: "“" "”" "‘" "’";
-  font-size: calc(4.3vw); line-height: 4.3vw;
+  font-size: calc(6.4vw); line-height: 6.4vw;
 
 }
 q:before {
@@ -167,7 +167,7 @@ b {
 .thin {
   /* font-family: 'Roboto Thin', sans-serif; */
   font-family: thin;
-  letter-spacing: -1px;
+  letter-spacing: 1px;
 }
 .cursive {
   /* font-family: 'Roboto Thin', sans-serif; */
@@ -659,10 +659,10 @@ h2 {
   }
 }
 
-.countdown {
+.countdown,.days,.minutes,.hours,.seconds {
   color: #fff;
   font-size: 36px;
-  font-family: thin;
+  font-family: bold;
   /* font-weight: 400; */
 }
 

@@ -193,6 +193,14 @@ tds.forEach(td => {
     console.log('Copied to clipboard:', text);
   });
 });
+const abbrElements = document.querySelectorAll('abbr');
+
+// Loop through each abbr element and remove the title attribute
+abbrElements.forEach(abbr => {
+  abbr.addEventListener('mouseenter', function () {
+    this.removeAttribute('title');
+  });
+});
 const imgBoxes = document.querySelectorAll('.img-box');
 
 imgBoxes.forEach(imgBox => {

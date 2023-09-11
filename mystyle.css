@@ -26,7 +26,7 @@
 
 @font-face {
   font-family: thin;
-  src: url(BebasNeue\ Light.otf);
+  src: url(Gotham-Light.otf);
 }
 
 * {
@@ -82,7 +82,7 @@ blockquote {
 cite {
   display: block;
   text-align: right;
-  font-family: st ;
+  font-family: bold, thin, st, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
   margin-top: 1rem;
   font-size: .9rem;
   color: #666666;
@@ -227,9 +227,9 @@ table
   max-height: 90%;
   font-size: calc(1vw + 3px);
   letter-spacing: 0.07rem;
-  box-shadow: 0 0 10px #0000005d;
+  box-shadow: 0 0 10px #000000fb;
 }
-table, table tr td {
+table, table tr td, table tr td .kbd, table tr td .wider-text,table tr td .narrow-text {
   border-style: dashed;
   border-radius: 10px;
   border-color: #ffffff0c;
@@ -363,7 +363,7 @@ header:after {
 footer {
   list-style: none;
   list-style: none;
-  position: sticky;
+  position: static;
   bottom: 0;
   display: flex;
   /* bottom: 0; */
@@ -378,7 +378,7 @@ footer {
   /* background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.144) 100%); */
   backdrop-filter: blur(10px);
   color: #fff;
-  background-image:linear-gradient(0deg, #00000000,#0F0331),url(bg.png);background-repeat: no-repeat;background-size: cover;
+  background-image:linear-gradient(0deg, #00000000,#030257),url(bg.png);background-repeat: no-repeat;background-size: cover;
   line-height: 2.5;
   /* max-height: 50vh; */
   /* background-position: 50%; */
@@ -482,6 +482,7 @@ footer:after {
 
 .content {
   position: relative;
+  white-space: nowrap;
   z-index: 1;
 
 }
@@ -568,29 +569,27 @@ button:hover::before {
   letter-spacing: 100px;
 }
 
-@media (max-width: 1090px) {
+
   .countdown {
     position: relative;
     /* cursor: pointer; */
   }
 
-  abbr:hover::after,
-  abbr:focus::after {
-    content: attr(title);
-    position: absolute;
-    top: 100%;
-    left: 50%;
-    transform: translateX(-50%);
-    padding: 5px;
-    background-color: #0F0331;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.767);
-
-    color: #fff;
-    border-radius: 5px;
-    font-size: 0.8rem;
-    z-index: 999999999;
-  }
+/* Style for the tooltip */
+[data-tooltip]:hover::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 5px;
+  background-color: #0F0331;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.767);
+  color: #fff;
+  border-radius: 5px;
+  font-size: 0.8rem;
+  z-index: 999999999;
 }
 
 button:hover {
@@ -698,7 +697,7 @@ h2 {
 }
 
 #preloader {
-  background: #000 url('preloader.gif') no-repeat center center;
+  background: #000 url('p2.gif') no-repeat center center;
   background-size: 30%;
   height: 100vh;
   width: 100%;
@@ -1341,11 +1340,12 @@ body::-webkit-scrollbar {
 }
 
 body::-webkit-scrollbar-thumb {
-  background-color: #000000;
-  background: linear-gradient(45deg, #150641, #190849, #2A1472);
+  background-color: #ffffff10;
+  /* background: linear-gradient(45deg, #150641, #190849, #2A1472); */
   border-radius: 10px;
-  box-shadow: 0 0 10px #00000070;
-  backdrop-filter: blur(10px);
+  box-shadow: 0 0 10px #000000;
+  transition: all 0.7s;
+  backdrop-filter: blur(100px);
 }
 
 .main {
@@ -1364,8 +1364,13 @@ body::-webkit-scrollbar-thumb {
 
 body::-webkit-scrollbar-track {
   background-color: #ffffff;
-  background: linear-gradient(45deg, #1E0A56, #190849, #2A1472);
+  background: linear-gradient(0deg, #0a0122, #1e0a55, #2A1472);
 
   backdrop-filter: blur(10px);
 }
-
+body::-webkit-scrollbar-thumb:hover{
+  
+    background-color:#ffffff3a;
+    transition: all 0.5s;
+  
+}

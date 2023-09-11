@@ -1,7 +1,7 @@
 // import Swal from 'sweetalert2.js'
 // import 'sweetalert2.scss'
 document.addEventListener('DOMContentLoaded', () => {
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbyHPFlrX46jTDBQ9kLgKBOOwb4XOaN4ub483t61JZVmL6oZHGmp7xfDvGNn2g5Unts6Nw/exec'; // Replace SCRIPT_ID with your Google Apps Script ID
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbx3a3CkINZYlEsilP3SBzy6-KBQuibS2HOJZ2tl7Bgakif7wFRrTiHBRiznYozXy_03Hw/exec'; // Replace SCRIPT_ID with your Google Apps Script ID
     const form = document.forms['product'];
 
     form.addEventListener('submit', e => {

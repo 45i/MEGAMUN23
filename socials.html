@@ -3,12 +3,16 @@
 <html>
 
 <head>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        rel="stylesheet" />
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
     <meta content="Official MEGAMUN'23 website" name="description" />
     <meta content="MEGAMUN'23" name="og:site_name" />
     <meta content="megamun.png" property="og:image" />
     <link href="megamun.png" rel="icon" type="image/x-icon" />
     <meta content="#2A1472" name="theme-color" />
-
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
     <title>Socials</title>
     <link href="mystyle.css" rel="stylesheet" />
@@ -18,50 +22,98 @@
     <div id="preloader"></div>
     <div class="navbar-container"></div>
     <header style="text-shadow: 0 0 2px #00000054;">
-        
-        <br style="font-size: calc(20vh); line-height: 20vh;">
-        <br style="font-size: calc(20vh); line-height: 20vh;">
-        <h1 style="font-size: calc(20vh); line-height: 20vh;"><b class="wider-text" style="font-size: calc(20vh); line-height: 20vh;">Socials</b></h1>
+        <br style="font-size: calc(20vh); line-height: 20vh;" />
+        <br style="font-size: calc(20vh); line-height: 20vh;" />
+        <h1 style="font-size: calc(20vh); line-height: 20vh;"><b class="wider-text"
+                style="font-size: calc(10vh); line-height: 10vh;">Socials</b></h1>
         <div class="">
             <!-- <div class="col">
                 <br>
             </div> -->
-
-            <div class="instagram-logo"><span class="thin" style="color: #fff ; letter-spacing: 2px; font-size: xxx-large;"><i
-                        class="fab fa-instagram" style="background: linear-gradient(220deg,#4f5bd5 ,#962fbf ,#d62976 , #fa7e1e , #feda75 );
+            <div class="instagram-logo"><span class="thin"
+                    style="color: #fff ; letter-spacing: 2px; font-size: xxx-large;"><i class="fab fa-instagram" style="background: linear-gradient(220deg,#4f5bd5 ,#962fbf ,#d62976 , #fa7e1e , #feda75 );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;"></i> </span><span class="wider-text"
                     style=" font-size: large;letter-spacing: 2px;"><a class="thin kbd"
                         href="https://www.instagram.com/megamun_23/"
                         style="text-decoration: none; color: #fff; font: bold;font-size: large;letter-spacing: 2px;">@megamun_23</a></span>
             </div>
-            <div class="instagram-logo"><span class="thin" style="color: #fff ; letter-spacing: 2px; font-size: xxx-large;"><i
-                        class="fas fa-globe" style="background: linear-gradient(40deg, #26045c , #4f5bd5 );
+            <div class="instagram-logo"><span class="thin"
+                    style="color: #fff ; letter-spacing: 2px; font-size: xxx-large;"><i class="fas fa-globe" style="background: linear-gradient(40deg, #26045c , #4f5bd5 );
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;"></i> </span><span class="wider-text"
                     style=" font-size: large;letter-spacing: 2px;"><a class="thin kbd" href="http://dpsmegacity.in/"
                         style="text-decoration: none; color: #fff; font: bold;font-size: large;letter-spacing: 2px;">dpsmegacity.in</a></span>
             </div>
         </div>
-        <div class="instagram-logo"><span class="thin" style="color: #fff ; letter-spacing: 2px; font-size: xxx-large;"><i
-                    class="fas fa-envelope" style="background: linear-gradient(40deg, #6e6e6e , #4f5bd5 );
+        <div class="instagram-logo"><span class="thin"
+                style="color: #fff ; letter-spacing: 2px; font-size: xxx-large;"><i class="fas fa-envelope" style="background: linear-gradient(40deg, #6e6e6e , #4f5bd5 );
                               -webkit-background-clip: text;
                               -webkit-text-fill-color: transparent;"></i> </span><span class="wider-text"
                 style=" font-size: large;letter-spacing: 2px;"><a class="thin kbd" href="mailto:megamun2023@gmail.com"
                     style="text-decoration: none; color: #fff; font: bold;font-size: large;letter-spacing: 2px;">megamun2023@gmail.com</a></span>
         </div>
-
     </header>
-    <div class="footer"></div>
+    <div class="footer-container"></div>
     <script defer="">
         fetch("footer.html")
             .then(response => response.text())
             .then(data => {
                 // Insert the navbar HTML into the navbar-container element
-                const navbarContainer = document.querySelector('.footer');
+                const navbarContainer = document.querySelector('.footer-container');
                 navbarContainer.innerHTML = data;
+                console.log("Hit 1");
+                const footer = document.querySelector(".footer-container");
+                const button = footer.querySelector("footer").querySelector(".retract");
+                var btn2 = document.createElement('button');
+
+                // Set the button's innerHTML to the FontAwesome icon
+                btn2.innerHTML = '<i class="fas fa-chevron-up"></i>';
+
+                // Add CSS styles to the button
+                btn2.style.position = 'fixed';
+                btn2.style.bottom = '0';
+                btn2.style.right = '0';
+                btn2.style.zIndex = '9999';
+
+                // const icon = button.getElementById("ret");
+
+                // Initial state
+                let isCollapsed = false;
+                footer.insertAdjacentElement('beforebegin', btn2);
+                footer.style.display = "block"; // Show the footer initially
+
+                btn2.style.display = "none";
+                button.addEventListener('click', () => {
+                    isCollapsed = !isCollapsed;
+
+                    console.log("Hit 2");
+
+                    // Collapse the footer
+                    footer.style.display = "none";
+                    btn2.innerHTML = '<i class="fas fa-chevron-up"></i>';
+                    btn2.style.display = "block";
+
+                    console.log(button);
+                    // icon.classList.remove("fa-chevron-down");
+                    // icon.classList.add("fa-chevron-up");
+                });
+                btn2.addEventListener('click', () => {
+                    // Expand the footer
+                    footer.style.display = "block";
+                    button.innerHTML = '<i class="fas fa-chevron-down"></i>';
+                    console.log(button);
+                    btn2.style.display = "none";
+                    // icon.classList.remove("fa-chevron-up");
+                    // icon.classList.add("fa-chevron-down");
+                }
+                );
             }
             );
+
+
+
+
     </script>
     <script defer="">
         // Fetch the contents of the navbar HTML file

@@ -34,11 +34,11 @@ document.addEventListener("DOMContentLoaded", function () {
   document.head.appendChild(ogImageMeta);
 
   // Create and append the 'favicon' link tag
-  const faviconLink = document.createElement('link');
-  faviconLink.href = '/megamun.png';
-  faviconLink.rel = 'icon';
-  faviconLink.type = 'image/x-icon';
-  document.head.appendChild(faviconLink);
+  // const faviconLink = document.createElement('link');
+  // faviconLink.href = 'megamun.png';
+  // faviconLink.rel = 'icon';
+  // faviconLink.type = 'image/x-icon';
+  // document.head.appendChild(faviconLink);
 
   // Create and append the 'theme-color' meta tag
   const themeColorMeta = document.createElement('meta');

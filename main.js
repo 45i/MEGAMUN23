@@ -14,6 +14,138 @@
 //   const bgColor = styles.backgroundColor || 'transparent';
 //   element.style.setProperty('--fallback-bg-color', bgColor);
 // });
+document.addEventListener("DOMContentLoaded", function () {
+  // Create and append the 'description' meta tag
+  const descriptionMeta = document.createElement('meta');
+  descriptionMeta.name = 'description';
+  descriptionMeta.content = "Official MEGAMUN'23 website";
+  document.head.appendChild(descriptionMeta);
+
+  // Create and append the 'og:site_name' meta tag
+  const ogSiteNameMeta = document.createElement('meta');
+  ogSiteNameMeta.name = 'og:site_name';
+  ogSiteNameMeta.content = "MEGAMUN'23";
+  document.head.appendChild(ogSiteNameMeta);
+
+  // Create and append the 'og:image' meta tag
+  const ogImageMeta = document.createElement('meta');
+  ogImageMeta.property = 'og:image';
+  ogImageMeta.content = 'megamun.png';
+  document.head.appendChild(ogImageMeta);
+
+  // Create and append the 'favicon' link tag
+  const faviconLink = document.createElement('link');
+  faviconLink.href = '/megamun.png';
+  faviconLink.rel = 'icon';
+  faviconLink.type = 'image/x-icon';
+  document.head.appendChild(faviconLink);
+
+  // Create and append the 'theme-color' meta tag
+  const themeColorMeta = document.createElement('meta');
+  themeColorMeta.name = 'theme-color';
+  themeColorMeta.content = '#2A1472';
+  document.head.appendChild(themeColorMeta);
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  // Fetch the contents of the navbar HTML file
+  fetch("/navbar.html")
+    .then(response => response.text())
+    .then(data => {
+      // Insert the navbar HTML into the navbar-container element
+      const navbarContainer = document.querySelector('.navbar-container');
+      navbarContainer.innerHTML = data;
+
+      // Access the menuIcon element and add a click event listener
+      var icon = document.querySelector('.main');
+      var menuIcon = document.querySelector('.icon');
+      var navbar = document.querySelector('.navbar');
+      var dropdownMenu = document.querySelector(".committee-menu");
+
+      console.log(menuIcon);
+      console.log(icon);
+
+      menuIcon.addEventListener('click', function () {
+        console.log("clicked");
+        icon.classList.toggle('open');
+        if (icon.classList.contains('open')) {
+          menuIcon.innerHTML = '<i class="fas fa-times"></i>';
+        } else {
+          menuIcon.innerHTML = '<i class="fas fa-bars"></i>';
+        }
+        menuIcon.classList.toggle('bx-x');
+        navbar.classList.toggle('open');
+      });
+
+      // Function to toggle the chevron icon when the dropdown is open
+      function toggleChevronIcon() {
+        var committeeIcon = document.querySelector(".committee i");
+        dropdownMenu.style.display = (dropdownMenu.style.display==="none")?"block":"none";
+        if (dropdownMenu.style.display === "block") {
+          committeeIcon.style.transform = "rotate(180deg)";
+        } else {
+          committeeIcon.style.transform = "rotate(0deg)";
+        }
+      }
+
+      const gg = document.querySelector(".committee");
+
+      console.log(dropdownMenu);
+      console.log("hover");
+      gg.addEventListener("mouseenter", function () {
+        toggleChevronIcon();
+        console.log("hover");
+      });
+
+      // dropdownMenu.addEventListener("mouseenter", function () {
+      //   dropdownMenu.style.display = "block";
+      //   toggleChevronIcon();
+      //   console.log("hover");
+      // });
+
+      gg.addEventListener("mouseleave", function () {
+        // dropdownMenu.style.display = "none";
+        toggleChevronIcon();
+      });
+      dropdownMenu.addEventListener("mouseleave", function () {
+        // dropdownMenu.style.display = "none";
+        toggleChevronIcon();
+      });
+    });
+});
+// footer.js
+
+document.addEventListener("DOMContentLoaded", function () {
+  fetch("/footer.html")
+    .then(response => response.text())
+    .then(data => {
+      const footerContainer = document.querySelector('.footer-container');
+      footerContainer.innerHTML = data;
+      const footer = document.querySelector(".footer-container");
+      const button = footer.querySelector("footer").querySelector(".retract");
+      var btn2 = document.createElement('button');
+      btn2.innerHTML = '<i class="fas fa-chevron-up"></i>';
+      btn2.style.position = 'fixed';
+      btn2.style.bottom = '0';
+      btn2.style.right = '0';
+      btn2.style.zIndex = '9999';
+      let isCollapsed = false;
+      footer.insertAdjacentElement('beforebegin', btn2);
+      footer.style.display = "block";
+      btn2.style.display = "none";
+      button.addEventListener('click', () => {
+        isCollapsed = !isCollapsed;
+        footer.style.display = "none";
+        btn2.innerHTML = '<i class="fas fa-chevron-up"></i>';
+        btn2.style.display = "block";
+      });
+      btn2.addEventListener('click', () => {
+        footer.style.display = "block";
+        button.innerHTML = '<i class="fas fa-chevron-down"></i>';
+        btn2.style.display = "none";
+      });
+    });
+});
 
 document.addEventListener("DOMContentLoaded", function () {
   var readMoreElements = document.querySelectorAll('.readmoretext');
@@ -293,4 +425,6 @@ function handleScroll() {
 
 // Add the initial scroll event listener
 window.addEventListener('scroll', handleScroll);
+
+// main.js
 

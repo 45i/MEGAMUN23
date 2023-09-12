@@ -10,11 +10,7 @@
 <meta content="megamun.png" property="og:image"/>
 <link href="megamun.png" rel="icon" type="image/x-icon"/>
 <meta content="#2A1472" name="theme-color"/>
-<meta content="Official MEGAMUN'23 website" name="description"/>
-<meta content="MEGAMUN'23" name="og:site_name"/>
-<meta content="megamun.png" property="og:image"/>
-<link href="megamun.png" rel="icon" type="image/x-icon"/>
-<meta content="#2A1472" name="theme-color"/>
+
 <meta content="Official MEGAMUN'23 website" name="description"/>
 <meta content="MEGAMUN'23" name="og:site_name"/>
 <meta content="megamun.png" property="og:image"/>
@@ -37,7 +33,7 @@
 </header>
 <div class="footer-container"></div>
 <script defer="">
-  fetch("footer.html")
+  fetch("/footer.html")
     .then(response => response.text())
     .then(data => {
       // Insert the navbar HTML into the navbar-container element

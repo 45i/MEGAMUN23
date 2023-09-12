@@ -56,7 +56,7 @@
     </header>
     <div class="footer-container"></div>
     <script defer="">
-        fetch("footer.html")
+        fetch("/footer.html")
             .then(response => response.text())
             .then(data => {
                 // Insert the navbar HTML into the navbar-container element
@@ -115,37 +115,7 @@
 
 
     </script>
-    <script defer="">
-        // Fetch the contents of the navbar HTML file
-        fetch("navbar.html")
-            .then(response => response.text())
-            .then(data => {
-                // Insert the navbar HTML into the navbar-container element
-                const navbarContainer = document.querySelector('.navbar-container');
-                navbarContainer.innerHTML = data;
-
-                // Access the menuIcon element and add a click event listener
-                var icon = document.querySelector('.main');
-                var menuIcon = document.querySelector('.icon');
-                var navbar = document.querySelector('.navbar');
-                console.log(menuIcon);
-                console.log(icon);
-
-                menuIcon.addEventListener('click', function () {
-                    console.log("clicked");
-                    icon.classList.toggle('open');
-                    if (icon.classList.contains('open')) {
-                        menuIcon.innerHTML = '<i class="fas fa-times"></i>';
-                    } else {
-                        menuIcon.innerHTML = '<i class="fas fa-bars"></i>';
-                    }
-                    menuIcon.classList.toggle('bx-x');
-                    navbar.classList.toggle('open');
-
-                });
-            });
-
-    </script>
+    
     <script defer="" src="main.js"></script>
     <script defer="" src="main2.js"></script>
 </body>

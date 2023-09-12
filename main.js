@@ -49,7 +49,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
 document.addEventListener("DOMContentLoaded", function () {
   // Fetch the contents of the navbar HTML file
-  fetch("/navbar.html")
+  fetch("navbar.html")
     .then(response => response.text())
     .then(data => {
       // Insert the navbar HTML into the navbar-container element
@@ -116,7 +116,7 @@ document.addEventListener("DOMContentLoaded", function () {
 // footer.js
 
 document.addEventListener("DOMContentLoaded", function () {
-  fetch("/footer.html")
+  fetch("footer.html")
     .then(response => response.text())
     .then(data => {
       const footerContainer = document.querySelector('.footer-container');

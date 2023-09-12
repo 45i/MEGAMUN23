@@ -689,22 +689,17 @@ h2 {
 
 .countdown,.days,.minutes,.hours,.seconds {
   color: #fff;
-  font-size: 36px;
+  font-size: clamp(22px,calc(9vw),40px);
   font-family: bold;
   /* font-weight: 400; */
 }
 
-@include breakpoint(480px) {
+/* @include breakpoint(480px) {
   .countdown {
     font-size: 42px;
   }
-}
+} */
 
-@include breakpoint(480px) {
-  .countdown {
-    font-size: 56px;
-  }
-}
 
 #preloader {
   background: #000 url('p2.gif') no-repeat center center;

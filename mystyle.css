@@ -1303,10 +1303,12 @@ abbr:hover {
     position: absolute;
     z-index: 999999;
     top: 100%;
-    right: -270px;
-    width: 270px;
+    right: -300px;
+    width: 300px;
     height: auto;
     font-family: thin;
+    display: none;
+    font-size: medium;
     background-color: #0F0331;
     backdrop-filter: blur(10px);
     box-shadow: 10px 1px 10px rgb(0, 0, 0);
@@ -1319,19 +1321,21 @@ abbr:hover {
 
   .navbar a {
     display: block;
-    margin: 12px 0px;
+    margin: 2px 0px;
     padding: 5px 25px;
     transition: all 0.5s ease;
+    line-height: 25px;
   }
 
   .navbar a:hover {
     /* color: var(--text-color); */
-    transform: translateY(5px);
+    /* transform: translateY(5px); */
     background-color: #15064169;
   }
 
   .navbar.open {
     right: 0;
+    display: block;
   }
 }
 

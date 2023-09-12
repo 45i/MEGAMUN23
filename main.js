@@ -88,7 +88,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       }
 
-      const gg = document.querySelector(".committee");
+      const gg = document.querySelector(".committee i");
 
       console.log(dropdownMenu);
       console.log("hover");
@@ -103,10 +103,10 @@ document.addEventListener("DOMContentLoaded", function () {
       //   console.log("hover");
       // });
 
-      gg.addEventListener("mouseleave", function () {
-        // dropdownMenu.style.display = "none";
-        toggleChevronIcon();
-      });
+      // gg.addEventListener("mouseleave", function () {
+      //   // dropdownMenu.style.display = "none";
+      //   toggleChevronIcon();
+      // });
       dropdownMenu.addEventListener("mouseleave", function () {
         // dropdownMenu.style.display = "none";
         toggleChevronIcon();

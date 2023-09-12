@@ -1,19 +1,45 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>UNSC</title>
-        <link href="mystyle.css" rel="stylesheet" />
-        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
 
-    </head>
-    <body>
-        <div class="preloader"></div>
-        <div class="navbar-container"></div>
-        
-        <header>
-        <h1><strong>UNSC</strong></h1>
-        </header>
-        <div class="footer-container"></div>
-    </body>
-    <script src="main.js"></script>
+<head>
+    <title>UNSC</title>
+    <link href="mystyle.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
+
+</head>
+<style>
+    /* Set the initial font size */
+    header h1 {
+        font-size: calc(15vw);
+    }
+</style>
+
+<body>
+    <div class="preloader"></div>
+    <div class="navbar-container"></div>
+
+    <header>
+        <div style="background-image: url(unsc-logo.png); background-position: 50%;background-size: cover; filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.5)); background-repeat: no-repeat;">
+            <h1 ><strong>UNSC</strong></h1>
+            <span style="color:#ffffffbb">United Nations Security Council</span>
+        </div>
+    </header>
+    <div class="info_text">
+       <div class="cols">
+        <div class="col">
+                <h3><strong>Chairperson</strong></h3>
+                <span style="white-space: nowrap;">Hitesh Kar</span>
+        </div>
+        <div class="col">
+            <h3><strong>Agenda</strong></h3>
+            <span style="">Discussing the Yugoslav wars(<span class="kbd"
+                style="box-shadow: none; background-color: transparent;">1987-1991</span>) with special emphasis
+            on the Kosovo region</span>
+        </div>
+       </div>
+    </div>
+    <div class="footer-container"></div>
+</body>
+<script src="main.js"></script>
+
 </html>

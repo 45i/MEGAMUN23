@@ -48,12 +48,16 @@
         <h1 style="font-size: 10vw; line-height: 0.14px;"><span class="kbd"
                 style="border-radius: 6px;font-family: 'Consolas';background-image:url(bg.png);background-repeat: no-repeat;background-size: cover;">404</span>
         </h1>
-        <span style="color: rgb(199, 199, 199);font-size: 2vw;">You've stumbled upon Apollo! <p><span class="kbd"
-                    style="">He's a good boy</span></p>
-            <p></p>
+        <span id="apolloSpan" style="color: rgb(199, 199, 199);font-size: 2vw;">
         </span>
-        <img alt="Apollo will keep you company" class="Apollo" src="dog-11328.png"
-            style="max-width: 20vh; position: absolute;bottom:0; " width="100%" />
+        <br>
+        <p
+           ><span class="kbd" id="apolloKbd" style="">He's a good boy</span></p>
+       <p></p>
+        <img class="Apollo" id="randomImage" src="" style="max-width: 20vh; position: absolute; bottom: 0;"
+            width="100%" />
+
+
     </header>
     <script>
         var apollo = document.querySelector(".Apollo");
@@ -61,6 +65,61 @@
             window.location.href = "website.html";
         });
     </script>
+
+    <script>
+        const imageFileNames = [
+            "755799375430549604.png",
+            "810696327234322432.png",
+            "babyyoda.png",
+            "dog-11328.png",
+            "panik.png",
+            "yoda.png"
+            // Add more image file names as needed
+        ];
+    
+        const spanTexts = [
+            "",
+            "",
+            "",
+            "",
+            ""
+            // Add more texts corresponding to each image
+        ];
+    
+        const kbdTexts = [
+            "cri",
+            "sadge",
+            "*burp*",
+            "woof!",
+            "AAAAAAAAAAAAAAAAAAAAAA",
+            "Lost you are, my friend. Yes, hmmm."
+            // Add more texts corresponding to each image
+        ];
+    
+        const randomIndex = Math.floor(Math.random() * imageFileNames.length);
+        const randomImageFileName = imageFileNames[randomIndex];
+    
+        const randomImage = document.getElementById("randomImage");
+        randomImage.src = `404 img/${randomImageFileName}`;
+    
+        const apolloSpan = document.getElementById("apolloSpan");
+        const apolloKbd = document.getElementById("apolloKbd");
+    
+        // Set the text based on the selected image
+        const textToDisplay = kbdTexts[randomIndex];
+    
+        if (randomIndex === 4) {
+            // Create a marquee element for the text
+            const marquee = document.createElement("marquee");
+            marquee.textContent = textToDisplay;
+            marquee.animate="continuous";
+            apolloKbd.innerHTML = ""; // Clear the previous content
+            apolloKbd.appendChild(marquee);
+        } else {
+            apolloKbd.textContent = textToDisplay;
+        }
+    </script>
+    
 </body>
 
 </html>

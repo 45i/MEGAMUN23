@@ -14,6 +14,26 @@
 //   const bgColor = styles.backgroundColor || 'transparent';
 //   element.style.setProperty('--fallback-bg-color', bgColor);
 // });
+// Check for backdrop-filter support
+// Check for backdrop-filter support
+function supportsBackdropFilter() {
+  const style = document.documentElement.style;
+  return 'backdrop-filter' in style || 'webkitBackdropFilter' in style;
+}
+
+// Apply backdrop filter or sepia based on support
+function applyFilter() {
+  if (!supportsBackdropFilter()) {
+      const allElements = document.querySelectorAll('*');
+      allElements.forEach(element => {
+          element.style.filter = 'sepia(100%)';
+      });
+  }
+}
+
+// Call the function to apply the filter
+applyFilter();
+
 document.addEventListener("DOMContentLoaded", function () {
   // Create and append the 'description' meta tag
   const descriptionMeta = document.createElement('meta');

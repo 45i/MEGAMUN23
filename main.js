@@ -16,9 +16,11 @@
 // });
 // Check for backdrop-filter support
 // Check for backdrop-filter support
+// Check if the device itself supports backdrop-filter
 function supportsBackdropFilter() {
-  const style = document.documentElement.style;
-  return 'backdrop-filter' in style || 'webkitBackdropFilter' in style;
+  const testElement = document.createElement('div');
+  testElement.style.backdropFilter = 'blur(10px)';
+  return testElement.style.backdropFilter !== undefined;
 }
 
 // Apply backdrop filter or sepia based on support
@@ -33,6 +35,7 @@ function applyFilter() {
 
 // Call the function to apply the filter
 applyFilter();
+
 
 document.addEventListener("DOMContentLoaded", function () {
   // Create and append the 'description' meta tag

@@ -51,9 +51,8 @@
         <span id="apolloSpan" style="color: rgb(199, 199, 199);font-size: 2vw;">
         </span>
         <br>
-        <p
-           ><span class="kbd" id="apolloKbd" style="">He's a good boy</span></p>
-       <p></p>
+        <p><span class="kbd" id="apolloKbd" style="">He's a good boy</span></p>
+        <p></p>
         <img class="Apollo" id="randomImage" src="" style="max-width: 20vh; position: absolute; bottom: 0;"
             width="100%" />
 
@@ -73,10 +72,12 @@
             "babyyoda.png",
             "dog-11328.png",
             "panik.png",
-            "yoda.png"
+            "yoda.png",
+            "wazowski.png",
+            "confused_dog.gif"
             // Add more image file names as needed
         ];
-    
+
         const spanTexts = [
             "",
             "",
@@ -85,41 +86,45 @@
             ""
             // Add more texts corresponding to each image
         ];
-    
+
         const kbdTexts = [
             "cri",
             "sadge",
             "*burp*",
             "woof!",
-            "AAAAAAAAAAAAAAAAAAAAAA",
-            "Lost you are, my friend. Yes, hmmm."
+            "AAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "Lost you are, my friend. Yes, hmmm.",
+            "literally you",
+            "whats dis hooman doin here?"
             // Add more texts corresponding to each image
         ];
-    
+
         const randomIndex = Math.floor(Math.random() * imageFileNames.length);
         const randomImageFileName = imageFileNames[randomIndex];
-    
+
         const randomImage = document.getElementById("randomImage");
         randomImage.src = `404 img/${randomImageFileName}`;
-    
+
         const apolloSpan = document.getElementById("apolloSpan");
         const apolloKbd = document.getElementById("apolloKbd");
-    
+
         // Set the text based on the selected image
         const textToDisplay = kbdTexts[randomIndex];
-    
+
         if (randomIndex === 4) {
             // Create a marquee element for the text
             const marquee = document.createElement("marquee");
             marquee.textContent = textToDisplay;
-            marquee.animate="continuous";
+            marquee.scrollAmount = 50; // Adjust the value as needed for your desired speed
+            marquee.animate = "continuous";
             apolloKbd.innerHTML = ""; // Clear the previous content
             apolloKbd.appendChild(marquee);
+
         } else {
             apolloKbd.textContent = textToDisplay;
         }
     </script>
-    
+
 </body>
 
 </html>

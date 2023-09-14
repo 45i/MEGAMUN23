@@ -63,6 +63,7 @@
                         <input id="school" name="school" placeholder="School Name" required="" type="text"
                             list="school-list" />
                         <datalist id="school-list"></datalist>
+                        <label for="school" id="schoollabel" style="font-size: small; color:red" class="kbd"></label>
                         <input id="phone" min="1" name="phone" placeholder="Phone no." required="" type="number" />
                         <select id="committee" name="committee" required="">
                             <option disabled="" selected="" value="">Select a committee</option>
@@ -74,22 +75,25 @@
                         </select>
                         <!-- Co-delegate fields, initially hidden -->
                         <div id="co-delegate-fields" style="display: none;">
-                            <input id="coname" name="coname" placeholder="Co-Delegate's Name" required="" type="text" />
-                            <input id="coemail" name="coemail" placeholder="Co-Delegate's Email ID" required=""
+                            <div class="">
+                            <input class=""id="coname" name="coname" placeholder="Co-Delegate's Name" required="" type="text" />
+                            <input class=""id="coemail" name="coemail" placeholder="Co-Delegate's Email ID" required=""
                                 type="email" />
-                            <input id="cophone" min="1" name="cophone" placeholder="Co-Delegate's Phone no." required=""
+                            <input class=""id="cophone" min="1" name="cophone" placeholder="Co-Delegate's Phone no." required=""
                                 type="number" />
-                            <div>
+                            <div class="">
                                 <input id="sameSchool" type="checkbox" name="sameSchool" checked>
 
                                 <label for="sameSchool" style="font-size: large;">Is your co-delegate from the same
                                     school?</label>
                             </div>
-                            <div id="coSchoolField" style="display: none;">
+                            <div id="coSchoolField" style="display: none;" class="">
                                 <input id="coschool" name="coschool" placeholder="Co-Delegate's School Name" type="text"
                                     list="school-list-coschool" />
                                 <datalist id="school-list-coschool"></datalist>
+                                <label for="coschool" id="coschoollabel" style="font-size: small; color:red" class="kbd"></label>
 
+                            </div>
                             </div>
                         </div>
                     </div>
@@ -180,7 +184,7 @@
                                     schoolList.appendChild(option);
                                 });
                             })
-                            .catch(error => console.error(error));
+                            .catch(error => document.getElementById("schoollabel").innerHTML="Failed to get school list... Please manually enter school name");
                     });
 
                     function parseCSV(csvData) {
@@ -238,7 +242,7 @@
                                     schoolList2.appendChild(option);
                                 });
                             })
-                            .catch(error => console.error(error));
+                            .catch(error =>document.getElementById("coschoollabel").innerHTML="Failed to get school list... Please manually enter school name");
                     });
 
                 </script>

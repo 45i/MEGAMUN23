@@ -237,12 +237,16 @@ table
   letter-spacing: 0.07rem;
   box-shadow: 0 0 10px #000000fb;
 }
-table, table tr td, table tr td .kbd, table tr td .wider-text,table tr td .narrow-text {
+table, table tr td{
   border-style: dashed;
   border-radius: 10px;
   border-color: #ffffff0c;
   user-select: text;
 
+}
+table tr td .kbd, table tr td .wider-text,table tr td .narrow-text, table tr td strong {
+  user-select: text;
+  
 }
 /* table tr :hover{
   border-style: dashed;

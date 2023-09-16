@@ -111,7 +111,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       }
 
-      const gg = document.querySelector(".committee i");
+      const gg = document.querySelector(".committee");
 
       console.log(dropdownMenu);
       console.log("hover");

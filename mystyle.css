@@ -10,10 +10,12 @@
   font-family: st;
   src: url(regular.OTF);
 }
+
 @font-face {
   font-family: cursve;
   src: url(Monotype\ Corsiva.ttf);
 }
+
 @font-face {
   font-family: bold;
   src: url(Gotham-Black.otf);
@@ -37,21 +39,25 @@
   user-select: none;
   user-zoom: none;
   zoom: 1;
-  -webkit-font-smoothing: antialiased; /* For Chrome, Safari, and newer versions of Edge */
-    -moz-osx-font-smoothing: grayscale; /* For Firefox and older versions of Edge on macOS */
+  -webkit-font-smoothing: antialiased;
+  /* For Chrome, Safari, and newer versions of Edge */
+  -moz-osx-font-smoothing: grayscale;
+  /* For Firefox and older versions of Edge on macOS */
 
   /* cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32"><path d="M16 1C8.271 1 2 7.271 2 15s6.271 14 14 14 14-6.271 14-14S23.729 1 16 1zm0 24c-6.627 0-12-5.373-12-12s5.373-12 12-12 12 5.373 12 12-5.373 12-12 12z"/><path d="M22 11c-.553 0-1 .448-1 1s.447 1 1 1h1.585l-1.293 1.293c-.391.391-.391 1.023 0 1.414.391.391 1.023.391 1.414 0l2-2c.391-.391.391-1.023 0-1.414l-2-2c-.195-.195-.45-.293-.707-.293s-.512.098-.707.293c-.391.391-.391 1.023 0 1.414L22.586 10H21c-.553 0-1 .448-1 1z"/></svg>'), auto; */
 
 
 
-  & a{
+  & a {
     text-decoration: none;
-    
+
   }
+
   /* white-space: nowrap; */
   /* font-family:st,-apple-system,BlinkMacSystemFont,"Apple Color Emoji","Segoe UI Emoji"; */
 }
-  /* -webkit-backdrop-filter: blur(10px);
+
+/* -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
     background-color: var(--fallback-bg-color);
   } */
@@ -60,14 +66,28 @@ body {
   margin: 0;
   background: linear-gradient(45deg, #2A1472, #2A1472);
 }
-.kbd{
-  display:inline-block;font-family: "Consolas";min-width:21px;padding:0 4px;line-height:1.5;text-align:center;background-color:transparent;border:1px solid #646464, #000000;border-radius:4px;;color: #c5c5c5;
+
+.kbd {
+  display: inline-block;
+  font-family: "Consolas";
+  min-width: 21px;
+  padding: 0 4px;
+  line-height: 1.5;
+  text-align: center;
+  background-color: transparent;
+  border: 1px solid #646464, #000000;
+  border-radius: 4px;
+  ;
+  color: #c5c5c5;
 
   font-family: "Consolas", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  background-color: transparent;background-repeat: no-repeat;background-size: cover;
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: cover;
 
-  
+
 }
+
 /* q{
   font-family: cursve;
   font-size: xx-large;
@@ -78,75 +98,86 @@ body {
 } */
 blockquote {
   font-size: 3rem;
-  
+
 
 }
+
 img {
   filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.5));
-  image-rendering: optimizeQuality; /* This can help with antialiasing for images and SVG graphics */
+  image-rendering: optimizeQuality;
+  /* This can help with antialiasing for images and SVG graphics */
 
 }
 
 cite {
   display: block;
   text-align: right;
-  font-family: bold, thin, st, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
+  font-family: bold, thin, st, system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   margin-top: 1rem;
   font-size: .9rem;
   color: #666666;
   font-style: normal;
 }
+
 blockquote q {
   font-family: cursve;
   font-size: xxx-large;
   /* font-style: italic; */
   /* letter-spacing: .1rem; */
 }
-blockquote q span { 
+
+blockquote q span {
   font-family: cursve;
   will-change: opacity, filter;
-    font-size: xxx-large;
+  font-size: xxx-large;
 
 
   opacity: 0;
   filter: blur(0px);
 }
+
 q {
   font-family: cursve;
   quotes: "“" "”" "‘" "’";
-    font-size: xxx-large;
+  font-size: xxx-large;
 
 
 }
+
 q:before {
   font-family: cursve;
   content: open-quote;
   margin-right: .8rem;
-    font-size: xxx-large;
+  font-size: xxx-large;
 
 
 }
+
 q:after {
   font-family: cursve;
   content: close-quote;
-    font-size: xxx-large;
+  font-size: xxx-large;
 
 
 }
-q:before, q:after {
+
+q:before,
+q:after {
   font-family: cursve;
   color: #ccc;
   font-size: 4rem;
-    font-size: xxx-large;
+  font-size: xxx-large;
 
 
 }
-.kbd::after{
+
+.kbd::after {
   /* background-image:url(partners_bg.f13db78.png);background-repeat: no-repeat;background-size: 100%; */
   background-position: 50%;
   z-index: -1;
   border-radius: 6px;
 }
+
 html,
 body,
 header {
@@ -172,7 +203,8 @@ header {
   transition: transform 0.2s ease-out;
 } */
 
-b,strong {
+b,
+strong {
   /* text-shadow: 0 0 10px #8f8f8f, 0 0 20px #8f8f8f, 0 0 30px #8f8f8f;
      */
   font-weight: 10000000;
@@ -184,6 +216,7 @@ b,strong {
   font-family: thin;
   letter-spacing: 0px;
 }
+
 .cursive {
   /* font-family: 'Roboto Thin', sans-serif; */
   font-family: cursve;
@@ -202,18 +235,22 @@ header {
   line-height: 2.5;
   text-shadow: 0 0 10px #000;
   transition: background 0.3s ease-out;
-  background-image: linear-gradient(360deg, #2A1472,#0000,#00000000),url(school.jpg); background-size: cover;background-repeat: no-repeat;  
+  background-image: linear-gradient(360deg, #2A1472, #0000, #00000000), url(school.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
   background-position-x: 50%;
   /*   
   border-color: #000;
   border-image: linear-gradient(45deg, #0F0331, #2A1472) 1; */
 }
+
 .Apollo {
   /* background-image: url(partners_bg.f13db78.png); */
   background-repeat: no-repeat;
-  background-size: contain ;
+  background-size: contain;
   background-position: 50%;
-  position: relative; /* Use "relative" or "absolute" based on your layout needs */
+  position: relative;
+  /* Use "relative" or "absolute" based on your layout needs */
   overflow: visible;
   /* height: 2000px; */
   /* You may also want to specify a width and height for the .countdown element */
@@ -221,12 +258,12 @@ header {
   /* height: ...; */
 }
 
-table 
-{
+table {
   color: #fff;
   background-color: #1616162d;
-  background-repeat: no-repeat;background-size:cover;
-  
+  background-repeat: no-repeat;
+  background-size: cover;
+
   background-blend-mode: color-burn;
   /* background-size: 101% ; */
   backdrop-filter: blur(100px);
@@ -237,17 +274,24 @@ table
   letter-spacing: 0.07rem;
   box-shadow: 0 0 10px #000000fb;
 }
-table, table tr td{
+
+table,
+table tr td {
   border-style: dashed;
   border-radius: 10px;
   border-color: #ffffff0c;
   user-select: text;
 
 }
-table tr td .kbd, table tr td .wider-text,table tr td .narrow-text, table tr td strong {
+
+table tr td .kbd,
+table tr td .wider-text,
+table tr td .narrow-text,
+table tr td strong {
   user-select: text;
-  
+
 }
+
 /* table tr :hover{
   border-style: dashed;
   border-radius: 10px;
@@ -265,13 +309,14 @@ tr.active td {
   border-style: dashed;
   border-radius: 10px;
   border-color: #ce0f0fda;
-  
+
   user-select: text;
   /* border: #181717; */
   animation: dash 1s linear infinite alternate;
 
-  
+
 }
+
 .narrow-text {
   display: none;
   /* Initially hide the narrow screen text */
@@ -285,16 +330,17 @@ tr.active td {
 /* Media query for narrow screens */
 @media (max-width: 1090px) {
   .narrow-text {
-      display: block;
-      /* Show the narrow screen text */
+    display: block;
+    /* Show the narrow screen text */
   }
 
   .wider-text {
-      display: none;
-      /* Hide the wider screen text */
+    display: none;
+    /* Hide the wider screen text */
   }
 }
-tr.inactive{
+
+tr.inactive {
   /* background-color: #00000086;
   /* color: #00000086; 
   border-style: dashed;
@@ -303,60 +349,72 @@ tr.inactive{
   user-select: text; */
 
 }
-.days::after{
+
+.days::after {
   content: "d";
   position: relative;
-  top:50%;
-  
-  
+  top: 50%;
+
+
 }
-.days:hover{
-  transition:0.5s;
-  
+
+.days:hover {
+  transition: 0.5s;
+
 }
-.days::content{
+
+.days::content {
   opacity: 0;
 }
 
-.hours::after{
+.hours::after {
   content: "h";
   position: relative;
-  top:50%;
-  
-  
-}
-.hours:hover{
-  transition:0.5s;
-  
-}
-.days::content{
-opacity: 0;}
+  top: 50%;
 
-.minutes::after{
+
+}
+
+.hours:hover {
+  transition: 0.5s;
+
+}
+
+.days::content {
+  opacity: 0;
+}
+
+.minutes::after {
   content: "m";
   position: relative;
-  top:50%;
-  
-}
-.minutes:hover{
-  transition:0.5s;
-  
-}
-.days::content{
-opacity: 0;}
+  top: 50%;
 
-.seconds::after{
+}
+
+.minutes:hover {
+  transition: 0.5s;
+
+}
+
+.days::content {
+  opacity: 0;
+}
+
+.seconds::after {
   content: "s";
   position: relative;
-  top:50%;
-  
+  top: 50%;
+
 }
-.seconds:hover{
-  transition:0.5s;
-  
+
+.seconds:hover {
+  transition: 0.5s;
+
 }
-.days::content{
-opacity: 0;}
+
+.days::content {
+  opacity: 0;
+}
 
 header:after {
   content: ' ';
@@ -390,39 +448,45 @@ footer {
   /* background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.144) 100%); */
   backdrop-filter: blur(10px);
   color: #fff;
-  background-image:linear-gradient(0deg, #00000000,#030257),url(bg.png);background-repeat: no-repeat;background-size: cover;
+  background-image: linear-gradient(0deg, #00000000, #030257), url(bg.png);
+  background-repeat: no-repeat;
+  background-size: cover;
   line-height: 2.5;
   /* max-height: 50vh; */
   /* background-position: 50%; */
   transition: background 0.3s ease-out;
   /* box-shadow: 0px -10px 10px #2A1472; */
-  
+
   /* border-color: #ffffff; */
   /* border-style: dashed; */
   /* border-image: linear-gradient(45deg, #0F0331, #2A1472) 1; */
 }
 
-.wrapper_footer{
+.wrapper_footer {
   background-image: url(partners_bg.f13db78.png);
   background-repeat: no-repeat;
   background-size: cover;
   /* background-position: 100% */
 }
-footer .cols .col a,footer .cols .col i{
 
-    font-size: clamp(16px, 4vw, 24px);
-    color: #fffefe60;
-    transition: all 0.5s;
+footer .cols .col a,
+footer .cols .col i {
+
+  font-size: clamp(16px, 4vw, 24px);
+  color: #fffefe60;
+  transition: all 0.5s;
 
 }
-footer .cols .col a:hover{
+
+footer .cols .col a:hover {
   color: #b8b8b8;
   transition: all 0.5s;
 }
+
 .readmoretext {
   /* max-height: 20vw; */
   /* Set the desired maximum width */
-  
+
   position: relative;
   /* Add a gradient overlay */
   /* Add a blur effect */
@@ -430,7 +494,7 @@ footer .cols .col a:hover{
 }
 
 .read-more-button {
-   /* content: "Read more"; */
+  /* content: "Read more"; */
   position: absolute;
   bottom: 0;
   right: 0;
@@ -439,14 +503,15 @@ footer .cols .col a:hover{
   cursor: pointer;
   z-index: 9999999;*/
 }
-.more-dots{
-z-index: 9999999;
+
+.more-dots {
+  z-index: 9999999;
 
 }
 
 .hidden-text {
   display: none;
-  
+
   top: 100%;
   left: 0;
   /* background-color: rgba(255, 255, 255, 0.9); */
@@ -454,29 +519,32 @@ z-index: 9999999;
   /* z-index: 1; */
   /* max-width: 20vw; */
 }
-footer ul{
-    list-style: none;
-    flex-direction: row;
-  }
-  footer ul li a{
-    /* color: #ffffff; */
+
+footer ul {
+  list-style: none;
+  flex-direction: row;
+}
+
+footer ul li a {
+  /* color: #ffffff; */
   text-decoration: none;
 }
+
 .legacy {
   margin-top: 10px;
-  
+
 }
 
 .invitation {
   margin-top: 20px;
-  
+
 }
 
 .glimpse,
 .unveiling {
   margin-top: 20px;
   margin-bottom: 30px;
-  
+
 }
 
 footer:after {
@@ -584,17 +652,17 @@ button:hover::before {
 }
 
 
-  .countdown {
-    position: relative;
-    /* cursor: pointer; */
-  }
+.countdown {
+  position: relative;
+  /* cursor: pointer; */
+}
 
 /* Style for the tooltip */
 [data-tooltip]:hover::after {
   content: attr(data-tooltip);
   position: absolute;
   top: 100%;
- left: 50%;  
+  left: 50%;
   transform: translateX(-50%);
   padding: 5px;
   background-color: #0F0331;
@@ -605,6 +673,7 @@ button:hover::before {
   font-size: 0.8rem;
   z-index: 999999999;
 }
+
 /* Style the suggestion dropdown (this may vary between browsers) 
 /* #school::-webkit-calendar-picker-indicator,
 #coschool::-webkit-calendar-picker-indicator {
@@ -723,9 +792,13 @@ h2 {
   }
 }
 
-.countdown,.days,.minutes,.hours,.seconds {
+.countdown,
+.days,
+.minutes,
+.hours,
+.seconds {
   color: #fff;
-  font-size: clamp(22px,calc(9vw),40px);
+  font-size: clamp(22px, calc(9vw), 40px);
   font-family: bold;
   /* font-weight: 400; */
 }
@@ -767,7 +840,7 @@ h2 {
 
 /* Global CSS rules for nav */
 nav {
-  height: 12.1%;
+  height: fit-content;
   width: 100%;
   position: fixed;
   background: #2A147277;
@@ -815,21 +888,22 @@ nav.sticky.hidden {
   transform: translateY(-100%);
 }
 
-.logo a{
+.logo a {
   font-size: 48px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 2px;
-  color: #ffffff00;
+  color: #ffffff;
   overflow: hidden;
   transform: scale(1.0);
   transition: transform 0.5s ease-in-out;
-  background-repeat: no-repeat;background-size: contain;
-background-image: url(megamun.png);
-font-size: auto;
-line-height: 100%;
-  content:none;
-  
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-image: url(megamun.png); */
+  font-size: auto;
+  line-height: 100%;
+  /* content:none; */
+
 }
 
 nav a {
@@ -1053,7 +1127,8 @@ abbr {
   font-size: 30px;
   animation: bounce 2s infinite;
   -webkit-animation: bounce 2s infinite;
-  height: 50px; width: 50px; 
+  height: 50px;
+  width: 50px;
 
 }
 
@@ -1076,6 +1151,7 @@ abbr {
   -webkit-text-fill-color: transparent; */
   /* text-shadow: 0 0 10px #9583d1, 0 0 20px #4926bd, 0 0 30px #9583d1; */
 }
+
 button {
   max-height: 200px;
   /* font-size: calc(1vw + 10px); */
@@ -1094,6 +1170,7 @@ button {
     /* font-size: calc(1vw + 6px); */
   }
 }
+
 .img-box:hover img {
   z-index: 9999;
   transform: scale(0.001);
@@ -1132,9 +1209,9 @@ canvas {
   /* cursor: pointer; */
   transition: transform 0.3s ease;
 }
-.form-container{
- 
-}
+
+.form-container {}
+
 .container {
   -webkit-transform-style: preserve-3d;
   transform-style: preserve-3d;
@@ -1387,13 +1464,16 @@ body {
   background: rgba(0, 0, 0, 0.025);
 
 }
+
 *::-webkit-scrollbar:hover {
   background: rgba(0, 0, 0, 0.05);
 }
+
 *::-webkit-scrollbar-track {
   border-radius: 2px;
   background-color: #0F0331;
 }
+
 *::-webkit-scrollbar-thumb {
   min-height: 30px;
   border-radius: 6px;
@@ -1401,6 +1481,7 @@ body {
   background-clip: padding-box;
   background-color: rgba(255, 255, 255, 0.15);
 }
+
 *::-webkit-scrollbar-thumb:hover {
   background-color: rgba(255, 255, 255, 0.25);
 }
@@ -1426,7 +1507,7 @@ body {
 border-radius: 100px;
   backdrop-filter: blur(10px);
 } */
- /* *::-webkit-scrollbar-thumb:hover{
+/* *::-webkit-scrollbar-thumb:hover{
   
     background-color:#ffffff3a;
     transition: all 0.5s;

@@ -53,7 +53,7 @@
         <br>
         <p><span class="kbd" id="apolloKbd" style="">He's a good boy</span></p>
         <p></p>
-        <img class="Apollo" id="randomImage" src="" style="max-width: 20vh; position: absolute; bottom: 0;"
+        <img class="Apollo" id="randomImage" src="" style="max-width: 30vh; position: absolute; bottom: 0; "
             width="100%" />
 
 
@@ -74,7 +74,8 @@
             "panik.png",
             "yoda.png",
             "wazowski.png",
-            "confused_dog.gif"
+            "confused_dog.gif",
+            "harambe.jpg"
             // Add more image file names as needed
         ];
 
@@ -95,7 +96,8 @@
             "AAAAAAAAAAAAAAAAAAAAAAAAAA",
             "Lost you are, my friend. Yes, hmmm.",
             "literally you",
-            "whats dis hooman doin here?"
+            "whats dis hooman doin here?",
+            "Harambe 4 Ever"
             // Add more texts corresponding to each image
         ];
 
@@ -107,10 +109,11 @@
 
         const apolloSpan = document.getElementById("apolloSpan");
         const apolloKbd = document.getElementById("apolloKbd");
-
+        // const frameDiv = document.getElementById("frameDiv"); 
         // Set the text based on the selected image
         const textToDisplay = kbdTexts[randomIndex];
-
+        // frameDiv.innerHTML = ""; 
+        // frameDiv.appendChild(randomImage);
         if (randomIndex === 4) {
             // Create a marquee element for the text
             const marquee = document.createElement("marquee");
@@ -120,7 +123,17 @@
             apolloKbd.innerHTML = ""; // Clear the previous content
             apolloKbd.appendChild(marquee);
 
-        } else {
+        }
+        else if (randomIndex===8){
+
+            apolloKbd.textContent = "";
+            const bold = document.createElement("b");
+            bold.innerHTML=textToDisplay;
+            apolloKbd.appendChild(bold);
+            randomImage.style.width="800vw";
+            
+        } 
+        else {
             apolloKbd.textContent = textToDisplay;
         }
     </script>

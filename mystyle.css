@@ -812,7 +812,7 @@ h2 {
 
 
 #preloader {
-  background: #000 url('p2.gif') no-repeat center center;
+  background: #000 url('preloader.gif') no-repeat center center;
   background-size: 30%;
   height: 100vh;
   width: 100%;

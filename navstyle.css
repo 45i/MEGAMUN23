@@ -1,138 +1,92 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-    text-decoration: none;
-    list-style: none;
+/* Style the FontAwesome icon */
+/* .committee  i {
+    margin-left: 5px;
+    transition: transform 0.2s ease;
 }
 
-:root{
-    --bg-color: #222327;
-    --text-color: #fff;
-    --main-color: #29fd53;
+/* Rotate the icon on hover
+.committee:hover  i {
+    transform: rotate(180deg);
+} */
+/* Add a smooth transition to the icon rotation */
+.committee i {
+    margin-left: 5px;
+    transition: transform 0.2s ease;
+    color: #220379;
 }
 
-body{
-    min-height: 100vh;
-    background: var(--bg-color);
-    color: var(--text-color);
+/* Rotate the icon on hover */
+.committee i:hover {
+    transform: rotate(180deg);
 }
 
-header{
-    position: fixed;
-    width: 100%;
-    top: 0;
-    right: 0;
-    z-index: 1000;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    background: transparent;
-    padding: 28px 12%;
-    transition: all 0.5s ease;
-}
-
-.logo{
-    display: flex;
-    align-items: center;
-    color: var(--text-color);
-    font-size: 1.7rem;
-    font-weight: 600;
-}
-
-.navbar{
-    display: flex;
-    height: 12.1%;
-        width: 100%;
-        position: fixed;
-        background: #30197d77;
-        backdrop-filter: blur(10px);
-        transition: 0.75s;
-        z-index: 10001;
-        justify-content: space-between;
-        align-items: center;
-        padding: 10px 20px;
-        display: flex;
-        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
-}
-
-.navbar a{
-    color: var(--text-color);
-    font-size: 1.1rem;
-    font-weight: 500;
-    padding: 5px 0;
-    margin: 0px 30px;
-    transition: all 0.5s ease;
-}
-
-.navbar a:hover{
-    color: var(--main-color);
-}
-
-.main{
-    display: flex;
-    align-items: center;
-}
-
-#menu-icon{
-    font-size: 35px;
-    color: var(--text-color);
-    cursor: pointer;
-    z-index: 10001;
+.committee-menu {
     display: none;
+    position: absolute;
+    top: 57.1%;
+    /* left: 0px; */
+    background-color: #0F0331;
+    border-radius: 6px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
 }
 
-@media(max-width: 1280px){
-    header{
-        padding: 14px 2%;
-        transition: .2s;
-    }
-    .navbar a{
-        padding: 5px 0;
-        margin: 0px 20px;
-    }
+.narrow-committee-list li {
+    font-size: xxx-small;
+    list-style: none;
+    color: #333;
 }
 
-@media(max-width: 1090px){
-    #menu-icon{
-        display: block;
-    }
-    .navbar{
-        position: absolute;
-        top: 100%;
-        right: -270px; /* Set to the width of the menu when closed */
-        width: 270px;
-        height: auto; /* Adjust this as needed */
-        background-color: var(--main-color);
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        border-radius: 10px;
-        transition: all 0.5s ease;
-        height: 12.1%;
-            width: 100%;
-            position: fixed;
-            background: #30197d77;
-            backdrop-filter: blur(10px);
-            transition: 0.75s;
-            z-index: 10001;
-            justify-content: space-between;
-            align-items: center;
-            padding: 10px 20px;
-            display: flex;
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
-    }
-    .navbar a{
-        display: block;
-        margin: 12px 0;
-        padding: 0px 25px;
-        transition: all 0.5s ease;
-    }
-    .navbar a:hover{
-        color: var(--text-color);
-        transform: translateY(5px);
-    }
-    .navbar.open{
-        right: 0;
-    }
+.narrow-committee-list li::before {}
+
+.committee-menu li {
+
+    list-style: none;
+    line-height: 50px;
 }
+
+.committee-menu li a {
+    list-style: none;
+    line-height: 50px;
+    color: #999999;
+}
+
+.committee-menu li a:hover {
+    list-style: none;
+    line-height: 50px;
+    color: #fff;
+}
+
+/* Style the dropdown item */
+.committee {
+    position: relative;
+    cursor: pointer;
+}
+.logo{
+    /* width: auto;
+    max-width: fit-content; */
+    /* background-color: #0F0331; */
+}
+/* .logo a::before{
+background:url(megamun.png);
+background-position: 0%;
+background-size: contain;
+background-repeat: no-repeat;
+ max-width: max-content; 
+}
+/* .logo a::before{
+    content: '      ';
+} */
+.committee a {
+    text-decoration: none;
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    transition: background-color 0.2s ease;
+}
+
+/* .committee:hover a {
+    background-color: #f2f2f2;
+} */

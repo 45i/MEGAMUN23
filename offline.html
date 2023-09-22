@@ -1,59 +1,78 @@
 <!DOCTYPE html>
+
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
+<head>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
 
-    <title>You are offline</title>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<meta content="Official MEGAMUN'23 website" name="description"/>
+<meta content="MEGAMUN'23" name="og:site_name"/>
+<meta content="megamun.png" property="og:image"/>
+<link href="megamun.png" rel="icon" type="image/x-icon"/>
+<meta content="#2A1472" name="theme-color"/>
 
-    <!-- Inline the page's stylesheet. -->
-    <link rel="stylesheet" href="mystyle.css">
-  </head>
-  <body style="background-color: blue;">
-    <div class="navbar-container"></div>
-    <header>
-        <div class="content">
-            <h1>You are <b>OFFLINE</b></h1>
-            <h3 style="color: white;">Check back again when you're connected to the internet!</h3>
-        </div>
-        
-    
-    </header>
-    
-    
+<meta content="Official MEGAMUN'23 website" name="description"/>
+<meta content="MEGAMUN'23" name="og:site_name"/>
+<meta content="megamun.png" property="og:image"/>
+<link href="megamun.png" rel="icon" type="image/x-icon"/>
+<meta content="#2A1472" name="theme-color"/>
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<title>You are offline</title>
+<!-- Inline the page's stylesheet. -->
+<link href="mystyle.css" rel="stylesheet"/>
+</head>
+<body style="background-color: blue;">
+<div class="navbar-container"></div>
+<header>
+<div class="content">
+<h1>You are <b>OFFLINE</b></h1>
+<h3 style="color: white;">Check back again when you're connected to the internet!</h3>
+</div>
+</header>
+<div class="footer-container"></div>
+<script defer="">
+  fetch("footer.html")
+    .then(response => response.text())
+    .then(data => {
+      // Insert the navbar HTML into the navbar-container element
+      const navbarContainer = document.querySelector('.footer');
+      navbarContainer.innerHTML = data;
+    }
+    );
+</script>
+<!-- Inline the page's JavaScript file. -->
+<script>
+    // Manual reload feature.
+    document.querySelector("button").addEventListener("click", () => {
+      window.location.reload();
+    });
 
-    <!-- Inline the page's JavaScript file. -->
-    <script>
-      // Manual reload feature.
-      document.querySelector("button").addEventListener("click", () => {
-        window.location.reload();
-      });
+    // Listen to changes in the network state, reload when online.
+    // This handles the case when the device is completely offline.
+    window.addEventListener('online', () => {
+      window.location.reload();
+    });
 
-      // Listen to changes in the network state, reload when online.
-      // This handles the case when the device is completely offline.
-      window.addEventListener('online', () => {
-        window.location.reload();
-      });
-
-      // Check if the server is responding and reload the page if it is.
-      // This handles the case when the device is online, but the server
-      // is offline or misbehaving.
-      async function checkNetworkAndReload() {
-        try {
-          const response = await fetch('.');
-          // Verify we get a valid response from the server
-          if (response.status >= 200 && response.status < 500) {
-            window.location.reload();
-            return;
-          }
-        } catch {
-          // Unable to connect to the server, ignore.
+    // Check if the server is responding and reload the page if it is.
+    // This handles the case when the device is online, but the server
+    // is offline or misbehaving.
+    async function checkNetworkAndReload() {
+      try {
+        const response = await fetch('.');
+        // Verify we get a valid response from the server
+        if (response.status >= 200 && response.status < 500) {
+          window.location.reload();
+          return;
         }
-        window.setTimeout(checkNetworkAndReload, 2500);
+      } catch {
+        // Unable to connect to the server, ignore.
       }
+      window.setTimeout(checkNetworkAndReload, 2500);
+    }
 
-      checkNetworkAndReload();
-    </script>
-  </body>
+    checkNetworkAndReload();
+  </script>
+</body>
 </html>

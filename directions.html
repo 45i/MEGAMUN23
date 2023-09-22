@@ -1,86 +1,124 @@
 <!DOCTYPE html>
+
 <html>
-
 <head>
-  <meta charset=" UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="mystyle.css">
-  <title>Mega Mun 2023</title>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
 
-
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
+<meta content="Official MEGAMUN'23 website" name="description"/>
+<meta content="MEGAMUN'23" name="og:site_name"/>
+<meta content="megamun.png" property="og:image"/>
+<link href="megamun.png" rel="icon" type="image/x-icon"/>
+<meta content="#2A1472" name="theme-color"/>
+<meta content="Official MEGAMUN'23 website" name="description"/>
+<meta content="MEGAMUN'23" name="og:site_name"/>
+<meta content="megamun.png" property="og:image"/>
+<link href="megamun.png" rel="icon" type="image/x-icon"/>
+<meta content="#2A1472" name="theme-color"/>
+<meta content="Official MEGAMUN'23 website" name="description"/>
+<meta content="MEGAMUN'23" name="og:site_name"/>
+<meta content="megamun.png" property="og:image"/>
+<link href="megamun.png" rel="icon" type="image/x-icon"/>
+<meta content="#2A1472" name="theme-color"/>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta content="ie=edge" http-equiv="X-UA-Compatible"/>
+<link href="mystyle.css" rel="stylesheet"/>
+<title>Mega Mun 2023</title>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet"/>
 </head>
-
 <body>
-  <div class="navbar-container"></div>
-  <header>
-    <div class="content">
-      <h1><b>MEGA</b><span class="thin">MUN</span><b>2023</b> </h1>
-      <h3 style="color: rgb(245, 241, 235);">Directions to <b>MEGA</b><span class="thin">MUN</span><b>23</b></h3>
-    </div>
-    <div class="scroll-down"><i class="fas fa-angle-double-down"></i></div>
+<div class="navbar-container"></div>
+<header>
+<div class="content">
+<h1><b>MEGA</b><span class="thin">MUN</span><b>2023</b> </h1>
+<h3 style="color: rgb(245, 241, 235);">Directions to <b>MEGA</b><span class="thin">MUN</span><b>23</b></h3>
+</div>
+<div class="scroll-down"><i class="fas fa-angle-double-down"></i></div>
+</header>
+<div id="preloader"></div>
+<div id="target-element">
+<main>
+<!-- ================= = -->
+<!-- Google Map Element -->
+<!-- <h1 class="hover_text" style="align-content: center">Hover </h1> -->
+<br/>
+<link href="mystyle2.css" rel="stylesheet" stylesheet=""/>
 
-  </header>
+ <section class="google-map"> <!-- google-map -->
 
-  <div id="preloader"></div>
+<div class="map-frame"><!-- map-frame -->
+<iframe allowfullscreen="true" height="450" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d240.76801816979423!2d88.49864548713926!3d22.587282625293472!2m3!1f0!2f39.4247856168604!3f0!3m2!1i1024!2i768!4f35!3m3!1m2!1s0x3a020aeab291e7d3%3A0xd9b3fc04bea40456!2sDelhi%20Public%20School%20Megacity!5e1!3m2!1sen!2sin!4v1692953111717!5m2!1sen!2sin" style="border:0;" width="600"></iframe>
+</div>
+</section>
+<!-- <h1  class="hover_text" style="align-content: center"> Here </h1> -->
+<!-- Google Map Element -->
+<!-- ================== -->
+</main>
+</div>
+<div class="footer-container"></div>
+<script defer="">
+  fetch("footer.html")
+      .then(response => response.text())
+      .then(data => {
+          // Insert the navbar HTML into the navbar-container element
+          const navbarContainer = document.querySelector('.footer-container');
+          navbarContainer.innerHTML = data;
+          console.log("Hit 1");
+          const footer = document.querySelector(".footer-container");
+          const button = footer.querySelector("footer").querySelector(".retract");
+          var btn2 = document.createElement('button');
+
+          // Set the button's innerHTML to the FontAwesome icon
+          btn2.innerHTML = '<i class="fas fa-chevron-up"></i>';
+
+          // Add CSS styles to the button
+          btn2.style.position = 'fixed';
+          btn2.style.bottom = '0';
+          btn2.style.right = '0';
+          btn2.style.zIndex = '9999';
+
+          // const icon = button.getElementById("ret");
+
+          // Initial state
+          let isCollapsed = false;
+          footer.insertAdjacentElement('beforebegin', btn2);
+          footer.style.display = "block"; // Show the footer initially
+
+          btn2.style.display = "none";
+          button.addEventListener('click', () => {
+              isCollapsed = !isCollapsed;
+
+              console.log("Hit 2");
+
+              // Collapse the footer
+              footer.style.display = "none";
+              btn2.innerHTML = '<i class="fas fa-chevron-up"></i>';
+              btn2.style.display = "block";
+
+              console.log(button);
+              // icon.classList.remove("fa-chevron-down");
+              // icon.classList.add("fa-chevron-up");
+          });
+          btn2.addEventListener('click', () => {
+              // Expand the footer
+              footer.style.display = "block";
+              button.innerHTML = '<i class="fas fa-chevron-down"></i>';
+              console.log(button);
+              btn2.style.display = "none";
+              // icon.classList.remove("fa-chevron-up");
+              // icon.classList.add("fa-chevron-down");
+          }
+          );
+      }
+      );
 
 
-  <main>
-    <!-- ================= = -->
-    <!-- Google Map Element -->
-    <!-- <h1 class="hover_text" style="align-content: center">Hover </h1> -->
-    <br>
-    <link stylesheet rel="stylesheet" href="mystyle2.css">
-    <div id="target-element">
-      <section class="google-map">
-        <div class="map-frame">
 
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3683.734361801241!2d88.49640407475759!3d22.589036432368797!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a020aeab291e7d3%3A0xd9b3fc04bea40456!2sDelhi%20Public%20School%20Megacity!5e0!3m2!1sen!2sin!4v1690017216375!5m2!1sen!2sin"
-            width="600" height="450" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
-            tabindex="0"></iframe>
-        </div>
-      </section>
-    </div>
-    <!-- <h1  class="hover_text" style="align-content: center"> Here </h1> -->
-    <!-- Google Map Element -->
-    <!-- ================== -->
-  </main>
-<script defer>
-  // Fetch the contents of the navbar HTML file
-  fetch("navbar.html")
-    .then(response => response.text())
-    .then(data => {
-      // Insert the navbar HTML into the navbar-container element
-      const navbarContainer = document.querySelector('.navbar-container');
-      navbarContainer.innerHTML = data;
 
-      // Access the menuIcon element and add a click event listener
-      const icon = document.querySelector('.main');
-      const menuIcon = document.querySelector('.bx-menu');
-      const navbar = document.querySelector('.navbar');
-
-      menuIcon.onclick = () => {
-        console.log("clicked");
-        icon.classList.toggle('open');
-        if (menuIcon.classList.contains('open')) {
-          menuIcon.innerHTML = '<i class="fas fa-times"></i>';
-        } else {
-          menuIcon.innerHTML = '<i class="fas fa-bars"></i>';
-        }
-        menuIcon.classList.toggle('bx-x');
-        navbar.classList.toggle('open');
-
-      };
-    });
 </script>
-  <!-- <script src="main.js" defer></script> -->
-  <script src="main2.js" defer></script>
-  
 
-
-
+<script defer="" src="main.js"></script>
+<script defer="" src="main2.js"></script>
 </body>
-
 </html>

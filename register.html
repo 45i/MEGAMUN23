@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <meta content="Official MEGAMUN'23 website" name="description" />
+    <meta content="MEGAMUN'23" name="og:site_name" />
+    <meta content="megamun.png" property="og:image" />
+    <link href="megamun.png" rel="icon" type="image/x-icon" />
+    <meta content="#2A1472" name="theme-color" />
+    <meta charset="utf-8" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Self-Registration</title>
+    <link href="mystyle.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
+    <link href="formstyle.css" rel="stylesheet" />
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" id="theme-styles"
+        rel="stylesheet" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.js"></script>
+    <style>
+        header {
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: linear-gradient(45deg, #0c0227, #190849, #2A1472);
+            background-color: #fff;
+            line-height: 2.5;
+            text-shadow: 0 0 10px #000;
+            transition: background 0.3s ease-out;
+            background-image: linear-gradient(360deg, #2A1472, #0000, #00000000), url(school.jpeg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position-x: 50%;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <div class="navbar-container"></div>
+    </div>
+    <div id="target-element">
+        <div id="preloader"></div>
+    </div>
+    <header>
+        <div class="container2">
+            <div class="form-container">
+                <form name="product">
+                    <h1 class="wider-text"
+                        style="color: #cccccc; align-self: center; font-weight: 1000; letter-spacing: 0.4px; text-decoration: underline;">
+                        Registration
+                    </h1>
+                    <div class="input-fields">
+                        <input id="name" name="name" placeholder="Your Name" required="" type="text" />
+                        <input id="email" name="email" placeholder="Email ID" required="" type="email" />
+                        <input id="school" name="school" placeholder="School Name" required="" type="text"
+                            list="school-list" />
+                        <datalist id="school-list"></datalist>
+                        <label for="school" id="schoollabel" style="font-size: small; color:red" class="kbd"></label>
+                        <input id="phone" min="1" name="phone" placeholder="Phone no." required="" type="number" />
+                        <select id="committee" name="committee" required="">
+                            <option disabled="" selected="" value="">Select a committee</option>
+                            <option value="UNSC">UNSC</option>
+                            <option value="COE-ATIP">COE-ATIP</option>
+                            <option value="OGADEN-1977">Special Session on the Ogaden Crisis 1977</option>
+                            <option value="AIPPM">AIPPM</option>
+                            <option value="IPC">IPC</option>
+                        </select>
+                        <!-- Co-delegate fields, initially hidden -->
+                        <div id="co-delegate-fields" style="display: none;">
+                            <div class="">
+                            <input class=""id="coname" name="coname" placeholder="Co-Delegate's Name" required="" type="text" />
+                            <input class=""id="coemail" name="coemail" placeholder="Co-Delegate's Email ID" required=""
+                                type="email" />
+                            <input class=""id="cophone" min="1" name="cophone" placeholder="Co-Delegate's Phone no." required=""
+                                type="number" />
+                            <div class="">
+                                <input id="sameSchool" type="checkbox" name="sameSchool" checked>
+
+                                <label for="sameSchool" style="font-size: large;">Is your co-delegate from the same
+                                    school?</label>
+                            </div>
+                            <div id="coSchoolField" style="display: none;" class="">
+                                <input id="coschool" name="coschool" placeholder="Co-Delegate's School Name" type="text"
+                                    list="school-list-coschool" />
+                                <datalist id="school-list-coschool"></datalist>
+                                <label for="coschool" id="coschoollabel" style="font-size: small; color:red" class="kbd"></label>
+
+                            </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="cols">
+                        <div style="margin-right: 10px;">
+                            <div class="button-container">
+                                <button data-tooltip="Register" type="submit"><i class="fas fa-check"
+                                        style="color: #00a761; font-size: 200%; "></i></button>
+                            </div>
+                        </div>
+                        <div style="margin-right: 10px;">
+                            <div class="button-container">
+                                <button data-tooltip="Reset" type="reset"><i class="fas fa-times"
+                                        style="color: #ff1e00; font-size: 200%; "></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+                <!-- JavaScript to show/hide co-delegate fields when UNSC is selected -->
+                <script>
+                    const committeeSelect = document.getElementById("committee");
+                    const coDelegateFields = document.getElementById("co-delegate-fields");
+                    const sameSchoolCheckbox = document.getElementById("sameSchool");
+                    const coSchoolField = document.getElementById("coSchoolField");
+
+                    committeeSelect.addEventListener("change", function () {
+                        if (committeeSelect.value === "UNSC") {
+                            coDelegateFields.style.display = "block";
+                            // Add 'required' attribute to all input fields within co-delegate-fields
+                            const inputFields = coDelegateFields.querySelectorAll("input");
+                            inputFields.forEach(function (input) {
+                                input.setAttribute("required", "required");
+                            });
+                        } else {
+                            coDelegateFields.style.display = "none";
+                            // Remove 'required' attribute from all input fields within co-delegate-fields
+                            const inputFields = coDelegateFields.querySelectorAll("input");
+                            inputFields.forEach(function (input) {
+                                input.removeAttribute("required");
+                            });
+                        }
+                    });
+
+                    sameSchoolCheckbox.addEventListener("change", function () {
+                        if (sameSchoolCheckbox.checked) {
+                            coSchoolField.style.display = "none";
+                        } else {
+                            coSchoolField.style.display = "block";
+                        }
+                    });
+                </script>
+                <!-- JavaScript to fetch school names from API and populate the datalist -->
+                <script>
+                    const schoolInput = document.getElementById("school");
+                    const schoolList = document.getElementById("school-list");
+
+                    schoolInput.addEventListener("input", () => {
+                        const inputText = schoolInput.value.toLowerCase();
+
+                        // Fetch school names from the first CSV file
+                        const CSV_URL1 = "https://raw.githubusercontent.com/deedy/cisce_schools_data/master/schools.csv";
+                        // Fetch school names from the second CSV file
+                        const CSV_URL2 = "https://raw.githubusercontent.com/deedy/cbse_schools_data/master/basic/schools.csv";
+
+                        Promise.all([
+                            fetch(CSV_URL1).then(response => response.text()),
+                            fetch(CSV_URL2).then(response => response.text())
+                        ])
+                            .then(([data1, data2]) => {
+                                // Parse CSV data from the first file
+                                const schools1 = parseCSV(data1);
+                                // Parse CSV data from the second file
+                                const schools2 = parseCSV(data2);
+
+                                // Merge school data from both sources
+                                const allSchools = [...schools1, ...schools2];
+
+                                // Filter schools based on inputText
+                                const filteredSchools = allSchools.filter(school => school.name.toLowerCase().includes(inputText));
+
+                                // Clear previous suggestions
+                                schoolList.innerHTML = "";
+
+                                // Add filtered schools to the datalist
+                                filteredSchools.forEach(school => {
+                                    const option = document.createElement("option");
+                                    option.value = `${school.name}, ${school.state}`; // Combine name and state
+                                    schoolList.appendChild(option);
+                                });
+                            })
+                            .catch(error => document.getElementById("schoollabel").innerHTML="Failed to get school list... Please manually enter school name");
+                    });
+
+                    function parseCSV(csvData) {
+                        const rows = csvData.trim().split('\n');
+                        const header = rows[0].split(',');
+                        const schools = [];
+
+                        for (let i = 1; i < rows.length; i++) {
+                            const values = rows[i].split(',');
+                            const school = {};
+                            for (let j = 0; j < header.length; j++) {
+                                school[header[j]] = values[j];
+                            }
+                            schools.push(school);
+                        }
+
+                        return schools;
+                    }
+
+                    // Separate variables for coschool input and school list
+                    const coschoolInput = document.getElementById("coschool");
+                    const schoolList2 = document.getElementById("school-list-coschool");
+
+                    coschoolInput.addEventListener("input", () => {
+                        const inputText = coschoolInput.value.toLowerCase();
+
+                        // Fetch school names from the first CSV file
+                        const CSV_URL1 = "https://raw.githubusercontent.com/deedy/cisce_schools_data/master/schools.csv";
+                        // Fetch school names from the second CSV file
+                        const CSV_URL2 = "https://raw.githubusercontent.com/deedy/cbse_schools_data/master/basic/schools.csv";
+
+                        Promise.all([
+                            fetch(CSV_URL1).then(response => response.text()),
+                            fetch(CSV_URL2).then(response => response.text())
+                        ])
+                            .then(([data1, data2]) => {
+                                // Parse CSV data from the first file
+                                const schools1 = parseCSV(data1);
+                                // Parse CSV data from the second file
+                                const schools2 = parseCSV(data2);
+
+                                // Merge school data from both sources
+                                const allSchools = [...schools1, ...schools2];
+
+                                // Filter schools based on inputText
+                                const filteredSchools = allSchools.filter(school => school.name.toLowerCase().includes(inputText));
+
+                                // Clear previous suggestions
+                                schoolList2.innerHTML = "";
+
+                                // Add filtered schools to the datalist
+                                filteredSchools.forEach(school => {
+                                    const option = document.createElement("option");
+                                    option.value = `${school.name}, ${school.state}`; // Combine name and state
+                                    schoolList2.appendChild(option);
+                                });
+                            })
+                            .catch(error =>document.getElementById("coschoollabel").innerHTML="Failed to get school list... Please manually enter school name");
+                    });
+
+                </script>
+            </div>
+        </div>
+    </header>
+    <div class="footer-container"></div>
+    <script defer="">
+        fetch("footer.html")
+            .then(response => response.text())
+            .then(data => {
+                const navbarContainer = document.querySelector('.footer-container');
+                navbarContainer.innerHTML = data;
+                console.log("Hit 1");
+                const footer = document.querySelector(".footer-container");
+                const button = footer.querySelector("footer").querySelector(".retract");
+                var btn2 = document.createElement('button');
+
+                btn2.innerHTML = '<i class="fas fa-chevron-up"></i>';
+
+                btn2.style.position = 'fixed';
+                btn2.style.bottom = '0';
+                btn2.style.right = '0';
+                btn2.style.zIndex = '9999';
+
+                let isCollapsed = false;
+                footer.insertAdjacentElement('beforebegin', btn2);
+                footer.style.display = "block";
+
+                btn2.style.display = "none";
+                button.addEventListener('click', () => {
+                    isCollapsed = !isCollapsed;
+
+                    console.log("Hit 2");
+
+                    footer.style.display = "none";
+                    btn2.innerHTML = '<i class="fas fa-chevron-up"></i>';
+                    btn2.style.display = "block";
+
+                    console.log(button);
+                });
+                btn2.addEventListener('click', () => {
+                    footer.style.display = "block";
+                    button.innerHTML = '<i class="fas fa-chevron-down"></i>';
+                    console.log(button);
+                    btn2.style.display = "none";
+                });
+            });
+    </script>
+    <script defer="" src="formscript.js"></script>
+    <script defer="" src="main.js"></script>
+    <script defer="">
+        Swal.fire({
+            title: '<strong>Before you begin...</strong>',
+            icon: 'warning',
+            html:
+                'Please go through the list of committees and their agendas before registering.',
+            showCancelButton: true,
+            focusConfirm: false,
+            confirmButtonText:
+                'I want to take a look at the committees',
+            confirmButtonAriaLabel: 'Thumbs up, great!',
+            cancelButtonText:
+                'I\'m already familiar with the committees',
+            cancelButtonAriaLabel: 'cancel'
+        }).then((result) => {
+            if (result.isConfirmed) {
+                window.location.href = "committees.html";
+            }
+        })
+    </script>
+</body>
+
+</html>

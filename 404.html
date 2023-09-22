@@ -1,0 +1,143 @@
+<html>
+
+<head>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        rel="stylesheet" />
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <meta content="Official MEGAMUN'23 website" name="description" />
+    <meta content="MEGAMUN'23" name="og:site_name" />
+    <meta content="megamun.png" property="og:image" />
+    <link href="megamun.png" rel="icon" type="image/x-icon" />
+    <meta content="#2A1472" name="theme-color" />
+    <meta content="Official MEGAMUN'23 website" name="description" />
+    <meta content="MEGAMUN'23" name="og:site_name" />
+    <meta content="megamun.png" property="og:image" />
+    <link href="megamun.png" rel="icon" type="image/x-icon" />
+    <meta content="#2A1472" name="theme-color" />
+    <meta content="Official MEGAMUN'23 website" name="description" />
+    <meta content="MEGAMUN'23" name="og:site_name" />
+    <meta content="megamun.png" property="og:image" />
+    <link href="megamun.png" rel="icon" type="image/x-icon" />
+    <meta content="#2A1472" name="theme-color" />
+    <title>There's nothing here</title>
+    <link href="mystyle.css" rel="stylesheet" />
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" meta="" name="viewport" />
+</head>
+
+<body>
+    <!-- <style>
+        .kbd {
+            display: inline-block;
+            font-family: "Consolas", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+            min-width: 21px;
+            padding: 0 4px;
+            line-height: 1.5;
+            text-align: center;
+            background-color: #00000021;
+            border: 1px solid #646464, #fff;
+            border-radius: 2vw;
+            box-shadow: 0 0 10px;
+            color: #ffffff;
+            box-shadow: 0 0 5px #00000021;
+        }
+    </style> -->
+    <div class="preloader"></div>
+    <header style="background: #0F0331;">
+        <h1 style="font-size: 10vw; line-height: 0.14px;"><span class="kbd"
+                style="border-radius: 6px;font-family: 'Consolas';background-image:url(bg.png);background-repeat: no-repeat;background-size: cover;">404</span>
+        </h1>
+        <span id="apolloSpan" style="color: rgb(199, 199, 199);font-size: 2vw;">
+        </span>
+        <br>
+        <p><span class="kbd" id="apolloKbd" style="">He's a good boy</span></p>
+        <p></p>
+        <img class="Apollo" id="randomImage" src="" style="max-width: 30vh; position: absolute; bottom: 0; "
+            width="100%" />
+
+
+    </header>
+    <script>
+        var apollo = document.querySelector(".Apollo");
+        apollo.addEventListener('click', function () {
+            window.location.href = "website.html";
+        });
+    </script>
+
+    <script>
+        const imageFileNames = [
+            "755799375430549604.png",
+            "810696327234322432.png",
+            "babyyoda.png",
+            "dog-11328.png",
+            "panik.png",
+            "yoda.png",
+            "wazowski.png",
+            "confused_dog.gif",
+            "harambe.jpg"
+            // Add more image file names as needed
+        ];
+
+        const spanTexts = [
+            "",
+            "",
+            "",
+            "",
+            ""
+            // Add more texts corresponding to each image
+        ];
+
+        const kbdTexts = [
+            "cri",
+            "sadge",
+            "*burp*",
+            "woof!",
+            "AAAAAAAAAAAAAAAAAAAAAAAAAA",
+            "Lost you are, my friend. Yes, hmmm.",
+            "literally you",
+            "whats dis hooman doin here?",
+            "Harambe 4 Ever"
+            // Add more texts corresponding to each image
+        ];
+
+        const randomIndex = Math.floor(Math.random() * imageFileNames.length);
+        const randomImageFileName = imageFileNames[randomIndex];
+
+        const randomImage = document.getElementById("randomImage");
+        randomImage.src = `404 img/${randomImageFileName}`;
+
+        const apolloSpan = document.getElementById("apolloSpan");
+        const apolloKbd = document.getElementById("apolloKbd");
+        // const frameDiv = document.getElementById("frameDiv"); 
+        // Set the text based on the selected image
+        const textToDisplay = kbdTexts[randomIndex];
+        // frameDiv.innerHTML = ""; 
+        // frameDiv.appendChild(randomImage);
+        if (randomIndex === 4) {
+            // Create a marquee element for the text
+            const marquee = document.createElement("marquee");
+            marquee.textContent = textToDisplay;
+            marquee.scrollAmount = 50; // Adjust the value as needed for your desired speed
+            marquee.animate = "continuous";
+            apolloKbd.innerHTML = ""; // Clear the previous content
+            apolloKbd.appendChild(marquee);
+
+        }
+        else if (randomIndex===8){
+
+            apolloKbd.textContent = "";
+            const bold = document.createElement("b");
+            bold.innerHTML=textToDisplay;
+            apolloKbd.appendChild(bold);
+            randomImage.style.width="800vw";
+            
+        } 
+        else {
+            apolloKbd.textContent = textToDisplay;
+        }
+    </script>
+
+</body>
+
+</html>

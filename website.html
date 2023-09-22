@@ -1,68 +1,136 @@
 <!DOCTYPE html>
+
 <html>
 
 <head>
-    <meta charset=" UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="mystyle.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        rel="stylesheet" />
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+    <meta content="Official MEGAMUN'23 website" name="description" />
+    <meta content="MEGAMUN'23" name="og:site_name" />
+    <meta content="megamun.png" property="og:image" />
+    <link href="megamun.png" rel="icon" type="image/x-icon" />
+    <meta content="#2A1472" name="theme-color" />
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <meta content="ie=edge" http-equiv="X-UA-Compatible" />
+    <link href="mystyle.css" rel="stylesheet" />
     <title>Mega Mun 2023</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-
-
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" meta="" name="viewport" />
+    <!-- <title>45i Does Stuff</title> -->
 </head>
 
 <body>
+    <div id="preloader"></div>
     <div class="navbar-container"></div>
-    <header>
-        <div class="content">
-            <h1><b>MEGA</b><span class="thin">MUN</span><b>2023</b> </h1>
-            <h1><b>STARTS</b><span> IN</span > </h1>
-
-            <thin><abbr title="Days : Hours : Minutes : Seconds" class="countdown">
-                    -- : -- : -- : --
-                </abbr>
-            </thin>
-        </div>
-        <div class="cols" >
-
-            <div style="margin-right: 10px;">
-                <div class="button-container">
-                    <a href="form.html"><button hovertext="Register Now"><i class="fas fa-user-plus"
-                                style="color: #ffffff; font-size: 200%;"></i><b>
-                                <p></p>
-                            </b></button></a>
-
+    <header
+        style="background-image: linear-gradient(360deg, #2A1472,#0000,#00000000),url(school.jpeg); background-size: cover;background-repeat: no-repeat;  ">
+        <div style=" ">
+            <div class="content">
+                <h1><b>MEGA</b><span class="thin">MUN</span><b>2023</b> </h1>
+                <h1><b>STARTS</b><span> IN</span> </h1>
+                <div>
+                    <abbr class="countdown" >
+                        --d : --h : --m : --s
+                    </abbr>
+                    <!-- <h1>Days : Hours : Minutes : Seconds</h1> -->
                 </div>
-                <span class="button-text"></span>
             </div>
-            <br style="margin-right: 20px;">
-            <br style="margin-right: 20px;">
-            <br style="margin-right: 20px;">
-            <div>
-                <div class="button-container">
-                    <a href="directions.html"><button hovertext="Get Directions"><i class="fas fa-map-marker-alt"
-                                style="color: #eeeeee; font-size: 200%;"></i><b>
-                                <p></p>
-                            </b></button></a>
-
+            <div class="cols">
+                <div class="col">
+                    <div class="button-container">
+                        <a href="register.html"><button data-tooltip="Register Now"
+                                style="backdrop-filter:blur(10px);"><i class="fas fa-user-plus"
+                                    style="color: #ffffff; font-size: 200%;"></i><b>
+                                    <p></p>
+                                </b></button></a>
+                    </div>
+                    <span class="button-text"></span>
                 </div>
-                <span class="button-text"></span>
+                <div class="col">
+                    <div class="button-container">
+                        <a href="directions.html"><button data-tooltip="Get Directions"
+                                style="backdrop-filter:blur(10px);"><i class="fas fa-map-marker-alt"
+                                    style="color: #eeeeee; font-size: 200%;"></i><b>
+                                    <p></p>
+                                </b></button></a>
+                    </div>
+                    <span class="button-text"></span>
+                </div>
+                <div class="col">
+                    <div class="button-container">
+                        <a href="committees.html"><button data-tooltip="View Committees"
+                                style="backdrop-filter:blur(10px);"><i class="fas fa-users "
+                                    style="color: #eeeeee; font-size: 200%;"></i><b>
+                                    <p></p>
+                                </b></button></a>
+                    </div>
+                    <span class="button-text"></span>
+                </div>
             </div>
         </div>
-        <div class="scroll-down"><i class="fas fa-angle-double-down"></i></div>
+        <div><a href="#enquiry" style="color: #ffffff;">Have Questions?</a></div>
+        <div class="scroll-down"><i class="fas fa-angle-double-down" style="font-size: small; "></i></div>
     </header>
-
-
     <div id="target-element">
-        <div id="preloader"></div>
     </div>
-
-
-
-    <div class="info_text">Writeup in progress 🚧</div>
-
-    <div class="cols">
+    <style>
+        /* Default styles for both narrow and wider screens */
+    </style>
+    <div class="info_text" style="background: #2A1472; height:100vh">
+        <div>
+            <p>
+            <blockquote contenteditable="false"><q translate="no">Dedication. Perseverance. Success.</q>
+                <cite>School Song</cite>
+            </blockquote>
+            </p>
+        </div>
+    </div>
+    <div class="info_text" style=" text-overflow: ellipsis; text-overflow: ellipsis; background: #2A1472;">
+        <div class="col">
+            <div style="flex-direction: column; align-self: center;">
+                <h1
+                    style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; text-size-adjust: 100%; font-size: calc(7.5vw); line-height: 7.5vw;">
+                    <span class="thin">About</span> <strong>MEGA<span class="thin">MUN</span>23</strong>
+                </h1>
+            </div>
+            <div class="cols">
+                <div class="col wider-text" style="overflow: hidden; width: 90%vw;"><img src="megamun.png" width=" 90%"
+                        data-tooltip="MEGAMUN23 Logo" />
+                </div>
+                <div class="col" style="align-self: center;">
+                    <!-- <br style="line-height: 900px;"> -->
+                    <!-- <h4>
+                            <p><q>Dedication. Perseverance. Success.</q></p>
+                        </h4> -->
+                    <div style="text-align: center;">
+                        MEGAMUN is back after a
+                        brief hiatus of three years. The Model United
+                        Conference organized by Delhi Public School, Megacity has been one of the premiere MUN’s
+                        in
+                        the
+                        city, and has a rich
+                        history of providing attendees with exhilarating and enriching sessions. We at MegaMun
+                        have
+                        always stressed upon the
+                        importance of global awareness associated with the event among individuals, and thus
+                        have
+                        always
+                        worked on and prepared
+                        meticulously thought-out agendas and committees. With the 5th session of MegaMun this
+                        year
+                        being
+                        no different as we look
+                        forward to a productive and fruitful conference
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- <div class="cols">
         <div class="col" ontouchstart="this.classList.toggle('hover');">
             <div class="container">
                 <div class="front"
@@ -100,8 +168,69 @@
             </div>
         </div>
 
+    </div> -->
+    <div class="info_text" style=" text-overflow: ellipsis; text-overflow: ellipsis; " id="enquiry">
+
+        <div class="col">
+            <div style="flex-direction: column; align-self: center;">
+                <h1
+                    style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; text-size-adjust: 100%; font-size: calc(7.5vw); line-height: 7.5vw;">
+                    <span class="thin"></span> <strong>Contact Us<span class="thin"></span></strong>
+                </h1>
+            </div>
+            <div class="">
+                <br>
+                <br>
+                <div class="">
+                    <p><strong>
+                            <h1>Adwitiyo Das</h1>
+                        </strong></p>
+                    <span class="cols">
+                        <a class="thin col" href="tel:+9073977729" style="color: #ffffff6b;text-decoration: solid underline;" >
+                            90739 77729
+                        </a>
+                        <span class="thin col">
+                            <a href="mailto:emailadwitiyo@gmail.com" style="color: #ffffff;">Email</a>
+                        </span>
+                        <span class="kbd col">Co-Secretary General MegaMun'23</span>
+                    </span>
+                </div>
+                <br>
+                <div class="">
+                    <p><strong>
+                            <h1>Vaanchhit Agarwal</h1>
+                        </strong></p>
+                    <span class="cols">
+                        <a class="thin col" href="tel:+8100579761" style="color: #ffffff6b;text-decoration: solid underline;" >
+                            81005 79761
+                        </a>
+                        <span class="thin col">
+                            <a href="mailto:vaanchhit06@gmail.com" style="color: #ffffff;">Email</a>
+                        </span>
+                        <span class="kbd col">Co-Secretary General MegaMun'23</span>
+                    </span>
+                </div>
+                <br>
+                <div class="">
+                    <p><strong>
+                            <h1>Sanchari Dasgupta</h1>
+                        </strong></p>
+                    <span class="cols">
+                        <a class="thin col" href="tel:+9831043009" style="color: #ffffff6b;text-decoration: solid underline;" >
+                            98310 43009
+                        </a>
+                        <span class="kbd col">Teacher Coordinator</span>
+                    </span>
+                </div>
+
+
+            </div>
+        </div>
     </div>
-    <script defer>
+
+    <div class="footer-container"></div>
+
+    <script>
         // Fetch the contents of the navbar HTML file
         fetch("navbar.html")
             .then(response => response.text())
@@ -111,14 +240,16 @@
                 navbarContainer.innerHTML = data;
 
                 // Access the menuIcon element and add a click event listener
-                const icon = document.querySelector('.main');
-                const menuIcon = document.querySelector('.bx-menu');
-                const navbar = document.querySelector('.navbar');
+                var icon = document.querySelector('.main');
+                var menuIcon = document.querySelector('.icon');
+                var navbar = document.querySelector('.navbar');
+                console.log(menuIcon);
+                console.log(icon);
 
-                menuIcon.onclick = () => {
+                menuIcon.addEventListener('click', function () {
                     console.log("clicked");
                     icon.classList.toggle('open');
-                    if (menuIcon.classList.contains('open')) {
+                    if (icon.classList.contains('open')) {
                         menuIcon.innerHTML = '<i class="fas fa-times"></i>';
                     } else {
                         menuIcon.innerHTML = '<i class="fas fa-bars"></i>';
@@ -126,12 +257,92 @@
                     menuIcon.classList.toggle('bx-x');
                     navbar.classList.toggle('open');
 
-                };
+                });
+                const dropdownMenu = document.querySelector(".committee-menu");
+                const gg = document.querySelector(".committee");
+
+                console.log(dropdownMenu);
+                console.log("hover");
+                gg.addEventListener("mouseenter", function () {
+                    dropdownMenu.style.display = "block";
+                    console.log("hover");
+                });
+
+
+                dropdownMenu.addEventListener("mouseenter", function () {
+                    dropdownMenu.style.display = "block";
+                    console.log("hover");
+                });
+
+                dropdownMenu.addEventListener("mouseleave", function () {
+                    dropdownMenu.style.display = "none";
+                });
             });
+
     </script>
+    <script src="main.js"></script>
+    <script defer="">
+        document.addEventListener("DOMContentLoaded", function () {
+            var readMoreElements = document.querySelectorAll('.readmoretext');
 
-    <script src="main.js" async="false"></script>
+            readMoreElements.forEach(function (element) {
+                var content = element.innerHTML;
+                var height = window.innerHeight;
+                var width = window.innerWidth;
+                var limit;
 
+                if (width < 768) {
+                    limit = 50;
+                } else if (width < 992) {
+                    limit = 75;
+                } else {
+                    limit = 100;
+                }
+
+                if (height < 600) {
+                    limit -= 25;
+                }
+
+                // Use the limit variable to truncate the content as before
+                if (content.length > limit) {
+                    var visibleText = content.substring(0, limit);
+                    var hiddenText = content.substring(limit);
+
+                    element.innerHTML = '<div class="visible-text">' +
+                        visibleText +
+                        '<span class="more-dots">...</span>' +
+                        '<div class="hidden-text">' + '&nbsp;' + hiddenText + '</div>' +
+                        '<span class="read-more-button"> <button style="max-width: 200px; font-size: calc(1vw + 10px);bottom:-50px;right:0; ">Read more</button></span>' +
+                        '</div>';
+
+                    var readMoreButton = element.querySelector('.read-more-button');
+                    var readMoreDiv = element.querySelector('.readmoretext');
+                    var moreDots = element.querySelector('.more-dots');
+                    var hiddenTextDiv = element.querySelector('.visible-text');
+
+                    readMoreButton.addEventListener('click', function () {
+                        hiddenTextDiv.innerHTML = visibleText + hiddenText;
+                        // hiddenTextDiv.style.display = 'block';
+                        // hiddenTextDiv.style.color = '#fff';
+                        // hiddenTextDiv.style.zIndex = '9999999';
+                        // readMoreDiv.style.maxheight = '100%vh';
+                        if (moreDots && readMoreButton) {
+                            moreDots.remove();
+                            readMoreButton.remove();
+                        }
+                    });
+                }
+            });
+        });
+    </script>
+    <script defer="">
+        document.addEventListener("DOMContentLoaded", function () {
+            var externalLinks = document.querySelectorAll('a[href^="http"]');
+            for (var i = externalLinks.length - 1; i >= 0; i--) {
+                externalLinks[i].addEventListener("click", function () { alert("hi"); }, false);
+            }
+        });
+    </script>
 
 </body>
 

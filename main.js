@@ -119,7 +119,10 @@ document.addEventListener("DOMContentLoaded", function () {
         toggleChevronIcon();
         console.log("hover");
       });
-
+      gg.addEventListener("click", function () {
+        toggleChevronIcon();
+        console.log("Clicked! 🖱️");
+    });
       // dropdownMenu.addEventListener("mouseenter", function () {
       //   dropdownMenu.style.display = "block";
       //   toggleChevronIcon();

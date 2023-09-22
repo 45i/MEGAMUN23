@@ -661,9 +661,10 @@ button:hover::before {
 [data-tooltip]:hover::after {
   content: attr(data-tooltip);
   position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
+  /* top: 100%; */
+  /* left: 50%; */
+  transform: translate(-50%, 60%);
+  /* transform: ; */
   padding: 5px;
   background-color: #0F0331;
   backdrop-filter: blur(10px);

@@ -12,15 +12,15 @@
 .committee i {
     margin-left: 5px;
     transition: transform 0.2s ease;
-    color: #220379 ;
-  }
-  
-  /* Rotate the icon on hover */
-  .committee i:hover  {
+    color: #220379;
+}
+
+/* Rotate the icon on hover */
+.committee i:hover {
     transform: rotate(180deg);
-  }
-  
-.committee-menu  {
+}
+
+.committee-menu {
     display: none;
     position: absolute;
     top: 57.1%;
@@ -30,36 +30,54 @@
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
 }
-.narrow-committee-list li{
+
+.narrow-committee-list li {
     font-size: xxx-small;
     list-style: none;
     color: #333;
 }
-.narrow-committee-list li::before{
-    
-}
-.committee-menu li{
+
+.narrow-committee-list li::before {}
+
+.committee-menu li {
 
     list-style: none;
     line-height: 50px;
 }
-.committee-menu li a{
+
+.committee-menu li a {
     list-style: none;
     line-height: 50px;
     color: #999999;
 }
-.committee-menu li a:hover{
+
+.committee-menu li a:hover {
     list-style: none;
     line-height: 50px;
     color: #fff;
 }
+
 /* Style the dropdown item */
 .committee {
     position: relative;
     cursor: pointer;
 }
-
-.committee  a{
+.logo{
+    /* width: auto;
+    max-width: fit-content; */
+    /* background-color: #0F0331; */
+}
+/* .logo a::before{
+background:url(megamun.png);
+background-position: 0%;
+background-size: contain;
+background-repeat: no-repeat;
+ max-width: max-content; 
+}
+/* .logo a::before{
+    content: '      ';
+} */
+.committee a {
     text-decoration: none;
     color: #333;
     display: flex;

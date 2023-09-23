@@ -239,7 +239,7 @@ header {
   background-size: cover;
   background-repeat: no-repeat;
   background-position-x: 50%;
-  background-postion:fixed;
+  background-attachment:fixed;
   /*   
   border-color: #000;
   border-image: linear-gradient(45deg, #0F0331, #2A1472) 1; */

@@ -135,10 +135,10 @@ document.addEventListener("DOMContentLoaded", function () {
 
       console.log(dropdownMenu);
       console.log("hover");
-      gg.addEventListener("mouseenter", function () {
-        toggleChevronIcon();
-        console.log("hover");
-      });
+      // gg.addEventListener("mouseenter", function () {
+      //   toggleChevronIcon();
+      //   console.log("hover");
+      // });
       gg.addEventListener("click", function () {
         toggleChevronIcon();
         console.log("Clicked! 🖱️");

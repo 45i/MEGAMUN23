@@ -31,6 +31,19 @@
     z-index: 1;
 }
 
+.google_translate_element {
+    display: none;
+    position: absolute;
+    top: 100%;
+    color: #999999;
+    right: 10px;
+    background: #ffffff;
+    backdrop-filter: blur(10px);
+    border-radius: 6px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
 .narrow-committee-list li {
     font-size: xxx-small;
     list-style: none;
@@ -62,11 +75,13 @@
     position: relative;
     cursor: pointer;
 }
-.logo{
+
+.logo {
     /* width: auto;
     max-width: fit-content; */
     /* background-color: #0F0331; */
 }
+
 /* .logo a::before{
 background:url(megamun.png);
 background-position: 0%;

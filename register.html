@@ -123,17 +123,17 @@
                         if (committeeSelect.value === "UNSC") {
                             coDelegateFields.style.display = "block";
                             // Add 'required' attribute to all input fields within co-delegate-fields
-                            // const inputFields = coDelegateFields.querySelectorAll("input");
-                            // inputFields.forEach(function (input) {
-                            //     input.setAttribute("required", "required");
-                            // });
+                            const inputFields = coDelegateFields.querySelectorAll("input");
+                            inputFields.forEach(function (input) {
+                                input.setAttribute("required", "required");
+                            });
                         } else {
                             coDelegateFields.style.display = "none";
                             // Remove 'required' attribute from all input fields within co-delegate-fields
-                            // const inputFields = coDelegateFields.querySelectorAll("input");
-                            // inputFields.forEach(function (input) {
-                            //     input.removeAttribute("required");
-                            // });
+                            const inputFields = coDelegateFields.querySelectorAll("input");
+                            inputFields.forEach(function (input) {
+                                input.removeAttribute("required");
+                            });
                         }
                     });
 

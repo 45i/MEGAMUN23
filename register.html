@@ -140,11 +140,11 @@
                     sameSchoolCheckbox.addEventListener("change", function () {
                         if (sameSchoolCheckbox.checked) {
                             coSchoolField.style.display = "none";
-                            //coSchoolField.removeAttribute("required");
+                            coSchoolField.removeAttribute("required");
                             
                         } else {
                             coSchoolField.style.display = "block";
-                            //coSchoolField.setAttribute("required", "required");
+                            coSchoolField.setAttribute("required", "required");
                             
                         }
                     });

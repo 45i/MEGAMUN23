@@ -88,7 +88,7 @@
                                     school?</label>
                             </div>
                             <div id="coSchoolField" style="display: none;" class="">
-                                <input id="coschool" name="coschool" required placeholder="Co-Delegate's School Name" type="text"
+                                <input id="coschool" name="coschool"  placeholder="Co-Delegate's School Name" type="text"
                                     list="school-list-coschool" />
                                 <datalist id="school-list-coschool"></datalist>
                                 <label for="coschool" id="coschoollabel" style="font-size: small; color:red" class="kbd"></label>
@@ -140,10 +140,12 @@
                     sameSchoolCheckbox.addEventListener("change", function () {
                         if (sameSchoolCheckbox.checked) {
                             coSchoolField.style.display = "none";
-                            coSchoolField.setAttribute("required", "required");
+                            //coSchoolField.removeAttribute("required");
+                            
                         } else {
                             coSchoolField.style.display = "block";
-                            coSchoolField.removeAttribute("required");
+                            //coSchoolField.setAttribute("required", "required");
+                            
                         }
                     });
                 </script>

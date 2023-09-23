@@ -81,14 +81,14 @@
                                 type="email" />
                             <input class=""id="cophone" min="1" name="cophone" required  placeholder="Co-Delegate's Phone no." required=""
                                 type="number" /> 
-                            <div class="">
+                            <!-- <div class="">
                                 <input id="sameSchool" type="checkbox" name="sameSchool" checked>
 
                                 <label for="sameSchool" style="font-size: large;">Is your co-delegate from the same
                                     school?</label>
-                            </div>
-                            <div id="coSchoolField" style="display: none;" class="">
-                                <input id="coschool" name="coschool"  placeholder="Co-Delegate's School Name" type="text"
+                            </div> -->
+                            <div id="coSchoolField" style="display: block;" class="">
+                                <input id="coschool" required name="coschool"  placeholder="Co-Delegate's School Name" type="text"
                                     list="school-list-coschool" />
                                 <datalist id="school-list-coschool"></datalist>
                                 <label for="coschool" id="coschoollabel" style="font-size: small; color:red" class="kbd"></label>
@@ -137,17 +137,17 @@
                         }
                     });
 
-                    sameSchoolCheckbox.addEventListener("change", function () {
-                        if (sameSchoolCheckbox.checked) {
-                            coSchoolField.style.display = "none";
-                            coSchoolField.removeAttribute("required");
+                    // sameSchoolCheckbox.addEventListener("change", function () {
+                    //     if (sameSchoolCheckbox.checked) {
+                    //         coSchoolField.style.display = "none";
+                    //         coSchoolField.removeAttribute("required");
                             
-                        } else {
-                            coSchoolField.style.display = "block";
-                            coSchoolField.setAttribute("required", "required");
+                    //     } else {
+                    //         coSchoolField.style.display = "block";
+                    //         coSchoolField.setAttribute("required", "required");
                             
-                        }
-                    });
+                    //     }
+                    //});
                 </script>
                 <!-- JavaScript to fetch school names from API and populate the datalist -->
                 <script>

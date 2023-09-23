@@ -1,22 +1,5 @@
-// const menuIcon = document.querySelector('.bx-menu');
-// const navbar = document.querySelector('.navbar');
+// Include the external Google Translate script
 
-// menuIcon.onclick = () => {
-//   console.log('Menu icon clicked');
-//   menuIcon.classList.toggle('bx-x');
-//   navbar.classList.toggle('open');
-// };
-// JavaScript to set the CSS variable based on computed background color
-// const elements = document.querySelectorAll('*'); // Select all elements, you can narrow this down as needed
-
-// elements.forEach(element => {
-//   const styles = getComputedStyle(element);
-//   const bgColor = styles.backgroundColor || 'transparent';
-//   element.style.setProperty('--fallback-bg-color', bgColor);
-// });
-// Check for backdrop-filter support
-// Check for backdrop-filter support
-// Check if the device itself supports backdrop-filter
 function supportsBackdropFilter() {
   const testElement = document.createElement('div');
   testElement.style.backdropFilter = 'blur(10px)';
@@ -26,10 +9,10 @@ function supportsBackdropFilter() {
 // Apply backdrop filter or sepia based on support
 function applyFilter() {
   if (!supportsBackdropFilter()) {
-      const allElements = document.querySelectorAll('*');
-      allElements.forEach(element => {
-          element.style.filter = 'sepia(100%)';
-      });
+    const allElements = document.querySelectorAll('*');
+    allElements.forEach(element => {
+      element.style.filter = 'sepia(100%)';
+    });
   }
 }
 
@@ -84,10 +67,15 @@ document.addEventListener("DOMContentLoaded", function () {
       var menuIcon = document.querySelector('.icon');
       var navbar = document.querySelector('.navbar');
       var dropdownMenu = document.querySelector(".committee-menu");
+      var translate = document.querySelector(".translate-button");
 
       console.log(menuIcon);
       console.log(icon);
 
+      translate.addEventListener('click', function () {
+      googleTranslateElementInit();
+      toggleTranslateElement();
+      });
       menuIcon.addEventListener('click', function () {
         console.log("clicked");
         icon.classList.toggle('open');
@@ -99,11 +87,43 @@ document.addEventListener("DOMContentLoaded", function () {
         menuIcon.classList.toggle('bx-x');
         navbar.classList.toggle('open');
       });
+      function googleTranslateElementInit() {
+        // Your code for initializing the Google Translate element goes here
+        new google.translate.TranslateElement(
+          { pageLanguage: 'en' },
+          'google_translate_element'
+        );
+      }
+      var script = document.createElement('script');
+      script.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+      script.type = 'text/javascript';
+      document.getElementsByTagName('head')[0].appendChild(script);
+      var translateElementVisible = false;
+
+      // Function to toggle the Google Translate element and button icon
+      function toggleTranslateElement() {
+        var translateElement = document.getElementById('google_translate_element');
+        var translateButton = document.querySelector('.translate-button');
+        var icon = translateButton.querySelector('i');
+
+        if (translateElementVisible) {
+          translateElement.style.display = 'none';
+          icon.className = 'fas fa-language';
+        } else {
+          translateElement.style.display = 'block';
+          icon.className = 'fas fa-times';
+        }
+
+        translateElementVisible = !translateElementVisible;
+      }
+
+      // Define the googleTranslateElementInit function here if needed
+      
 
       // Function to toggle the chevron icon when the dropdown is open
       function toggleChevronIcon() {
         var committeeIcon = document.querySelector(".committee i");
-        dropdownMenu.style.display = (dropdownMenu.style.display==="none")?"block":"none";
+        dropdownMenu.style.display = (dropdownMenu.style.display === "none") ? "block" : "none";
         if (dropdownMenu.style.display === "block") {
           committeeIcon.style.transform = "rotate(180deg)";
         } else {
@@ -122,7 +142,7 @@ document.addEventListener("DOMContentLoaded", function () {
       gg.addEventListener("click", function () {
         toggleChevronIcon();
         console.log("Clicked! 🖱️");
-    });
+      });
       // dropdownMenu.addEventListener("mouseenter", function () {
       //   dropdownMenu.style.display = "block";
       //   toggleChevronIcon();
@@ -202,11 +222,11 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 let prevScrollpos = window.scrollY;
-window.onscroll = function() {
+window.onscroll = function () {
   let currentScrollPos = window.scrollY;
   if (prevScrollpos > currentScrollPos) {
     document.querySelector("nav").classList.remove("hidden");
-    
+
   } else {
     document.querySelector("nav").classList.add("hidden");
 
@@ -256,16 +276,16 @@ document.querySelectorAll("[data-value]").forEach(element => {
         .split("")
         .map((letter, index) => {
           if (index < iterations) {
-            return event.target.dataset.value[ index ];
+            return event.target.dataset.value[index];
           }
-          return letters[ Math.floor(Math.random() * (26 + 10)) ];
+          return letters[Math.floor(Math.random() * (26 + 10))];
         })
         .join("");
 
       if (iterations >= event.target.dataset.value.length) {
         clearInterval(interval);
       }
-      
+
       iterations += 1 / 2;
     }, 100);
   });
@@ -303,44 +323,44 @@ let launchDate = new Date("October 11, 2023 00:00:00").getTime();
 
 let timer = setInterval(tick, 1000);
 function tick() {
-    let now = new Date().getTime();
-    let t = launchDate - now;
-    if (t > 0) {
-        let days = Math.floor(t / (1000 * 60 * 60 * 24));
-        if (days < 10) {
-            days = "0" + days;
-          }
-          let hours = Math.floor(t % (1000 * 60 * 60 * 24) / (1000 * 60 * 60));
-        if (hours < 10) {
-            hours = "0" + hours;
-        }
-        let minutes = Math.floor(t % (1000 * 60 * 60) / (1000 * 60));
-        if (minutes < 10) {
-            minutes = "0" + minutes;
-        }
-        let seconds = Math.floor(t % (1000 * 60) / 1000);
-        if (seconds < 10) {
-            seconds = "0" + seconds;
-        }
-
-      let time = `<span class="days">${days}</span> : <span class="hours">${hours}</span> : <span class="minutes">${minutes}</span> : <span class="seconds">${seconds}</span>`;
-
-        document.querySelector('.countdown').innerHTML = time;
-
-        // Add event listener to the days span element
-        // const daysSpan = document.querySelector('.days');
-        // daysSpan.addEventListener('mouseover', () => {
-        //     daysSpan.innerText = `${days} days`;
-        // });
-        // daysSpan.addEventListener('mouseout', () => {
-        //     daysSpan.innerText = `${days}`;
-        // });
+  let now = new Date().getTime();
+  let t = launchDate - now;
+  if (t > 0) {
+    let days = Math.floor(t / (1000 * 60 * 60 * 24));
+    if (days < 10) {
+      days = "0" + days;
     }
+    let hours = Math.floor(t % (1000 * 60 * 60 * 24) / (1000 * 60 * 60));
+    if (hours < 10) {
+      hours = "0" + hours;
+    }
+    let minutes = Math.floor(t % (1000 * 60 * 60) / (1000 * 60));
+    if (minutes < 10) {
+      minutes = "0" + minutes;
+    }
+    let seconds = Math.floor(t % (1000 * 60) / 1000);
+    if (seconds < 10) {
+      seconds = "0" + seconds;
+    }
+
+    let time = `<span class="days">${days}</span> : <span class="hours">${hours}</span> : <span class="minutes">${minutes}</span> : <span class="seconds">${seconds}</span>`;
+
+    document.querySelector('.countdown').innerHTML = time;
+
+    // Add event listener to the days span element
+    // const daysSpan = document.querySelector('.days');
+    // daysSpan.addEventListener('mouseover', () => {
+    //     daysSpan.innerText = `${days} days`;
+    // });
+    // daysSpan.addEventListener('mouseout', () => {
+    //     daysSpan.innerText = `${days}`;
+    // });
+  }
 }
 const tds = document.querySelectorAll('td');
 
 tds.forEach(td => {
-  td.addEventListener('click', function() {
+  td.addEventListener('click', function () {
     const text = this.innerText;
     const tempInput = document.createElement('input');
     tempInput.setAttribute('value', text);
@@ -371,23 +391,23 @@ imgBoxes.forEach(imgBox => {
     const deltaY = (centerY - y) / centerY;
     imgBox.querySelector('img').style.transform = `perspective(1000px) rotateY(${deltaX * 5.1}deg) rotateX(${deltaY * 5.1}deg) scale(1.1)`;
   });
-  
+
   imgBox.addEventListener('mouseleave', () => {
     imgBox.querySelector('img').style.transform = 'perspective(1000px) rotateY(0deg) rotateX(0deg) scale(1.1)';
   });
 
-  
-  
+
+
 });
 
 function splitWords() {
   let quote = document.querySelector("blockquote q");
-  quote.innerText.replace(/(<([^>]+)>)/ig,"");
+  quote.innerText.replace(/(<([^>]+)>)/ig, "");
   quotewords = quote.innerText.split(" "),
-  wordCount = quotewords.length;
+    wordCount = quotewords.length;
   quote.innerHTML = "";
-  for (let i=0; i < wordCount; i++) {
-    quote.innerHTML += "<span>"+quotewords[i]+"</span>";
+  for (let i = 0; i < wordCount; i++) {
+    quote.innerHTML += "<span>" + quotewords[i] + "</span>";
     if (i < quotewords.length - 1) {
       quote.innerHTML += " ";
     }
@@ -401,20 +421,20 @@ function getRandom(min, max) {
 }
 
 function fadeWords(quotewords) {
-  Array.prototype.forEach.call(quotewords, function(word) {
+  Array.prototype.forEach.call(quotewords, function (word) {
     let animate = word.animate([{
       opacity: 0,
-      filter: "blur("+getRandom(2,5)+"px)"
+      filter: "blur(" + getRandom(2, 5) + "px)"
     }, {
       opacity: 1,
       filter: "blur(0px)"
-    }], 
-    { 
-      duration: 1000,
-      delay: getRandom(500,3300),
-      fill: 'forwards'
-    } 
-   )
+    }],
+      {
+        duration: 1000,
+        delay: getRandom(500, 3300),
+        fill: 'forwards'
+      }
+    )
   })
 }
 

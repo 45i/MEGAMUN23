@@ -76,11 +76,11 @@
                         <!-- Co-delegate fields, initially hidden -->
                         <div id="co-delegate-fields" style="display: none;">
                             <div class="">
-                            <input class=""id="coname" name="coname" placeholder="Co-Delegate's Name" required="" type="text" />
-                            <input class=""id="coemail" name="coemail" placeholder="Co-Delegate's Email ID" required=""
+                            <input class=""id="coname" name="coname" required placeholder="Co-Delegate's Name" required="" type="text" />
+                            <input class=""id="coemail" name="coemail" required placeholder="Co-Delegate's Email ID" required=""
                                 type="email" />
-                            <input class=""id="cophone" min="1" name="cophone" placeholder="Co-Delegate's Phone no." required=""
-                                type="number" />
+                            <input class=""id="cophone" min="1" name="cophone" required  placeholder="Co-Delegate's Phone no." required=""
+                                type="number" /> 
                             <div class="">
                                 <input id="sameSchool" type="checkbox" name="sameSchool" checked>
 
@@ -88,7 +88,7 @@
                                     school?</label>
                             </div>
                             <div id="coSchoolField" style="display: none;" class="">
-                                <input id="coschool" name="coschool" placeholder="Co-Delegate's School Name" type="text"
+                                <input id="coschool" name="coschool" required placeholder="Co-Delegate's School Name" type="text"
                                     list="school-list-coschool" />
                                 <datalist id="school-list-coschool"></datalist>
                                 <label for="coschool" id="coschoollabel" style="font-size: small; color:red" class="kbd"></label>
@@ -123,25 +123,27 @@
                         if (committeeSelect.value === "UNSC") {
                             coDelegateFields.style.display = "block";
                             // Add 'required' attribute to all input fields within co-delegate-fields
-                            const inputFields = coDelegateFields.querySelectorAll("input");
-                            inputFields.forEach(function (input) {
-                                input.setAttribute("required", "required");
-                            });
+                            // const inputFields = coDelegateFields.querySelectorAll("input");
+                            // inputFields.forEach(function (input) {
+                            //     input.setAttribute("required", "required");
+                            // });
                         } else {
                             coDelegateFields.style.display = "none";
                             // Remove 'required' attribute from all input fields within co-delegate-fields
-                            const inputFields = coDelegateFields.querySelectorAll("input");
-                            inputFields.forEach(function (input) {
-                                input.removeAttribute("required");
-                            });
+                            // const inputFields = coDelegateFields.querySelectorAll("input");
+                            // inputFields.forEach(function (input) {
+                            //     input.removeAttribute("required");
+                            // });
                         }
                     });
 
                     sameSchoolCheckbox.addEventListener("change", function () {
                         if (sameSchoolCheckbox.checked) {
                             coSchoolField.style.display = "none";
+                            coSchoolField.setAttribute("required", "required");
                         } else {
                             coSchoolField.style.display = "block";
+                            coSchoolField.removeAttribute("required");
                         }
                     });
                 </script>

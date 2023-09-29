@@ -1,4 +1,12 @@
-// Include the external Google Translate script
+// // Include the external Google Translate script
+// $(document).ready(function() {
+//   $('#\\3A 1\\.container').click(function() {
+//     var immediateParent = $(this).parent(); // This selects the immediate parent (1)
+//     var grandParent = immediateParent.parent(); // This selects the grandparent (2)
+    
+//     $(this).add(grandParent).animate({ top: '-200%' }, 'slow');
+//   });
+// });
 
 function supportsBackdropFilter() {
   const testElement = document.createElement('div');
@@ -67,15 +75,11 @@ document.addEventListener("DOMContentLoaded", function () {
       var menuIcon = document.querySelector('.icon');
       var navbar = document.querySelector('.navbar');
       var dropdownMenu = document.querySelector(".committee-menu");
-      var translate = document.querySelector(".translate-button");
 
       console.log(menuIcon);
       console.log(icon);
 
-      translate.addEventListener('click', function () {
-      googleTranslateElementInit();
-      toggleTranslateElement();
-      });
+      
       menuIcon.addEventListener('click', function () {
         console.log("clicked");
         icon.classList.toggle('open');
@@ -87,35 +91,7 @@ document.addEventListener("DOMContentLoaded", function () {
         menuIcon.classList.toggle('bx-x');
         navbar.classList.toggle('open');
       });
-      function googleTranslateElementInit() {
-        // Your code for initializing the Google Translate element goes here
-        new google.translate.TranslateElement(
-          { pageLanguage: 'en' },
-          'google_translate_element'
-        );
-      }
-      var script = document.createElement('script');
-      script.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
-      script.type = 'text/javascript';
-      document.getElementsByTagName('head')[0].appendChild(script);
-      var translateElementVisible = false;
-
-      // Function to toggle the Google Translate element and button icon
-      function toggleTranslateElement() {
-        var translateElement = document.getElementById('google_translate_element');
-        var translateButton = document.querySelector('.translate-button');
-        var icon = translateButton.querySelector('i');
-
-        if (translateElementVisible) {
-          translateElement.style.display = 'none';
-          icon.className = 'fas fa-language';
-        } else {
-          translateElement.style.display = 'block';
-          icon.className = 'fas fa-times';
-        }
-
-        translateElementVisible = !translateElementVisible;
-      }
+      
 
       // Define the googleTranslateElementInit function here if needed
       
@@ -190,6 +166,39 @@ document.addEventListener("DOMContentLoaded", function () {
         button.innerHTML = '<i class="fas fa-chevron-down"></i>';
         btn2.style.display = "none";
       });
+      var translate = document.querySelector(".translate-button");
+      translate.addEventListener('click', function () {
+        googleTranslateElementInit();
+        toggleTranslateElement();
+        });function googleTranslateElementInit() {
+          // Your code for initializing the Google Translate element goes here
+          new google.translate.TranslateElement(
+            { pageLanguage: 'en' },
+            'google_translate_element'
+          );
+        }
+        var script = document.createElement('script');
+        script.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+        script.type = 'text/javascript';
+        document.getElementsByTagName('head')[0].appendChild(script);
+        var translateElementVisible = false;
+  
+        // Function to toggle the Google Translate element and button icon
+        function toggleTranslateElement() {
+          var translateElement = document.getElementById('google_translate_element');
+          var translateButton = document.querySelector('.translate-button');
+          var icon = translateButton.querySelector('i');
+  
+          if (translateElementVisible) {
+            translateElement.style.display = 'none';
+            icon.className = 'fas fa-language';
+          } else {
+            translateElement.style.display = 'block';
+            icon.className = 'fas fa-times';
+          }
+  
+          translateElementVisible = !translateElementVisible;
+        }
     });
 });
 

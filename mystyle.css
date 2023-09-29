@@ -235,10 +235,11 @@ header {
   line-height: 2.5;
   text-shadow: 0 0 10px #000;
   transition: background 0.3s ease-out;
-  background-image: linear-gradient(360deg, #2A1472, #0000, #00000000), url(school.jpeg);
+  background-image: linear-gradient(360deg,#2a1472,#2a147234, #00000000), url(school.jpeg);
   background-size: cover;
   background-repeat: no-repeat;
   background-position-x: 50%;
+  
   
   /*   
   border-color: #000;
@@ -1510,3 +1511,6 @@ body {
  /* display: none; */
 }
 
+article{
+  margin: 10px;
+}

@@ -801,7 +801,7 @@ h2 {
 .hours,
 .seconds {
   color: #fff;
-  font-size: clamp(22px, calc(9vw), 40px);
+  font-size: clamp(19px, calc(8.25vw), 30px);
   font-family: bold;
   /* font-weight: 400; */
 }

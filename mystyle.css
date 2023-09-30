@@ -1425,7 +1425,8 @@ abbr:hover {
     background-color: #0F0331;
     backdrop-filter: blur(10px);
     box-shadow: 10px 1px 10px rgb(0, 0, 0);
-    display: flex;
+    display: none;
+    /* visibility: hidden; */
     flex-direction: column;
     justify-content: flex-end;
     border-radius: 10px;

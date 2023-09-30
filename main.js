@@ -8,6 +8,20 @@
 //   });
 // });
 
+var swiper = new Swiper('.blog-slider', {
+  spaceBetween: 30,
+  effect: 'fade',
+  loop: true,
+  mousewheel: {
+    invert: false,
+  },
+  // autoHeight: true,
+  pagination: {
+    el: '.blog-slider__pagination',
+    clickable: true,
+  }
+});
+
 const body = document.body;
 
 let sx = 0, // For scroll positions
@@ -82,19 +96,19 @@ document.addEventListener("DOMContentLoaded", function () {
   ogImageMeta.content = 'megamun.png';
   document.head.appendChild(ogImageMeta);
 
-  // Create and append the 'favicon' link tag
-  // const faviconLink = document.createElement('link');
-  // faviconLink.href = 'megamun.png';
-  // faviconLink.rel = 'icon';
-  // faviconLink.type = 'image/x-icon';
-  // document.head.appendChild(faviconLink);
-
   // Create and append the 'theme-color' meta tag
   const themeColorMeta = document.createElement('meta');
   themeColorMeta.name = 'theme-color';
   themeColorMeta.content = '#2A1472';
   document.head.appendChild(themeColorMeta);
+
+  // Create and append the Font Awesome CSS link
+  const fontAwesomeLink = document.createElement('link');
+  fontAwesomeLink.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css';
+  fontAwesomeLink.rel = 'stylesheet';
+  document.head.appendChild(fontAwesomeLink);
 });
+
 
 document.addEventListener("DOMContentLoaded", function () {
   // Fetch the contents of the navbar HTML file

@@ -180,27 +180,27 @@ document.addEventListener("DOMContentLoaded", function () {
       footerContainer.innerHTML = data;
       const footer = document.querySelector(".footer-container");
       const button = footer.querySelector("footer").querySelector(".retract");
-      var btn2 = document.createElement('button');
-      btn2.innerHTML = '<i class="fas fa-chevron-up"></i>';
-      btn2.style.position = 'fixed';
-      btn2.style.bottom = '0';
-      btn2.style.right = '0';
-      btn2.style.zIndex = '9999';
-      let isCollapsed = false;
-      footer.insertAdjacentElement('beforebegin', btn2);
-      footer.style.display = "block";
-      btn2.style.display = "none";
-      button.addEventListener('click', () => {
-        isCollapsed = !isCollapsed;
-        footer.style.display = "none";
-        btn2.innerHTML = '<i class="fas fa-chevron-up"></i>';
-        btn2.style.display = "block";
-      });
-      btn2.addEventListener('click', () => {
-        footer.style.display = "block";
-        button.innerHTML = '<i class="fas fa-chevron-down"></i>';
-        btn2.style.display = "none";
-      });
+      // var btn2 = document.createElement('button');
+      // btn2.innerHTML = '<i class="fas fa-chevron-up"></i>';
+      // btn2.style.position = 'relative';
+      // btn2.style.bottom = '0';
+      // btn2.style.right = '0';
+      // btn2.style.zIndex = '9999';
+      // let isCollapsed = false;
+      // footer.insertAdjacentElement('beforebegin', btn2);
+      // footer.style.display = "block";
+      // btn2.style.display = "none";
+      // button.addEventListener('click', () => {
+      //   isCollapsed = !isCollapsed;
+      //   footer.style.display = "none";
+      //   btn2.innerHTML = '<i class="fas fa-chevron-up"></i>';
+      //   btn2.style.display = "block";
+      // });
+      // btn2.addEventListener('click', () => {
+      //   footer.style.display = "block";
+      //   button.innerHTML = '<i class="fas fa-chevron-down"></i>';
+      //   btn2.style.display = "none";
+      // });
       var translate = document.querySelector(".translate-button");
       translate.addEventListener('click', function () {
         googleTranslateElementInit();

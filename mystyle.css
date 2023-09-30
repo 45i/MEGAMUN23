@@ -99,8 +99,11 @@ body {
 
 } */
 blockquote {
-  font-size: 3rem;
-
+ 
+    font-size: clamp(19px,4vw,100px); /* Adjust this value as needed */
+ 
+  
+/*  */
 
 }
 
@@ -123,7 +126,7 @@ cite {
 
 blockquote q {
   font-family: cursve;
-  font-size: xxx-large;
+  /* font-size: xxx-large; */
   /* font-style: italic; */
   /* letter-spacing: .1rem; */
 }
@@ -131,7 +134,7 @@ blockquote q {
 blockquote q span {
   font-family: cursve;
   will-change: opacity, filter;
-  font-size: xxx-large;
+  /* font-size: xxx-small; */
 
 
   opacity: 0;
@@ -141,7 +144,7 @@ blockquote q span {
 q {
   font-family: cursve;
   quotes: "“" "”" "‘" "’";
-  font-size: 400px;
+  /* font-size: 400px; */
 
 
 }
@@ -167,7 +170,7 @@ q:before,
 q:after {
   font-family: cursve;
   color: #ccc;
-  font-size: 4rem;
+  /* font-size: 4rem; */
   /* font-size: xxx-large; */
 
 

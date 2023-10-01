@@ -40,6 +40,7 @@
   user-zoom: none;
   zoom: 1;
   -webkit-font-smoothing: antialiased;
+  scroll-snap-type: y mandatory;
   /* For Chrome, Safari, and newer versions of Edge */
   -moz-osx-font-smoothing: grayscale;
   /* For Firefox and older versions of Edge on macOS */

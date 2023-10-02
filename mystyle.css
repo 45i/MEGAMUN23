@@ -678,39 +678,6 @@ button:hover::before {
   z-index: 999999999;
 }
 
-/* Style the suggestion dropdown (this may vary between browsers) 
-/* #school::-webkit-calendar-picker-indicator,
-#coschool::-webkit-calendar-picker-indicator {
-  /* Your styles here 
-  display: none; /* Hides the dropdown arrow in Chrome 
-}
-
-/* Style the suggestions themselves 
-#school-list,
-#school-list-coschool {
-  /* Your styles here 
-  max-height: 150px; /* Set a maximum height for the dropdown 
-  overflow-y: auto; /* Add a scrollbar if there are too many suggestions 
-  border: 1px solid #ccc;
-  border-top: none; /* Hide top border 
-  position: absolute;
-  z-index: 1;
-}
-
-/* Style each suggestion option 
-#school-list option,
-#school-list-coschool option {
-  /* Your styles here 
-  padding: 5px;
-}
-
-/* Style the selected option (highlighted) 
-#school-list option:checked,
-#school-list-coschool option:checked {
-  /* Your styles here 
-  background-color: #007bff; 
-  color: #fff; 
-} */
 button:hover {
   /* box-shadow: -6px -6px 10px rgba(255, 255, 255, 0.8), */
   /* 6px 6px 10px rgba(0, 0, 0, 0.2); */
@@ -1634,7 +1601,7 @@ article{
   /* transform: translateY(50%); Center vertically */
   /* transform: translateX(0%); */
   pointer-events:  all;
-  scroll-behavior: auto;
+  /* scroll-behavior: auto; */
 }
 
 /* Hide the scrollbar */

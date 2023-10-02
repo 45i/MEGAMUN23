@@ -48,7 +48,7 @@
 
     </div>
     <!-- </center> -->
-    <center><h1
+    <center class="target-element"><h1
                     style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; text-size-adjust: 100%; font-size: calc(7.5vw); line-height: 7.5vw;" id="cption">
                     <!-- <span class="thin">About</span> <strong>MEGA<span class="thin">MUN</span>23</strong>/ -->
                 </h1></center>
@@ -57,19 +57,19 @@
         <!-- Full-width images with number and caption text -->
         <div class="mySlides fade">
 
-            <center><img src="chairs/AIPPM.jpg" style="width:100%" id="myImg"></center>
+            <center><img src="chairs/AIPPM.jpg" style="width:75vh" id="myImg"></center>
             <div class="text"><span class="thin">Team</span> <strong>AIPPM</strong></div>
         </div>
 
         <div class="mySlides fade">
 
-            <center><img src="chairs/COE-ATIP.jpg" style="width:100%" id="myImg"></center>
+            <center><img src="chairs/COE-ATIP.jpg" style="width:75vh" id="myImg"></center>
             <div class="text"><span class="thin">Team</span> <strong>COE-ATIP</strong></div>
         </div>
 
         <div class="mySlides fade">
 
-            <center><img src="chairs/SSOC-1977.jpg" style="width:100%" id="myImg"></center>
+            <center><img src="chairs/SSOC-1977.jpg" style="width:75vh" id="myImg"></center>
             <div class="text"><span class="thin">Team</span> <strong>SSOC-1977</strong></div>
         </div>
         
@@ -136,29 +136,6 @@
 
 </body>
 <script>
-    // Get the number of slides
-    var numSlides = document.querySelectorAll('.mySlides').length;
-
-    // Get a reference to the dot container
-    var dotContainer = document.getElementById('dot-container');
-
-    // Create and add the dots
-    for (var i = 0; i < numSlides; i++) {
-        var dot = document.createElement('span');
-        dot.className = 'dot';
-        dot.onclick = function () {
-            currentSlide(i + 1);
-        };
-        dotContainer.appendChild(dot);
-    }
-
-    // Set the initial active dot
-    var dots = document.querySelectorAll('.dot');
-    dots[0].classList.add('active');
-
-
-</script>
-<script>
     let slideIndex = 1;
      showSlides(slideIndex);
 
@@ -210,6 +187,30 @@
 }
 
 </script>
+<script>
+    // Get the number of slides
+    var numSlides = document.querySelectorAll('.mySlides').length;
+
+    // Get a reference to the dot container
+    var dotContainer = document.getElementById('dot-container');
+
+    // Create and add the dots
+    for (var i = 0; i < numSlides; i++) {
+        var dot = document.createElement('span');
+        dot.className = 'dot';
+        dot.onclick = function () {
+            currentSlide(i + 1);
+        };
+        dotContainer.appendChild(dot);
+    }
+
+    // Set the initial active dot
+    var dots = document.querySelectorAll('.dot');
+    dots[0].classList.add('active');
+
+
+</script>
+
 <script>
     // Get all elements with the id "myImg" and the class "text"
     var images = document.querySelectorAll("#myImg");

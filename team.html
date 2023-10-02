@@ -35,17 +35,17 @@
     <div id="myModal" class="modal">
 
         <!-- The Close Button -->
-        <!-- <span class="close">&times;</span> -->
-
+        
         <!-- Modal Content (The Image) -->
-        <center>
+        
         <div class="close">
-            <img class="modal-content" style="max-width:100vh" id="img01">
+            <!-- <span class="close">&times;</span> -->
+            <center><img class="modal-content" style="max-width:80vh" id="img01"></center>
 
             <!-- Modal Caption (Image Text) -->
             <div id="caption"></div>
         </div>
-</center>
+
     </div>
     <!-- </center> -->
     <div class="slideshow-container" style="margin:10px; border-radius: 10px;">
@@ -227,20 +227,11 @@
     // Get the <span> element that closes the modal
 var span = document.getElementsByClassName("close")[0];
 
-// Get the modal element
-var modal = document.getElementById("myModal");
+span.onclick = function () {
+        var modal = document.getElementById("myModal");
+        modal.style.display = "none";
+    }
 
-// When the user clicks on <span> (x), close the modal 
-span.onclick = function() {
-  modal.style.display = "none";
-};
-
-// Listen for clicks anywhere on the document
-window.addEventListener("click", function(event) {
-  if (event.target !== span && event.target !== modal) {
-    modal.style.display = "none";
-  }
-});
 
 </script>
 

@@ -1501,11 +1501,12 @@ article{
 
   
 }
-.mySlides img{
+#myImg {
   border-radius: 10px;
   box-shadow: 0 0 10px #000;
-  transform:translateX(0%) ;
+  /* transform:translateX(0) ; */
   z-index: 1;
+  width: 75vw;
 }
 
 /* Next & previous buttons */

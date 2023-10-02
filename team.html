@@ -23,7 +23,7 @@
             <h1><strong>The Team</strong></h1>
         </div>
 
-        <span style="color:#ffffff;font-size: calc(5.15vw);">The brains behind <b>MEGAMUN23</b></span>
+        <span style="color:#ffffff;font-size: calc(3.15vw);">The brains behind <b>MEGAMUN23</b></span>
         <div class="scroll-down"><i class="fas fa-angle-double-down" style="font-size: small; "></i></div>
     </header>
 
@@ -48,31 +48,31 @@
 
     </div>
     <!-- </center> -->
+    <center><h1
+                    style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; text-size-adjust: 100%; font-size: calc(7.5vw); line-height: 7.5vw;" id="cption">
+                    <!-- <span class="thin">About</span> <strong>MEGA<span class="thin">MUN</span>23</strong>/ -->
+                </h1></center>
     <div class="slideshow-container" style="margin:10px; border-radius: 10px;">
 
         <!-- Full-width images with number and caption text -->
         <div class="mySlides fade">
 
             <center><img src="chairs/AIPPM.jpg" style="width:100%" id="myImg"></center>
-            <div class="text">Team AIPPM</div>
+            <div class="text"><span class="thin">Team</span> <strong>AIPPM</strong></div>
         </div>
 
         <div class="mySlides fade">
 
             <center><img src="chairs/COE-ATIP.jpg" style="width:100%" id="myImg"></center>
-            <div class="text">Team COE-ATIP</div>
+            <div class="text"><span class="thin">Team</span> <strong>COE-ATIP</strong></div>
         </div>
 
         <div class="mySlides fade">
 
             <center><img src="chairs/SSOC-1977.jpg" style="width:100%" id="myImg"></center>
-            <div class="text">Team SSOC-1977</div>
+            <div class="text"><span class="thin">Team</span> <strong>SSOC-1977</strong></div>
         </div>
-        <div class="mySlides fade">
-
-            <center><img src="img3.jpg" style="width:100%" id="myImg"></center>
-            <div class="text">Caption Three</div>
-        </div>
+        
 
         <!-- Next and previous buttons -->
         <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
@@ -189,20 +189,26 @@
     }
 
     function showSlides(n) {
-        let i;
-        let slides = document.getElementsByClassName("mySlides");
-        let dots = document.getElementsByClassName("dot");
-        if (n > slides.length) { slideIndex = 1 }
-        if (n < 1) { slideIndex = slides.length }
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-        for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[slideIndex - 1].style.display = "block";
-        dots[slideIndex - 1].className += " active";
+    let i;
+    let slides = document.getElementsByClassName("mySlides");
+    let dots = document.getElementsByClassName("dot");
+    if (n > slides.length) { slideIndex = 1 }
+    if (n < 1) { slideIndex = slides.length }
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
     }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
+
+    // Get the associated text for the current slide
+    var textElements = document.querySelectorAll(".text");
+    var captionText = document.getElementById("cption");
+    captionText.innerHTML = textElements[slideIndex - 1].innerHTML;
+}
+
 </script>
 <script>
     // Get all elements with the id "myImg" and the class "text"

@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Resources</title>
+    <link href="mystyle.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet" />
+    <script src="main.js"></script>
+    <link href="megamun.png" rel="icon" type="image/x-icon" />
+
+</head>
+<style>
+    /* Globals */
+    :root {
+        --font-family: "Inter", sans-serif;
+        --max-width: 55rem;
+        --padding: 2rem 1.5rem;
+        --margin: 0 auto;
+        --text-color: #241623;
+        --background-color: #eef2f4;
+        --h1-font-weight: 900;
+        --h1-font-size: 2.7rem;
+        --h1-max-width: 20ch;
+        --p-max-width: 60ch;
+        --a-color: currentcolor;
+
+        /* Utilities */
+        --auto-grid-columns: auto-fill;
+        --auto-grid-min-size: 14rem;
+        --auto-grid-gap: 0;
+
+        /* Composition */
+        --flow-space: 2em;
+
+        /* Blocks */
+        --profile-padding: 1.5rem;
+        --profile-color: #ffffff;
+        --profile-gradient-opacity: 0.7;
+        --profile-transition: 300ms;
+        --profile-opacity-transition: 300ms;
+        --profile-img-transition: 200ms ease, 250ms linear;
+        --profile-transform-transition: 300ms ease;
+        --profile-outline: 0.5rem solid white;
+        --profile-outline-offset: -0.5rem;
+        --profile-hover-opacity: 0.7;
+        --profile-hover-transition-delay: 200ms;
+
+        /* Profile ::before and ::after */
+        --profile-before-background: linear-gradient(to top,
+                hsl(0 0% 0% / 0.79) 0%,
+                hsl(0 0% 0% / 0.787) 7.8%,
+                hsl(0 0% 0% / 0.779) 14.4%,
+                hsl(0 0% 0% / 0.765) 20.2%,
+                hsl(0 0% 0% / 0.744) 25.3%,
+                hsl(0 0% 0% / 0.717) 29.9%,
+                hsl(0 0% 0% / 0.683) 34.3%,
+                hsl(0 0% 0% / 0.641) 38.7%,
+                hsl(0 0% 0% / 0.592) 43.3%,
+                hsl(0 0% 0% / 0.534) 48.4%,
+                hsl(0 0% 0% / 0.468) 54.1%,
+                hsl(0 0% 0% / 0.393) 60.6%,
+                hsl(0 0% 0% / 0.31) 68.3%,
+                hsl(0 0% 0% / 0.216) 77.3%,
+                hsl(0 0% 0% / 0.113) 87.7%,
+                hsl(0 0% 0% / 0) 100%);
+
+        --profile-after-background: linear-gradient(45deg,
+                hsl(5 97% 63% / 0.7) 0,
+                hsl(5 97% 63% / 0) 100%);
+    }
+
+    h1 {
+        font-weight: 900;
+        font-size: 2.7rem;
+        max-width: 20ch;
+    }
+
+    p {
+        max-width: 60ch;
+    }
+
+    .profile a {
+        color: currentcolor;
+    }
+
+    /* Utilities */
+    .auto-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fill,
+                minmax(var(--auto-grid-min-size, 14rem), 1fr));
+        grid-gap: var(--auto-grid-gap, 0);
+        padding: 0;
+    }
+
+    .flow>*+* {
+        margin-top: var(--flow-space, 1em);
+    }
+
+    /* Composition */
+    .team {
+        --flow-space: 2em;
+    }
+
+    /* Blocks */
+    .profile {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        aspect-ratio: 1/1;
+        position: relative;
+        padding: 1.5rem;
+        color: #ffffff;
+        backface-visibility: hidden;
+        text-decoration: none;
+        overflow: hidden;
+    }
+
+    .profile::before,
+    .profile::after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        /*inset: 0;*/
+        top: 0;
+        left: 0;
+    }
+
+    .profile::before {
+        /* background: linear-gradient(
+    to top,
+    hsl(0 0% 0% / 0.79) 0%,
+    hsl(0 0% 0% / 0.787) 7.8%,
+    hsl(0 0% 0% / 0.779) 14.4%,
+    hsl(0 0% 0% / 0.765) 20.2%,
+    hsl(0 0% 0% / 0.744) 25.3%,
+    hsl(0 0% 0% / 0.717) 29.9%,
+    hsl(0 0% 0% / 0.683) 34.3%,
+    hsl(0 0% 0% / 0.641) 38.7%,
+    hsl(0 0% 0% / 0.592) 43.3%,
+    hsl(0 0% 0% / 0.534) 48.4%,
+    hsl(0 0% 0% / 0.468) 54.1%,
+    hsl(0 0% 0% / 0.393) 60.6%,
+    hsl(0 0% 0% / 0.31) 68.3%,
+    hsl(0 0% 0% / 0.216) 77.3%,
+    hsl(0 0% 0% / 0.113) 87.7%,
+    hsl(0 0% 0% / 0) 100%
+  ); */
+
+        transition: 300ms opacity linear;
+    }
+
+    .profile::after {
+        background: none;
+        opacity: 0;
+        background: linear-gradient(0deg, #0000006e, #00000000);
+
+        transition: 300ms opacity linear;
+    }
+
+    .profile>* {
+        z-index: 1;
+    }
+
+    .profile img {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        margin: 0;
+        z-index: 0;
+        object-fit: cover;
+        filter: grayscale(1);
+
+        transition: filter 200ms ease, transform 250ms linear;
+    }
+
+    .profile h2,
+    .profile p {
+        transform: translateY(3ex);
+
+    }
+
+    .profile h2 {
+        font-size: 1.7rem;
+        /* line-height: 1.2; */
+        -webkit-text-stroke-width: 1px;
+        -webkit-text-stroke-color: black;
+        font-weight: 900;
+        letter-spacing: 0.03ch;
+        transition: 300ms transform ease;
+    }
+
+    .profile p {
+        font-size: 1.2rem;
+        font-weight: 500;
+    }
+
+    .profile p {
+        opacity: 0;
+        transition: 300ms opacity linear, 300ms transform ease-in-out;
+    }
+
+    .profile:focus {
+        outline: 0.5rem solid white;
+        outline-offset: -0.5rem;
+    }
+
+    .profile:hover :is(h2, p),
+    .profile:focus :is(h2, p) {
+        transform: translateY(2ex);
+        /* color: rgb(185, 185, 185); */
+    }
+
+    .profile:hover::after,
+    .profile:focus::after,
+    .profile:hover::before,
+    .profile:focus::before {
+        opacity: 0.7;
+    }
+
+    .profile:hover p,
+    .profile:focus p {
+        opacity: 0.7;
+        transition-delay: 200ms;
+    }
+
+    .profile:hover img,
+    .profile:focus img {
+        filter: grayscale(0);
+        transform: scale(1.05) rotate(0deg);
+    }
+</style>
+
+<body>
+    <div class="navbar-container"></div>
+
+    <header style="font-size: clamp(calc(10vw), 900px); line-height: 10vh;">
+        <h1 style="font-size: calc(20vh); line-height: 20vh; "><b class=""
+                style="font-size: calc(10vw); line-height: 10vh;text-shadow: 0 0 12px #00000054;">Resources</b></h1>
+
+
+        <span class="kbd" style="color:white ;">Study guides to help you get going</span>
+    </header>
+    <div class="info_text">
+        <article class="" style="width: 100vw;">
+            <center>
+                <h1 style="font-size: calc(10vh); line-height: 10vh; "><b class=""
+                        style="font-size: calc(05vw); line-height: 10vh;text-shadow: 0 0 12px #00000054;">Resources</b>
+                </h1>
+            </center>
+
+            <!--           <p>Given below are the study guides and resources(as PDF files) to help kickstart your research work for MEGAMUN23</p> -->
+            <div class="team">
+                <ul class="auto-grid" role="list" style="list-style: none;">
+                    <li>
+                        <a href="study guides/UNSC.pdf" target="_blank" class="profile">
+                            <h2 class="profile__name"><b>UNSC</b></h2>
+                            <p>Study Guide</p>
+                            <img alt="UNSC" src="logos/unsc-logo.png" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="study guides/SSOC.pdf" target="_blank" class="profile">
+                            <h2 class="profile__name"><b>SSOC-1977</b></h2>
+                            <p>Study Guide</p>
+                            <img alt="SSOC-1977" src="logos/OGADEN.png" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="study guides/AIPPM.pdf" target="_blank" class="profile">
+                            <h2 class="profile__name"><b>AIPPM</b></h2>
+                            <p>Study Guide</p>
+                            <img alt="AIPPM" src="logos/AIPPM.png" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="study guides/COE-ATIP.pdf" target="_blank" class="profile">
+                            <h2 class="profile__name"><b>COE-ATIP</b></h2>
+                            <p>Study Guide</p>
+                            <img alt="COE-ATIP" src="logos/COE-ATIP-logo.png" />
+                        </a>
+                    </li>
+
+
+                </ul>
+            </div>
+        </article>
+    </div>
+    <div class="footer-container"></div>
+</body>
+
+</html>

@@ -203,32 +203,32 @@
     }
 
     /* 
-    .profile:focus {
+    .profile:hover {
         outline: 0.5rem solid white;
         outline-offset: -0.5rem;
     } */
 
     .profile:hover :is(h2, p),
-    .profile:focus :is(h2, p) {
+    .profile:hover :is(h2, p) {
         transform: translateY(2ex);
         /* color: rgb(185, 185, 185); */
     }
 
     .profile:hover::after,
-    .profile:focus::after,
+    .profile:hover::after,
     .profile:hover::before,
-    .profile:focus::before {
+    .profile:hover::before {
         opacity: 0.7;
     }
 
     .profile:hover p,
-    .profile:focus p {
+    .profile:hover p {
         opacity: 0.7;
         transition-delay: 200ms;
     }
 
     .profile:hover img,
-    .profile:focus img {
+    .profile:hover img {
         filter: grayscale(0);
         transform: scale(1.05) rotate(0deg);
     }
@@ -299,15 +299,15 @@
         
             <article class="" style="width: 100vw;">
                 <h1 style="font-size: calc(10vh); line-height: 10vh; "><b class=""
-                        style="font-size: calc(05vw); line-height: 10vh;text-shadow: 0 0 12px #00000054;">Schedule</b>
+                        style="font-size: calc(05vw); line-height: 10vh;text-shadow: 0 0 12px #00000054;">Information</b>
                 </h1>
                 <center>
                     <div class="team">
-                        <ul class="auto-grid" role="list" style="list-style: none;">
-                            <li>
-                                <a href="conference data/Conference Schedule.pdf" target="_blank" class="profile">
+                        <ul class="auto-grid" role="list" style="list-style: none; color: #ffffff;">
+                            <li style="color: #ffffff;">
+                                <a href="conference data/Conference Schedule.pdf" target="_blank" class="profile" style="color: #ffffff;">
                                     <h2 class="profile__name"><b>Schedule</b></h2>
-                                    <p>Schedule, Rules and Regulatory Information</p>
+                                    <p style="color: #ffffff;">Schedule, Rules and Regulatory Information</p>
                                     <img alt="Schedule" src="megamun.png" />
                                 </a>
                             </li>

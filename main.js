@@ -154,7 +154,7 @@ document.addEventListener("click", function (event) {
     if (menu.style.display === "block") {
       // Check if the click occurred outside of the menu and the committee
       if (!menu.contains(event.target)) {
-        toggleCommitteeMenu();
+        toggleChevronIcon();
       }
     }
   });

@@ -1637,7 +1637,9 @@ article{
   padding: 10px 0;
   height: 150px;
 }
-
+#dot-container{
+  display: none;
+}
 /* Add Animation - Zoom in the Modal */
 .modal-content, #caption {
   animation-name: zoom;

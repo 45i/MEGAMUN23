@@ -149,7 +149,6 @@ committees.forEach(function(committee) {
 });
 document.addEventListener("click", function (event) {
   var dropdownMenus = document.querySelectorAll(".committee-menu");
-  
   dropdownMenus.forEach(function (menu) {
     if (menu.style.display === "block") {
       // Check if the click occurred outside of the menu and the committee

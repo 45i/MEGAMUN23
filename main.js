@@ -3,7 +3,7 @@
 //   $('#\\3A 1\\.container').click(function() {
 //     var immediateParent = $(this).parent(); // This selects the immediate parent (1)
 //     var grandParent = immediateParent.parent(); // This selects the grandparent (2)
-    
+
 //     $(this).add(grandParent).animate({ top: '-200%' }, 'slow');
 //   });
 // });
@@ -12,9 +12,9 @@
 const body = document.body;
 
 let sx = 0, // For scroll positions
-    sy = 0;
+  sy = 0;
 let dx = sx, // For container positions
-    dy = sy;
+  dy = sy;
 
 // Bind a scroll function
 window.addEventListener('scroll', easeScroll);
@@ -110,12 +110,6 @@ document.addEventListener("DOMContentLoaded", function () {
       var icon = document.querySelector('.main');
       var menuIcon = document.querySelector('.icon');
       var navbar = document.querySelector('.navbar');
-      var dropdownMenu = document.querySelector(".committee-menu");
-
-      console.log(menuIcon);
-      console.log(icon);
-
-      
       menuIcon.addEventListener('click', function () {
         console.log("clicked");
         icon.classList.toggle('open');
@@ -127,48 +121,44 @@ document.addEventListener("DOMContentLoaded", function () {
         menuIcon.classList.toggle('bx-x');
         navbar.classList.toggle('open');
       });
-      
 
-      // Define the googleTranslateElementInit function here if needed
-      
+      // Select all dropdown menus with the class "committee-menu"
+      // Select all elements with class "committee"
+var committees = document.querySelectorAll(".committee");
 
-      // Function to toggle the chevron icon when the dropdown is open
-      function toggleChevronIcon() {
-        var committeeIcon = document.querySelector(".committee i");
-        dropdownMenu.style.display = (dropdownMenu.style.display === "none") ? "block" : "none";
-        if (dropdownMenu.style.display === "block") {
-          committeeIcon.style.transform = "rotate(180deg)";
-        } else {
-          committeeIcon.style.transform = "rotate(0deg)";
-        }
+// Define the function to toggle the chevron icon and menu
+function toggleChevronIcon(event) {
+  var committee = event.currentTarget;
+  var committeeIcon = committee.querySelector(".ico");
+  var dropdownMenu = committee.nextElementSibling; // Assumes the menu is right after the .committee element
+  
+  // Toggle the display of the dropdown menu
+  dropdownMenu.style.display = (dropdownMenu.style.display === "none" || !dropdownMenu.style.display) ? "block" : "none";
+  
+  // Rotate the chevron icon based on the display state
+  if (dropdownMenu.style.display === "block") {
+    committeeIcon.style.transform = "rotate(180deg)";
+  } else {
+    committeeIcon.style.transform = "rotate(0deg)";
+  }
+}
+
+// Attach the click event listener to each .committee element
+committees.forEach(function(committee) {
+  committee.addEventListener("click", toggleChevronIcon);
+});
+document.addEventListener("click", function (event) {
+  var dropdownMenus = document.querySelectorAll(".committee-menu");
+  
+  dropdownMenus.forEach(function (menu) {
+    if (menu.style.display === "block") {
+      // Check if the click occurred outside of the menu and the committee
+      if (!menu.contains(event.target)) {
+        toggleCommitteeMenu();
       }
-
-      const gg = document.querySelector(".committee");
-
-      console.log(dropdownMenu);
-      console.log("hover");
-      // gg.addEventListener("mouseenter", function () {
-      //   toggleChevronIcon();
-      //   console.log("hover");
-      // });
-      gg.addEventListener("click", function () {
-        toggleChevronIcon();
-        console.log("Clicked! 🖱️");
-      });
-      // dropdownMenu.addEventListener("mouseenter", function () {
-      //   dropdownMenu.style.display = "block";
-      //   toggleChevronIcon();
-      //   console.log("hover");
-      // });
-
-      // gg.addEventListener("mouseleave", function () {
-      //   // dropdownMenu.style.display = "none";
-      //   toggleChevronIcon();
-      // });
-      dropdownMenu.addEventListener("mouseleave", function () {
-        // dropdownMenu.style.display = "none";
-        toggleChevronIcon();
-      });
+    }
+  });
+});
     });
 });
 // footer.js
@@ -206,35 +196,35 @@ document.addEventListener("DOMContentLoaded", function () {
       translate.addEventListener('click', function () {
         googleTranslateElementInit();
         toggleTranslateElement();
-        });function googleTranslateElementInit() {
-          // Your code for initializing the Google Translate element goes here
-          new google.translate.TranslateElement(
-            { pageLanguage: 'en' },
-            'google_translate_element'
-          );
+      }); function googleTranslateElementInit() {
+        // Your code for initializing the Google Translate element goes here
+        new google.translate.TranslateElement(
+          { pageLanguage: 'en' },
+          'google_translate_element'
+        );
+      }
+      var script = document.createElement('script');
+      script.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
+      script.type = 'text/javascript';
+      document.getElementsByTagName('head')[0].appendChild(script);
+      var translateElementVisible = false;
+
+      // Function to toggle the Google Translate element and button icon
+      function toggleTranslateElement() {
+        var translateElement = document.getElementById('google_translate_element');
+        var translateButton = document.querySelector('.translate-button');
+        var icon = translateButton.querySelector('i');
+
+        if (translateElementVisible) {
+          translateElement.style.display = 'none';
+          icon.className = 'fas fa-language';
+        } else {
+          translateElement.style.display = 'block';
+          icon.className = 'fas fa-times';
         }
-        var script = document.createElement('script');
-        script.src = 'https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit';
-        script.type = 'text/javascript';
-        document.getElementsByTagName('head')[0].appendChild(script);
-        var translateElementVisible = false;
-  
-        // Function to toggle the Google Translate element and button icon
-        function toggleTranslateElement() {
-          var translateElement = document.getElementById('google_translate_element');
-          var translateButton = document.querySelector('.translate-button');
-          var icon = translateButton.querySelector('i');
-  
-          if (translateElementVisible) {
-            translateElement.style.display = 'none';
-            icon.className = 'fas fa-language';
-          } else {
-            translateElement.style.display = 'block';
-            icon.className = 'fas fa-times';
-          }
-  
-          translateElementVisible = !translateElementVisible;
-        }
+
+        translateElementVisible = !translateElementVisible;
+      }
     });
 });
 

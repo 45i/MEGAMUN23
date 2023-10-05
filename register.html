@@ -158,9 +158,9 @@
              const inputText = schoolInput.value.toLowerCase();
  
              // Fetch school names from the first CSV file
-             const CSV_URL1 = "https://raw.githubusercontent.com/deedy/cisce_schools_data/master/schools.csv";
+             const CSV_URL1 = "School_List/schools_ICSE.csv";
              // Fetch school names from the second CSV file
-             const CSV_URL2 = "https://raw.githubusercontent.com/deedy/cbse_schools_data/master/basic/schools.csv";
+             const CSV_URL2 = "School_List/schools_CBSE.csv";
  
              Promise.all([
                      fetch(CSV_URL1).then(response => response.text()),
@@ -216,9 +216,9 @@
              const inputText = coschoolInput.value.toLowerCase();
  
              // Fetch school names from the first CSV file
-             const CSV_URL1 = "https://raw.githubusercontent.com/deedy/cisce_schools_data/master/schools.csv";
+             const CSV_URL1 = "School_List/schools_ICSE.csv";
              // Fetch school names from the second CSV file
-             const CSV_URL2 = "https://raw.githubusercontent.com/deedy/cbse_schools_data/master/basic/schools.csv";
+             const CSV_URL2 = "School_List/schools_CBSE.csv";
  
              Promise.all([
                      fetch(CSV_URL1).then(response => response.text()),

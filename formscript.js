@@ -1,7 +1,7 @@
 // import Swal from 'sweetalert2.js'
 // import 'sweetalert2.scss'
 document.addEventListener('DOMContentLoaded', () => {
-  const scriptURL = 'https://script.google.com/macros/s/AKfycbyMaJ7tWvSRDxbn7Djtaq2LjZIEMdprODshjfG3F5DVECxgVlSI0GKqxpO9MU849FxuwA/exec';
+  const scriptURL = 'https://script.google.com/macros/s/AKfycby7pvJgynRHwIphSQy3ioRyQWY2zV0_rT2fXmhYvYDIKdEiUS2jXO6npokxa0IQD-HiNA/exec';
     const form = document.forms['product'];
 
     form.addEventListener('submit', e => {

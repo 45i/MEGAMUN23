@@ -15,7 +15,8 @@
     header h1 {
         font-size: calc(15vw);
     }
-    .text{
+
+    .text {
         overflow: visible;
     }
 </style>
@@ -41,9 +42,9 @@
     <div id="myModal" class="modal">
 
         <!-- The Close Button -->
-        
+
         <!-- Modal Content (The Image) -->
-        
+
         <div class="close">
             <!-- <span class="close">&times;</span> -->
             <center><img class="modal-content" style="max-width:80vh" id="img01"></center>
@@ -51,61 +52,68 @@
             <!-- Modal Caption (Image Text) -->
             <div id="caption"></div>
         </div>
-
     </div>
-    <!-- </center> -->
-    <center class="target-element"><h1
-                    style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; text-size-adjust: 100%; font-size: calc(7.5vw); line-height: 7.5vw;" id="cption">
-                    <!-- <span class="thin">About</span> <strong>MEGA<span class="thin">MUN</span>23</strong>/ -->
-                </h1></center>
-    <div class="slideshow-container" style="margin:10px; border-radius: 10px;">
 
-        <!-- Full-width images with number and caption text -->
-        <div class="mySlides fade">
+    <div style="height:100vw;position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   ">
+        <center class="target-element">
+            <h1 style="white-space: nowrap; overflow: hidden; text-overflow: ellipsis; text-size-adjust: 100%; font-size: calc(7.5vw); line-height: 7.5vw;"
+                id="cption">
+                <span class="thin">Team</span> <strong>AIPPM</strong>
+            </h1>
+        </center>
+        <div class="slideshow-container" style="margin:10px; border-radius: 10px;">
 
-            <center><img src="chairs/AIPPM.jpg" style="max-width:75vh" id="myImg"></center>
-            <div class="text"><span class="thin">Team</span> <strong>AIPPM</strong></div>
+            <!-- Full-width images with number and caption text -->
+            <div class="mySlides fade">
+
+                <center><img src="chairs/AIPPM.jpg" style="max-width:75vh" id="myImg"></center>
+                <div class="text"><span class="thin">Team</span> <strong>AIPPM</strong></div>
+            </div>
+
+            <div class="mySlides fade">
+
+                <center><img src="chairs/COE-ATIP.jpg" style="max-width:75vh" id="myImg"></center>
+                <div class="text"><span class="thin">Team</span> <strong>COE-ATIP</strong></div>
+            </div>
+
+            <div class="mySlides fade">
+
+                <center><img src="chairs/SSOC-1977.jpg" style="max-width:75vh" id="myImg"></center>
+                <div class="text"><span class="thin">Team</span> <strong>SSOC-1977</strong></div>
+            </div>
+            <div class="mySlides fade">
+
+                <center><img src="chairs/Delegate Affairs.jpg" style="max-width:75vh" id="myImg"></center>
+                <div class="text"><strong>Delegate Affairs</strong> <span class="thin">Team</span> </div>
+            </div>
+
+            <div class="mySlides fade">
+
+                <center><img src="chairs/Design.jpg" style="max-width:75vh" id="myImg"></center>
+                <div class="text"><strong>Design</strong> <span class="thin">Team</span> </div>
+            </div>
+
+            <div class="mySlides fade">
+
+                <center><img src="chairs/Logistics.jpg" style="max-width:75vh" id="myImg"></center>
+                <div class="text"><strong>Logistics</strong> <span class="thin">Team</span> </div>
+            </div>
+            <div class="mySlides fade">
+
+                <center><img src="chairs/IT.jpg" style="max-width:75vh" id="myImg"></center>
+                <div class="text"><strong>IT</strong> <span class="thin">Team</span> </div>
+            </div>
+
+
+
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
         </div>
-
-        <div class="mySlides fade">
-
-            <center><img src="chairs/COE-ATIP.jpg" style="max-width:75vh" id="myImg"></center>
-            <div class="text"><span class="thin">Team</span> <strong>COE-ATIP</strong></div>
-        </div>
-
-        <div class="mySlides fade">
-
-            <center><img src="chairs/SSOC-1977.jpg" style="max-width:75vh" id="myImg"></center>
-            <div class="text"><span class="thin">Team</span> <strong>SSOC-1977</strong></div>
-        </div>
-        <div class="mySlides fade">
-
-            <center><img src="chairs/Delegate Affairs.jpg" style="max-width:75vh" id="myImg"></center>
-            <div class="text"><strong>Delegate Affairs</strong> <span class="thin">Team</span> </div>
-        </div>
-        
-        <div class="mySlides fade">
-
-            <center><img src="chairs/Design.jpg" style="max-width:75vh" id="myImg"></center>
-            <div class="text"><strong>Design</strong> <span class="thin">Team</span> </div>
-        </div>
-        
-        <div class="mySlides fade">
-
-            <center><img src="chairs/Logistics.jpg" style="max-width:75vh" id="myImg"></center>
-            <div class="text"><strong>Logistics</strong> <span class="thin">Team</span> </div>
-        </div>
-        <div class="mySlides fade">
-
-            <center><img src="chairs/IT.jpg" style="max-width:75vh" id="myImg"></center>
-            <div class="text"><strong>IT</strong> <span class="thin">Team</span> </div>
-        </div>
-
-        
-
-        <!-- Next and previous buttons -->
-        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-        <a class="next" onclick="plusSlides(1)">&#10095;</a>
     </div>
     <br>
 
@@ -166,7 +174,7 @@
 </body>
 <script>
     let slideIndex = 1;
-     showSlides(slideIndex);
+    showSlides(slideIndex);
 
     // function showSlides() {
     //     let i;
@@ -195,25 +203,25 @@
     }
 
     function showSlides(n) {
-    let i;
-    let slides = document.getElementsByClassName("mySlides");
-    let dots = document.getElementsByClassName("dot");
-    if (n > slides.length) { slideIndex = 1 }
-    if (n < 1) { slideIndex = slides.length }
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex - 1].style.display = "block";
-    dots[slideIndex - 1].className += " active";
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) { slideIndex = 1 }
+        if (n < 1) { slideIndex = slides.length }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
 
-    // Get the associated text for the current slide
-    var textElements = document.querySelectorAll(".text");
-    var captionText = document.getElementById("cption");
-    captionText.innerHTML = textElements[slideIndex - 1].innerHTML;
-}
+        // Get the associated text for the current slide
+        var textElements = document.querySelectorAll(".text");
+        var captionText = document.getElementById("cption");
+        captionText.innerHTML = textElements[slideIndex - 1].innerHTML;
+    }
 
 </script>
 <script>
@@ -261,9 +269,9 @@
 
     // Get the <span> element that closes the modal
     // Get the <span> element that closes the modal
-var span = document.getElementsByClassName("close")[0];
+    var span = document.getElementsByClassName("close")[0];
 
-span.onclick = function () {
+    span.onclick = function () {
         var modal = document.getElementById("myModal");
         modal.style.display = "none";
     }

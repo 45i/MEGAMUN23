@@ -352,14 +352,22 @@ scrollDown.addEventListener('click', () => {
     behavior: 'smooth'
   });
 });
-
-let launchDate = new Date("October 11, 2023 00:00:00").getTime();
+let launchDate = new Date("October 11, 2023 8:00:00").getTime();
 
 let timer = setInterval(tick, 1000);
+
 function tick() {
   let now = new Date().getTime();
   let t = launchDate - now;
-  if (t > 0) {
+
+  if (t <= 0) {
+    document.querySelector('.countdown').innerHTML = "The Gavel Drops!";
+    document.querySelector('.inf').innerHTML="MEGAMUN23 Commences ";
+    clearInterval(timer); // Stop the timer when the event begins
+  } else if (now > new Date("October 13, 2023 14:00:00").getTime()) { // Replace someOtherDate with your desired end date
+    document.querySelector('.countdown').innerHTML = "And That's A Wrap!";
+    clearInterval(timer); // Stop the timer when the event ends
+  } else {
     let days = Math.floor(t / (1000 * 60 * 60 * 24));
     if (days < 10) {
       days = "0" + days;
@@ -380,17 +388,9 @@ function tick() {
     let time = `<span class="days">${days}</span> : <span class="hours">${hours}</span> : <span class="minutes">${minutes}</span> : <span class="seconds">${seconds}</span>`;
 
     document.querySelector('.countdown').innerHTML = time;
-
-    // Add event listener to the days span element
-    // const daysSpan = document.querySelector('.days');
-    // daysSpan.addEventListener('mouseover', () => {
-    //     daysSpan.innerText = `${days} days`;
-    // });
-    // daysSpan.addEventListener('mouseout', () => {
-    //     daysSpan.innerText = `${days}`;
-    // });
   }
 }
+
 const tds = document.querySelectorAll('td');
 
 tds.forEach(td => {

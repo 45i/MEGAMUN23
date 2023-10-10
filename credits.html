@@ -24,6 +24,7 @@
     <link href="megamun.png" rel="icon" type="image/x-icon" />
     <meta content="#2A1472" name="theme-color" />
     <title>Backrooms</title>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
     <link href="mystyle.css" rel="stylesheet" />
 </head>
 <style>
@@ -31,13 +32,20 @@
         color: #fff;
         transition: 0.3s;
     }
-    header{
-        background-image: linear-gradient(360deg,#2a1472,#2a147234, #00000000), url("hidden content\\images\\holy cow.png");
+.col li {
+    display: flex;
+    /* align-items: center; */
+    /* margin: 0 50vw ; */
+  }
+  
+
+    header {
+        background-image: linear-gradient(360deg, #2a1472, #000000af, #000000af), url("hidden content\\images\\holy cow.png");
     }
 </style>
 
 <body>
-    <header >
+    <header>
         <h1>
             <h1 style="font-size: xxx-large;">
                 <div class="kbd">The Backrooms</div>
@@ -77,19 +85,20 @@
             playlist and have forgotten about everything around me. You can often find me bobbing to music (the likes of
             great men such as Metro Boomin, Skrillex, Eminem, Joyner and 'Ye), even when there isn't any playing.
             I dabble a <strong>lot</strong> in art, mainly digital 3D ones, in Blender.
-            <p><small class="kbd">
+            <p><span class="kbd">
                     <ul style="list-style: none;">
                         <li><a href="https://github.com/45i" class="kbd"
-                                style="text-decoration: none; color: rgb(146, 146, 146);"><i class="fab fa-github"></i>
+                                style="text-decoration: none; color: rgb(146, 146, 146);"><i class="fab fa-github"
+                                    style="color:#000000"></i>
                                 &nbsp;GitHub</a>
                         </li>
                         <li><a href="https://discord.com/users/1123896290024108093" class="kbd"
-                                style="text-decoration: none; color: rgb(146, 146, 146);"><i
-                                    class="fab fab fa-discord"></i>
+                                style="text-decoration: none; color: rgb(146, 146, 146);"><i class="fab fab fa-discord"
+                                    style="color:#4c00ff; text-shadow: 0 0 10px #fff;"></i>
                                 Discord</a>
                         </li>
                     </ul>
-                </small></p>
+                </span></p>
 
 
         </article>
@@ -112,14 +121,65 @@
             </span>
             <ul style="list-style: none;">
                 <li><a href="https://github.com/yessboialt" class="kbd"
-                        style="text-decoration: none; color: rgb(146, 146, 146);"><i class="fab fa-github"></i>
+                        style="text-decoration: none; color: rgb(146, 146, 146);"><i class="fab fa-github"
+                            style="color:#000000"></i>
                         &nbsp;GitHub</a>
                 </li>
+                <li><a href="https://discord.com/users/829575701559509022" class="kbd"
+                        style="text-decoration: none; color: rgb(146, 146, 146);"><i class="fab fab fa-discord"
+                            style="color:#4c00ff; text-shadow: 0 0 10px #fff;"></i>
+                        Discord</a>
+                </li>
+            </ul>
+        </article>
+    </div>
+    <center>
+        <h1 style="font-size: calc(20vh); line-height: 20vh; "><b class=""
+                style="font-size: calc(7vw); line-height: 10vh;text-shadow: 0 0 12px #00000054;">Rolling Credits <small
+                    class="kbd">thing</small></b></h1>
+    </center>
+    <div class="info_text" style="background: #2A1472;">
+
+        <br>
+        <article>
+            All the different websites and things we used during the making of this website. Thanks to everyone who
+            helped during the tedious process of scripting javascript and styling CSSs, by providing valuable feedback.
+            
+            <br>
+            <br><div class="cols">
+            <ul style="list-style: none;" class="col">
+                <legend><strong>Websites</strong></legend>
+                <li><i class="fab fa-stack-overflow"></i>&nbsp;StackOverflow</li>
+                <li><i class="fas fa-globe"></i>&nbsp;GeeksForGeeks</li>
+            </ul>
+            <!-- <br> -->
+            <ul style="list-style: none;" class="col">
+                <legend><strong class="element"></strong></legend>
+                <li><i class="fas fa-user"></i>&nbsp;Avrodeep Kundu</li>
+                <li><i class="fas fa-user"></i>&nbsp;Agniva Mandal</li>
+                <li><i class="fas fa-user"></i>&nbsp;Vartika Soni</li>
+                <li><i class="fas fa-user"></i>&nbsp;Trishla Rai</li>
+                <li><i class="fas fa-user"></i>&nbsp;Aarav Dhar</li>
+                <li><i class="fas fa-user"></i>&nbsp;Adwityo Das</li>
+                <li><i class="fas fa-user"></i>&nbsp;Vaanchit Agarwal</li>
                 
             </ul>
+            </div>
         </article>
     </div>
 </body>
 <script src="main.js"></script>
-
+<script>
+    var typed = new Typed('.element', {
+  strings: ["Individuals^1000", "Friends^1000","Class mates^1000","Colleagues^1000"],
+  typeSpeed: 30,
+  backSpeed: 30,
+  backDelay: 700,
+  smartBackspace: true,
+  startDelay: 100,
+  delay:10000,
+  loop: true,
+  loopCount: Infinity,
+});
+</script>
 </html>

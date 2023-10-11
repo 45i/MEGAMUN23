@@ -34,8 +34,18 @@
     }
 .col li {
     display: flex;
-    /* align-items: center; */
-    /* margin: 0 50vw ; */
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .col i {
+    order: 1; /* Reorder the "i" element to the left */
+  }
+
+  .niger {
+    order: 2; /* Reorder the text to the right */
+    letter-spacing: calc(100% - 0.1ch); 
+     
   }
   
 
@@ -149,24 +159,30 @@
             <br><div class="cols">
             <ul style="list-style: none;" class="col">
                 <legend><strong>Websites</strong></legend>
-                <li><i class="fab fa-stack-overflow"></i>&nbsp;StackOverflow</li>
-                <li><i class="fas fa-globe"></i>&nbsp;GeeksForGeeks</li>
+                <li><i class="fab fa-stack-overflow"></i><span class="niger">&nbsp;StackOverflow</span></li>
+                <li><i class="fas fa-globe"></i><span class="niger">&nbsp;GeeksForGeeks</span></li>
             </ul>
             <!-- <br> -->
             <ul style="list-style: none;" class="col">
                 <legend><strong class="element"></strong></legend>
-                <li><i class="fas fa-user"></i>&nbsp;Avrodeep Kundu</li>
-                <li><i class="fas fa-user"></i>&nbsp;Agniva Mandal</li>
-                <li><i class="fas fa-user"></i>&nbsp;Vartika Soni</li>
-                <li><i class="fas fa-user"></i>&nbsp;Trishla Rai</li>
-                <li><i class="fas fa-user"></i>&nbsp;Aarav Dhar</li>
-                <li><i class="fas fa-user"></i>&nbsp;Adwityo Das</li>
-                <li><i class="fas fa-user"></i>&nbsp;Vaanchit Agarwal</li>
+                <li><i class="fas fa-user"></i><span class="niger">&nbsp;Avrodeep Kundu</span></li>
+                <li><i class="fas fa-user"></i><span class="niger">&nbsp;Agniva Mandal</span></li>
+                <li><i class="fas fa-user"></i><span class="niger">&nbsp;Vartika Soni</span></li>
+                <li><i class="fas fa-user"></i><span class="niger">&nbsp;Trishla Rai</span></li>
+                <li><i class="fas fa-user"></i><span class="niger">&nbsp;Aarav Dhar</span></li>
+                <li><i class="fas fa-user"></i><span class="niger">&nbsp;Adwityo Das</span></li>
+                <li><i class="fas fa-user"></i><span class="niger">&nbsp;Vaanchit Agarwal</span></li>
                 
             </ul>
             </div>
         </article>
     </div>
+    <div class="info_text" style="background: #2A1472;">
+    <article>
+        <img src="monke.jpg" width="75%vw"/>
+        <legend><small>monke.</small></legend>
+    </article>
+</div>
 </body>
 <script src="main.js"></script>
 <script>

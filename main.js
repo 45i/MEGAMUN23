@@ -9,39 +9,39 @@
 // });
 
 
-const body = document.body;
+// const body = document.body;
 
-let sx = 0, // For scroll positions
-  sy = 0;
-let dx = sx, // For container positions
-  dy = sy;
+// let sx = 0, // For scroll positions
+//   sy = 0;
+// let dx = sx, // For container positions
+//   dy = sy;
 
-// Bind a scroll function
-window.addEventListener('scroll', easeScroll);
+// // Bind a scroll function
+// window.addEventListener('scroll', easeScroll);
 
-function easeScroll() {
-  sx = window.pageXOffset;
-  sy = window.pageYOffset;
-}
+// function easeScroll() {
+//   sx = window.pageXOffset;
+//   sy = window.pageYOffset;
+// }
 
-window.requestAnimationFrame(render);
+// window.requestAnimationFrame(render);
 
-function render() {
-  // We calculate our container position by linear interpolation method
-  dx = li(dx, sx, 0.2);
-  dy = li(dy, sy, 0.2);
+// function render() {
+//   // We calculate our container position by linear interpolation method
+//   dx = li(dx, sx, 0.2);
+//   dy = li(dy, sy, 0.2);
 
-  dx = Math.floor(dx * 100) / 100;
-  dy = Math.floor(dy * 100) / 100;
+//   dx = Math.floor(dx * 100) / 100;
+//   dy = Math.floor(dy * 100) / 100;
 
-  body.style.transform = `translate3d(-${dx}px, -${dy}px, 0px)`;
+//   body.style.transform = `translate3d(-${dx}px, -${dy}px, 0px)`;
 
-  window.requestAnimationFrame(render);
-}
+//   window.requestAnimationFrame(render);
+// }
 
-function li(a, b, n) {
-  return (1 - n) * a + n * b;
-}
+// function li(a, b, n) {
+//   return (1 - n) * a + n * b;
+// }
 
 
 function supportsBackdropFilter() {
@@ -385,7 +385,7 @@ function tick() {
       seconds = "0" + seconds;
     }
 
-    let time = `<span class="days">${days}</span> : <span class="hours">${hours}</span> : <span class="minutes">${minutes}</span> : <span class="seconds">${seconds}</span>`;
+    let time = `<p><h1><b>STARTS</b><span> IN</span> </h1></p><br><span class="days">${days}</span> : <span class="hours">${hours}</span> : <span class="minutes">${minutes}</span> : <span class="seconds">${seconds}</span>`;
 
     document.querySelector('.countdown').innerHTML = time;
   }

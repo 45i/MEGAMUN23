@@ -94,6 +94,8 @@ document.addEventListener("DOMContentLoaded", function () {
   fontAwesomeLink.href = 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css';
   fontAwesomeLink.rel = 'stylesheet';
   document.head.appendChild(fontAwesomeLink);
+
+  
 });
 
 
@@ -124,40 +126,40 @@ document.addEventListener("DOMContentLoaded", function () {
 
       // Select all dropdown menus with the class "committee-menu"
       // Select all elements with class "committee"
-var committees = document.querySelectorAll(".committee");
+      var committees = document.querySelectorAll(".committee");
 
-// Define the function to toggle the chevron icon and menu
-function toggleChevronIcon(event) {
-  var committee = event.currentTarget;
-  var committeeIcon = committee.querySelector(".ico");
-  var dropdownMenu = committee.nextElementSibling; // Assumes the menu is right after the .committee element
-  
-  // Toggle the display of the dropdown menu
-  dropdownMenu.style.display = (dropdownMenu.style.display === "none" || !dropdownMenu.style.display) ? "block" : "none";
-  
-  // Rotate the chevron icon based on the display state
-  if (dropdownMenu.style.display === "block") {
-    committeeIcon.style.transform = "rotate(180deg)";
-  } else {
-    committeeIcon.style.transform = "rotate(0deg)";
-  }
-}
+      // Define the function to toggle the chevron icon and menu
+      function toggleChevronIcon(event) {
+        var committee = event.currentTarget;
+        var committeeIcon = committee.querySelector(".ico");
+        var dropdownMenu = committee.nextElementSibling; // Assumes the menu is right after the .committee element
 
-// Attach the click event listener to each .committee element
-committees.forEach(function(committee) {
-  committee.addEventListener("click", toggleChevronIcon);
-});
-document.addEventListener("click", function (event) {
-  var dropdownMenus = document.querySelectorAll(".committee-menu");
-  dropdownMenus.forEach(function (menu) {
-    if (menu.style.display === "block") {
-      // Check if the click occurred outside of the menu and the committee
-      if (!menu.contains(event.target)) {
-        toggleChevronIcon();
+        // Toggle the display of the dropdown menu
+        dropdownMenu.style.display = (dropdownMenu.style.display === "none" || !dropdownMenu.style.display) ? "block" : "none";
+
+        // Rotate the chevron icon based on the display state
+        if (dropdownMenu.style.display === "block") {
+          committeeIcon.style.transform = "rotate(180deg)";
+        } else {
+          committeeIcon.style.transform = "rotate(0deg)";
+        }
       }
-    }
-  });
-});
+
+      // Attach the click event listener to each .committee element
+      committees.forEach(function (committee) {
+        committee.addEventListener("click", toggleChevronIcon);
+      });
+      document.addEventListener("click", function (event) {
+        var dropdownMenus = document.querySelectorAll(".committee-menu");
+        dropdownMenus.forEach(function (menu) {
+          if (menu.style.display === "block") {
+            // Check if the click occurred outside of the menu and the committee
+            if (!menu.contains(event.target)) {
+              toggleChevronIcon();
+            }
+          }
+        });
+      });
     });
 });
 // footer.js
@@ -362,7 +364,7 @@ function tick() {
 
   if (t <= 0) {
     document.querySelector('.countdown').innerHTML = "The Gavel Drops!";
-    document.querySelector('.inf').innerHTML="MEGAMUN23 Commences ";
+    document.querySelector('.inf').innerHTML = "MEGAMUN23 Commences ";
     clearInterval(timer); // Stop the timer when the event begins
   } else if (now > new Date("October 13, 2023 14:00:00").getTime()) { // Replace someOtherDate with your desired end date
     document.querySelector('.countdown').innerHTML = "And That's A Wrap!";
@@ -507,104 +509,3 @@ function handleScroll() {
 window.addEventListener('scroll', handleScroll);
 
 // main.js
-
- let slideIndex = 1;
-    showSlides(slideIndex);
-
-    // function showSlides() {
-    //     let i;
-    //     let slides = document.getElementsByClassName("mySlides");
-    //     let dots = document.getElementsByClassName("dot");
-    //     for (i = 0; i < slides.length; i++) {
-    //         slides[i].style.display = "none";
-    //     }
-    //     for (i = 0; i < dots.length; i++) {
-    //         dots[i].className = dots[i].className.replace(" active", "");
-    //     }
-    //     slideIndex++;
-    //     if (slideIndex > slides.length) { slideIndex = 1 }
-    //     slides[slideIndex - 1].style.display = "block";
-    //     dots[slideIndex - 1].className += " active";
-    //     setTimeout(showSlides, 300); // Change image every 2 seconds
-    // }
-
-    function plusSlides(n) {
-        showSlides(slideIndex += n);
-    }
-
-    // Thumbnail image controls
-    function currentSlide(n) {
-        showSlides(slideIndex = n);
-    }
-
-    function showSlides(n) {
-        let i;
-        let slides = document.getElementsByClassName("mySlides");
-        let dots = document.getElementsByClassName("dot");
-        if (n > slides.length) { slideIndex = 1 }
-        if (n < 1) { slideIndex = slides.length }
-        for (i = 0; i < slides.length; i++) {
-            slides[i].style.display = "none";
-        }
-        for (i = 0; i < dots.length; i++) {
-            dots[i].className = dots[i].className.replace(" active", "");
-        }
-        slides[slideIndex - 1].style.display = "block";
-        dots[slideIndex - 1].className += " active";
-
-        // Get the associated text for the current slide
-        var textElements = document.querySelectorAll(".text");
-        var captionText = document.getElementById("cption");
-        captionText.innerHTML = textElements[slideIndex - 1].innerHTML;
-    }
-
-
-    // Get the number of slides
-    var numSlides = document.querySelectorAll('.mySlides').length;
-
-    // Get a reference to the dot container
-    var dotContainer = document.getElementById('dot-container');
-
-    // Create and add the dots
-    for (var i = 0; i < numSlides; i++) {
-        var dot = document.createElement('span');
-        dot.className = 'dot';
-        dot.onclick = function () {
-            currentSlide(i + 1);
-        };
-        dotContainer.appendChild(dot);
-    }
-
-    // Set the initial active dot
-    var dots = document.querySelectorAll('.dot');
-    dots[0].classList.add('active');
-
-
-
-    // Get all elements with the id "myImg" and the class "text"
-    var images = document.querySelectorAll("#myImg");
-    var textElements = document.querySelectorAll(".text");
-
-    // Loop through each image and attach the modal functionality
-    images.forEach(function (img, index) {
-        img.onclick = function () {
-            var modal = document.getElementById("myModal");
-            var modalImg = document.getElementById("img01");
-            var captionText = document.getElementById("caption");
-
-            // Set the modal content based on the clicked image and its corresponding text
-            modal.style.display = "block";
-            modalImg.src = this.src;
-            captionText.innerHTML = textElements[index].innerHTML;
-        }
-    });
-
-    // Get the <span> element that closes the modal
-    // Get the <span> element that closes the modal
-    var span = document.getElementsByClassName("close")[0];
-
-    span.onclick = function () {
-        var modal = document.getElementById("myModal");
-        modal.style.display = "none";
-    }
-

@@ -32,6 +32,17 @@
         color: #fff;
         transition: 0.3s;
     }
+    
+    
+    a.kbd:active::after {
+  content: '🔥 Drag Me!'; /* Add some text or icon */
+  position: absolute;
+  /* transform: translateX(-50%); */
+  background: #ff5733; /* Customize the background color */
+  color: #fff; /* Customize the text color */
+  border-radius: 5px; /* Round those corners */
+  padding: 5px 10px; /* Adjust the size as you like */
+}
 .col li {
     display: flex;
     justify-content: space-between;
@@ -197,5 +208,15 @@
   loop: true,
   loopCount: Infinity,
 });
+</script>
+<script>
+    document.addEventListener('mousemove', (e) => {
+  const dragIndicator = document.querySelector('a:active::after');
+  if (dragIndicator) {
+    dragIndicator.style.left = e.pageX + 'px';
+    dragIndicator.style.top = e.pageY + 'px';
+  }
+});
+
 </script>
 </html>

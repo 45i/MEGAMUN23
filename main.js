@@ -508,3 +508,103 @@ window.addEventListener('scroll', handleScroll);
 
 // main.js
 
+ let slideIndex = 1;
+    showSlides(slideIndex);
+
+    // function showSlides() {
+    //     let i;
+    //     let slides = document.getElementsByClassName("mySlides");
+    //     let dots = document.getElementsByClassName("dot");
+    //     for (i = 0; i < slides.length; i++) {
+    //         slides[i].style.display = "none";
+    //     }
+    //     for (i = 0; i < dots.length; i++) {
+    //         dots[i].className = dots[i].className.replace(" active", "");
+    //     }
+    //     slideIndex++;
+    //     if (slideIndex > slides.length) { slideIndex = 1 }
+    //     slides[slideIndex - 1].style.display = "block";
+    //     dots[slideIndex - 1].className += " active";
+    //     setTimeout(showSlides, 300); // Change image every 2 seconds
+    // }
+
+    function plusSlides(n) {
+        showSlides(slideIndex += n);
+    }
+
+    // Thumbnail image controls
+    function currentSlide(n) {
+        showSlides(slideIndex = n);
+    }
+
+    function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) { slideIndex = 1 }
+        if (n < 1) { slideIndex = slides.length }
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex - 1].style.display = "block";
+        dots[slideIndex - 1].className += " active";
+
+        // Get the associated text for the current slide
+        var textElements = document.querySelectorAll(".text");
+        var captionText = document.getElementById("cption");
+        captionText.innerHTML = textElements[slideIndex - 1].innerHTML;
+    }
+
+
+    // Get the number of slides
+    var numSlides = document.querySelectorAll('.mySlides').length;
+
+    // Get a reference to the dot container
+    var dotContainer = document.getElementById('dot-container');
+
+    // Create and add the dots
+    for (var i = 0; i < numSlides; i++) {
+        var dot = document.createElement('span');
+        dot.className = 'dot';
+        dot.onclick = function () {
+            currentSlide(i + 1);
+        };
+        dotContainer.appendChild(dot);
+    }
+
+    // Set the initial active dot
+    var dots = document.querySelectorAll('.dot');
+    dots[0].classList.add('active');
+
+
+
+    // Get all elements with the id "myImg" and the class "text"
+    var images = document.querySelectorAll("#myImg");
+    var textElements = document.querySelectorAll(".text");
+
+    // Loop through each image and attach the modal functionality
+    images.forEach(function (img, index) {
+        img.onclick = function () {
+            var modal = document.getElementById("myModal");
+            var modalImg = document.getElementById("img01");
+            var captionText = document.getElementById("caption");
+
+            // Set the modal content based on the clicked image and its corresponding text
+            modal.style.display = "block";
+            modalImg.src = this.src;
+            captionText.innerHTML = textElements[index].innerHTML;
+        }
+    });
+
+    // Get the <span> element that closes the modal
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+
+    span.onclick = function () {
+        var modal = document.getElementById("myModal");
+        modal.style.display = "none";
+    }
+

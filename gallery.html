@@ -1,35 +1,60 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Gallery</title>
-        <!-- <link rel="stylesheet" href="mystyle.css"> -->
-        <link href="video.css" rel="stylesheet" />
 
-    </head>
-    <body style="background-color: #2A1472;">
-<center>
-    <video
-    id="my-video"
-    class="video-js"
-    controls
-    preload="auto"
-    style="width: 95vw;"
-    height="264"
-    
-    data-setup="{}"
-  >
-    <source src="gavel-hitting-block-dwg-ws-bs-gs-hd-anim.mp4" type="video/mp4" />
-    <!-- <source src="MY_VIDEO.webm" type="video/webm" /> -->
-    <p class="vjs-no-js">
-      To view this video please enable JavaScript, and consider upgrading to a
-      web browser that
-      <a href="https://videojs.com/html5-video-support/" target="_blank"
-        >supports HTML5 video</a
-      >
-    </p>
-  </video>
-</center>
+<head>
+  <title>Gallery</title>
+  <!-- <link rel="stylesheet" href="mystyle.css"> -->
+  <link href="video.css" rel="stylesheet" />
+</head>
 
-  <script src="https://vjs.zencdn.net/8.5.2/video.min.js"></script>
-    </body>
+<script src="main.js"></script>
+
+<body style="background-color: #2A1472;">
+  <div class="navbar-container"></div>
+  <header>
+      <h1><strong style="font-size: clamp(20px,10vw, 90px); line-height: 10vh;">Official Videos</strong></h1>
+  </header>
+  <header style="background: #2A1472;">
+    <center>
+      <div class="">
+        <h3><strong>Official Trailer</strong></h3>
+        <video id="my-video" class="video-js" controls preload="auto" style="width: 95vw; border-radius: 10px; height:80vh;"
+          data-setup="{}">
+          <source src="finalmuntrailerwithcc.mov" type="video/mp4" />
+          <!-- <source src="MY_VIDEO.webm" type="video/webm" /> -->
+          <p class="vjs-no-js">
+            To view this video please enable JavaScript, and consider upgrading to a
+            web browser that
+            <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+          </p>
+        </video>
+        <legend style="color: #ffffff75;">Edited By: <strong>Priyangshu Ghosh</strong> & <strong>Avrodeep Kundu</strong></legend>
+      </div>
+      
+    </center>
+  </header>
+  <header style="background: #2A1472;">
+    <center>
+      <div class="">
+        <h3><strong>Official Outro</strong></h3>
+        <video id="my-video" class="video-js" controls preload="auto" style="width: 95vw; border-radius: 10px; height:80vh;"
+          data-setup="{}">
+          <source src="Closing Ceremony.mp4" type="video/mp4" />
+          <!-- <source src="MY_VIDEO.webm" type="video/webm" /> -->
+          <p class="vjs-no-js">
+            To view this video please enable JavaScript, and consider upgrading to a
+            web browser that
+            <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
+          </p>
+        </video>
+        <legend style="color: #ffffff75;">Edited By: <strong>Aarav Dhar</strong> </legend>
+
+      </div>
+      
+    </center>
+  </header>
+  <div class="footer-container"></div>
+</body>
+<script src="https://vjs.zencdn.net/8.5.2/video.min.js"></script>
+
 </html>
